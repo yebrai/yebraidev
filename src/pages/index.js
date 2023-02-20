@@ -11,15 +11,12 @@ export default function Home() {
   return (
     <>
     <Navbar/>
-    <section>
+    <section className={styles.containerMainSection}>
         <div><Image src={ivanPng} width={300} height={300}></Image></div>
         <div>
-        <h1>Web Developer</h1>
-        <p>Ivan Garcia Yebra</p>
-        </div>
-    </section>
-
-    <div>
+        <h2>Ivan Garcia Yebra</h2>
+        <h1>Web developer</h1>
+        <div>
       <ul>
       <li>About me</li>
       <li>Proyects</li>
@@ -27,6 +24,11 @@ export default function Home() {
       <li>My Cv</li>
       </ul>
     </div>
+        </div> 
+          
+    </section>
+
+ 
     <footer>Contact with me</footer>
     </>
   )

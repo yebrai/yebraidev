@@ -1,3 +1,9 @@
 .mainImage {
   width: 30px;
 }
+
+.containerMainSection {
+  padding: 10vw;
+  display: flex;
+  gap: 3vw;
+}
