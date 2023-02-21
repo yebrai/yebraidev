@@ -14,11 +14,11 @@ export default function Navbar() {
         },
         {
           label: <AiFillGithub />,
-          route: '/favourites'
+          route: 'https://github.com/yebrai'
         },
         {
           label: <AiFillLinkedin />,
-          route: '/popular'
+          route: 'https://www.linkedin.com/in/ivangarciayebra'
         },
         {
           label: <GrContact />,
