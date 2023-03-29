@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap");
 
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Karla', sans-serif;
-    font-weight: 500;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+}
 
-  name {
-    color: green;
-  }
+name {
+  color: #4b8de1;
+}
+
+

@@ -1,0 +1,21 @@
+.avatar {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .containerMainSection {
+    padding: 10vw;
+    display: flex;
+    margin-left: 8%;
+    gap: 3vw;
+  }
+
+  
+  .presentation {
+    font-size: 3rem;
+  }
+  
+  .position {
+    color: grey;
+  }
