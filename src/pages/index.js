@@ -14,8 +14,8 @@ export default function Home() {
     <section className={styles.containerMainSection}>
         <div><Image src={ivanPng} width={300} height={300}></Image></div>
         <div>
-        <h2>Ivan Garcia Yebra</h2>
-        <h1>Web developer</h1>
+        <h1>Hello 👋🏼, i'm <name>Ivan</name></h1>
+        <h3>Web developer</h3>
         <div>
       <ul>
       <li>About me</li>
