@@ -4,11 +4,11 @@
     position: relative;
 
   }
+
   
   .containerMainSection {
-    padding: 10vw;
     display: flex;
-    margin-left: 8%;
+    
     gap: 3vw;
   }
 

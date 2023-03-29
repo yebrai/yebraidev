@@ -7,10 +7,9 @@ export default function Home() {
   return (
     <>
     <Navbar/>
-    <section>
+    <section className='main'>
     <Welcome/>
     <Projects/>
-
     </section>
     <footer>Contact with me</footer>
     </>
