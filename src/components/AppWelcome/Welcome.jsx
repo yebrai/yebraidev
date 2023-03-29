@@ -13,7 +13,7 @@ export default function Welcome() {
         </div>
         <div>
         <h1 className={styles.presentation}>Hello 👋🏼, i'm <name>Ivan</name></h1>
-        <h3 className={styles.position}>Full-stack Developer</h3>
+        <h3 className={styles.position}>Full-stack Developer in Seville</h3>
     </div>
     </section>
     </>

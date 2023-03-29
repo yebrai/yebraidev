@@ -2,6 +2,7 @@
     width: 200px;
     height: 200px;
     position: relative;
+
   }
   
   .containerMainSection {
@@ -18,4 +19,6 @@
   
   .position {
     color: grey;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
