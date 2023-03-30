@@ -10,11 +10,6 @@ export default function Projects() {
   const links = [
     {
       imageSrc: tmb,
-      title: "PDF-SIGNER",
-      description: "pdfsigner",
-    },
-    {
-      imageSrc: tmb,
       title: "The Movie Bulletin",
       description: "pdfsigner",
     },
@@ -59,7 +54,7 @@ export default function Projects() {
 
         <li key={i}>
         <div>
-          <Image src={imageSrc} fill={true}></Image>
+          <Image src={imageSrc} fill={true} alt={title}></Image>
         </div>
           <h4>{title}</h4>
           <p>{description}</p>
