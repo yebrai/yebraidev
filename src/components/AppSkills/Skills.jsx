@@ -31,6 +31,10 @@ export default function Skills() {
         <li>
           <p>ExpressJs</p>
         </li>
+        <li>
+          <p>Agile</p>
+          <p>(Scrum)</p>
+        </li>
       </ul>
     </>
   );
