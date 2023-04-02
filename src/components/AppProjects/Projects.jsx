@@ -30,7 +30,7 @@ export default function Projects() {
     },
     {
         imageSrc: infecnation,
-        title: "PDF-SIGNER",
+        title: "Infecnation",
         description: "pdfsigner",
     },
     {
