@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./Projects.module.css";
+import styles from "./Portfolio.module.css";
 import tmb from '../../assets/images/tmb.jpg'
 import retroscript from '../../assets/images/retroscript.jpg'
 import tasteit from '../../assets/images/tasteit.jpg'
@@ -47,7 +47,7 @@ export default function Projects() {
 
   return (
     <>
-      <h3>Projects</h3>
+      <h3>Portfolio</h3>
       <ul className={styles.mainUl}>
     {links.map(({imageSrc, title, description}, i) => {
         return (

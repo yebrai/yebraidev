@@ -2,19 +2,19 @@
     width: 200px;
     height: 200px;
     position: relative;
-
+    margin-bottom: 5vw;
   }
 
   
   .containerMainSection {
     display: flex;
-    
     gap: 3vw;
   }
 
   
   .presentation {
     font-size: 3rem;
+    height: 5vh;
   }
   
   .position {
@@ -22,3 +22,6 @@
     font-size: 1.5rem;
     font-weight: 400;
   }
+
+  
+
