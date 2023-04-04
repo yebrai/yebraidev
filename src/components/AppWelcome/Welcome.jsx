@@ -13,7 +13,7 @@ export default function Welcome() {
         showCursor: false,
         backDelay: 2000,
         typeSpeed: 100,
-        strings: ['Junior Front-End Developer'],
+        strings: ['<Junior Front-End Developer />'],
       });
     }, []);
 
@@ -26,7 +26,7 @@ export default function Welcome() {
         </div>
         <div>
         <h1 className={styles.presentation}>Hello 👋🏼, i'm <name>Ivan</name></h1>
-        <h3><span className={styles.position} ref={textRef}></span></h3>
+        <span className={styles.position} ref={textRef}></span>
     </div>
     </section>
     </>

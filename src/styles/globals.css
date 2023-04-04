@@ -16,12 +16,9 @@ body {
   flex-direction: column;
 }
 
-.resume {
-
-}
-
-name, h3 {
+name, h3, hr {
   color: #4b8de1;
+  text-align: center;
 }
 
 
