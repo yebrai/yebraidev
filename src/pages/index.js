@@ -13,8 +13,8 @@ export default function Home() {
         <Welcome />
         <Portfolio />
         <div className="resume">
-          <About />
           <Skills />
+          <About />
         </div>
       </section>
       <footer>Contact with me</footer>
