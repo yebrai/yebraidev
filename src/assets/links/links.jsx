@@ -3,8 +3,13 @@ import retroscript from '../../assets/images/retroscript.jpg'
 import tasteit from '../../assets/images/tasteit.jpg'
 import ourhome from '../../assets/images/ourhome.jpg'
 import infecnation from '../../assets/images/infectnation.jpg'
+import flappy from '../../assets/images/flappy.jpg'
+import alleawey from '../../assets/images/alleawey.jpg'
+import { AiFillLinkedin, AiFillGithub } from "react-icons/Ai";
+import { MdEmail } from "react-icons/Md";
+import { BsPersonCircle } from "react-icons/Bs";
 
-const links = [
+export const portfolioLinks = [
     {
       imageSrc: tmb,
       title: "The Movie Bulletin",
@@ -15,45 +20,66 @@ const links = [
     {
         imageSrc: retroscript,
         title: "Retroscript",
-        techs: [['Typescript'], ['React'], ['NextJS'], ['Redux']],
-        linkCode: '',
-        linkDemo: '',
+        techs: [['Typescript']],
+        linkCode: 'https://github.com/yebrai/retroscript',
+        linkDemo: 'https://yebrai.github.io/retroscript/',
     },
     {
         imageSrc: tasteit,
         title: "Taste-it",
-        techs: [['Typescript'], ['React'], ['NextJS'], ['Redux']],
-        linkCode: '',
-        linkDemo: '',
+        techs: [['Javascript'], ['React'], ['NodeJS'], ['Express'], ['MongoDB']],
+        linkCode: 'https://github.com/yebrai/tasteit-client',
+        linkDemo: 'https://taste-it-app.netlify.app/',
     },
     {
         imageSrc: ourhome,
         title: "Our Home",
-        techs: [['Typescript'], ['React'], ['NextJS'], ['Redux']],
-        linkCode: '',
-        linkDemo: '',
+        techs: [['Javascript'], ['Handlebars'], ['NodeJS'], ['Express'], ['MongoDB']],
+        linkCode: 'https://github.com/yebrai/OurHome',
+        linkDemo: 'https://ourhome.cyclic.app/',
     },
     {
         imageSrc: infecnation,
         title: "Infecnation",
-        techs: [['Typescript'], ['React'], ['NextJS'], ['Redux']],
-        linkCode: '',
-        linkDemo: '',
+        techs: [['Javascript']],
+        linkCode: 'https://github.com/yebrai/Infectnation',
+        linkDemo: 'https://yebrai.github.io/Infectnation/',
     },
     {
-        imageSrc: tasteit,
-        title: "FlappyBirdJS/TS",
-        techs: [['Typescript'], ['React'], ['NextJS'], ['Redux']],
-        linkCode: '',
-        linkDemo: '',
+        imageSrc: flappy,
+        title: "FlappyBird",
+        techs: [['Javascript']],
+        linkCode: 'https://github.com/yebrai/flappy-bird',
+        linkDemo: 'https://yebrai.github.io/flappy-bird/',
     },
     {
-        imageSrc: tasteit,
-        title: "Alleaway",
-        techs: [['Typescript'], ['React'], ['NextJS'], ['Redux']],
-        linkCode: '',
-        linkDemo: '',
+        imageSrc: alleawey,
+        title: "Alleawey",
+        techs: [['Javascript']],
+        linkCode: 'https://github.com/yebrai/Alleyway-Canvas',
+        linkDemo: 'https://yebrai.github.io/Alleyway-Canvas/',
     },
   ];
 
-  export default links
+  export const navbarLinks = [
+    {
+      label: <BsPersonCircle />,
+      route: "https://github.com/yebrai",
+      description: "+34 692806198",
+    },
+    {
+      label: <AiFillGithub />,
+      route: "https://github.com/yebrai",
+      description: "Yebraidev",
+    },
+    {
+      label: <AiFillLinkedin />,
+      route: "https://www.linkedin.com/in/ivangarciayebra",
+      description: "My Linkedin Profile",
+    },
+    {
+      label: <MdEmail />,
+      route: "mailto:adrian.perez.conde22@gmail.com",
+      description: "Let´s talk!",
+    },
+  ];
