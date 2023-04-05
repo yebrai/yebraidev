@@ -4,6 +4,7 @@ import Welcome from "@/components/AppWelcome/Welcome";
 import Portfolio from "@/components/AppPortfolio/Portfolio";
 import Skills from "@/components/AppSkills/Skills";
 import About from "@/components/AppAbout/About";
+import Education from "@/components/AppEducation/Education";
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
       <section className="main">
         <Welcome />
         <Portfolio />
-        <div className="resume">
-          <Skills />
+        <Skills />
+        <div className="about">
           <About />
+          <Education />
         </div>
       </section>
       <footer>Contact with me</footer>

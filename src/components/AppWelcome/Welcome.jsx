@@ -26,7 +26,7 @@ export default function Welcome() {
         </div>
         <div>
         <h1 className={styles.presentation}>Hello 👋🏼, i'm <name>Ivan</name></h1>
-        <span className={styles.position} ref={textRef}></span>
+        <p className={styles.position} ref={textRef}></p>
     </div>
     </section>
     </>

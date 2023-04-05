@@ -25,4 +25,9 @@ name, h3, hr {
   text-align: center;
 }
 
+.about {
+  display: flex;
+  gap: 5vw;
+}
+
 

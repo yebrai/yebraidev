@@ -3,3 +3,7 @@ display: flex;
 width: 100%;
 justify-content: center;
 }
+
+.aboutContainer {
+    width: 60%;
+}
