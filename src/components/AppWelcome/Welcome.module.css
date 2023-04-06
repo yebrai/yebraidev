@@ -18,6 +18,7 @@
   color: grey;
   font-size: 1.5rem;
   font-weight: 400;
+  height: 1vh;
 }
 
 @media (max-width: 1200px) {
@@ -36,4 +37,16 @@
     width: 150px;
     height: 150px;
   }
+
+  .position{
+    font-size: 1rem;
+    width: 50vw
+  }
+}
+
+@media (max-width: 450px) {
+  .presentation {
+    font-size: 2rem;
+  }
+
 }
