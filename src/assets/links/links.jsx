@@ -65,7 +65,7 @@ export const portfolioLinks = [
   export const navbarLinks = [
     {
       label: <BsPersonCircle />,
-      route: "https://github.com/yebrai",
+      route: "https://wa.me/34692806198",
       description: "+34 692806198",
     },
     {

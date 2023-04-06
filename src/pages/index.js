@@ -15,7 +15,7 @@ export default function Home() {
           <About />
           <Education />
       </section>
-      <footer>Contact with me</footer>
+      <footer>© 2023 Ivan Yebra</footer>
     </>
   );
 }

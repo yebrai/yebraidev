@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
         <Skills />
-        <h2>About me</h2>
+        <h2 id="about">About me</h2>
       <div className={styles.aboutContainer}>
         <p>
           With a background in <b>team management</b>, curious and enthusiastic

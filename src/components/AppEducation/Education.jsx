@@ -3,7 +3,7 @@ import styles from "./Education.module.css";
 export default function Education() {
   return (
     <>
-      <h2>Education & Certifications</h2>
+      <h2 id="education">Education & Certifications</h2>
       <div className={styles.educationContainer}>
         <div>
           <h4>Scrum Fundamentals Certified</h4>

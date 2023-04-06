@@ -3,15 +3,17 @@
   list-style: none;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   z-index: 1;
   background-color: white;
-  width: 100%;
-  height: 5vw;
+  width: 96%;
+  height: 10vh;
 }
 
 .navLinks{
   display: flex;
+
 }
 
 .container a {
@@ -38,4 +40,20 @@
 .icons {
     margin: 40px;
     font-size: 1.5rem;
+}
+
+.navSections {
+  display: flex;
+  gap: 1vw;
+}
+
+.navSections a{
+  font-weight: 400;
+}
+
+.navSections a:hover{
+  font-weight: 400;
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
 }
