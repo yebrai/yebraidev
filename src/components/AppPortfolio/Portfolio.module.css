@@ -3,8 +3,8 @@
   flex-wrap: wrap;
   overflow: scroll;
   height: 55vh;
-  gap: 40px;
-  justify-content: space-between;
+  gap: 5vh 10vw;
+  justify-content: center;
   text-align: center;
   padding: 0;
 }
@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 3vw;
+  margin: 0;
 }
 
 .image {
@@ -42,7 +42,8 @@
 
 .techsContainer {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  column-gap: 10px;
   justify-content: center;
 }
 
@@ -79,8 +80,15 @@
     .image {
         width: 250px;
         height: 150px;
-
       }
+
+      .techsContainer p {
+        background-color: #f4f4f4;
+        color: rgb(155, 154, 154);
+        padding: 2px;
+        margin: 10px 3px 10px 3px;
+      }
+      
 }
 
 
