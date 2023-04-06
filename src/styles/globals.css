@@ -20,14 +20,14 @@ body {
   flex-direction: column;
 }
 
-name, h3, hr {
+name, h2, hr {
   color: #4b8de1;
-  text-align: center;
 }
 
 .about {
   display: flex;
   gap: 5vw;
+  margin-top: 10vh;
 }
 
 

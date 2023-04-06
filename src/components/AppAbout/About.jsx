@@ -1,11 +1,13 @@
 import styles from "./About.module.css";
 import stylesBtn from "../AppPortfolio/Portfolio.module.css";
+import Skills from "../AppSkills/Skills";
 
 export default function About() {
   return (
     <>
+        <Skills />
+        <h2>About me</h2>
       <div className={styles.aboutContainer}>
-        <h3>About me</h3>
         <p>
           With a background in <b>team management</b>, curious and enthusiastic
           about new technologies and web development, I like to spend my free

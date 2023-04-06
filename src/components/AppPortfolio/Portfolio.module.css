@@ -3,9 +3,8 @@
     flex-wrap: wrap;
     overflow: scroll;
     height: 55vh;
-    gap: 50px;
+    gap: 5vw;
     justify-content: center;
-    padding: 10px;
     text-align: center;
 }
 
@@ -18,8 +17,8 @@
 
 .image{
     position: relative;
-    width: 400px;
-    height: 200px;
+    width: 500px;
+    height: 250px;
     transition: transform 1s;
     overflow: hidden;
     

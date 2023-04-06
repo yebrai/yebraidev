@@ -3,7 +3,7 @@ import styles from "./Skills.module.css";
 export default function Skills() {
   return (
     <>
-      <h3>Skills</h3>
+      <h2>Skills</h2>
       <ul className={styles.skillsUl}>
         <li>
           <p>Javascript</p>
@@ -19,11 +19,11 @@ export default function Skills() {
         </li>
         <li>
           <p>Git</p>
-          <p>(Github)</p>
+          <p className={styles.details}>(Github)</p>
         </li>
         <li>
           <p>NoSql</p>
-          <p>(MongoDB)</p>
+          <p className={styles.details}>(MongoDB)</p>
         </li>
         <li>
           <p>NodeJS</p>
@@ -32,8 +32,8 @@ export default function Skills() {
           <p>ExpressJs</p>
         </li>
         <li>
-          <p>Agile</p>
-          <p>(Scrum)</p>
+          <p>Scrum</p>
+          <p className={styles.details}>(Agile)</p>
         </li>
       </ul>
     </>

@@ -6,7 +6,7 @@ export default function Portfolio() {
   return (
     <>
       <div>
-        <h3>Portfolio </h3>
+        <h2>Portfolio </h2>
         <ul className={styles.mainUl}>
           {portfolioLinks.map(({ imageSrc, title, techs, linkCode, linkDemo }, i) => {
             return (

@@ -22,7 +22,7 @@ export default function Welcome() {
         <>
         <section className={styles.containerMainSection}>
         <div className={styles.avatar}>
-        <Image src={ivanPng} fill={true}></Image>
+        <Image src={ivanPng} fill={true} />
         </div>
         <div>
         <h1 className={styles.presentation}>Hello 👋🏼, i'm <name>Ivan</name></h1>

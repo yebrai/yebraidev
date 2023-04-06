@@ -18,18 +18,18 @@ export const portfolioLinks = [
       linkDemo: 'https://the-movie-bulletin.vercel.app/'
     },
     {
-        imageSrc: retroscript,
-        title: "Retroscript",
-        techs: [['Typescript']],
-        linkCode: 'https://github.com/yebrai/retroscript',
-        linkDemo: 'https://yebrai.github.io/retroscript/',
-    },
-    {
         imageSrc: tasteit,
         title: "Taste-it",
         techs: [['Javascript'], ['React'], ['NodeJS'], ['Express'], ['MongoDB']],
         linkCode: 'https://github.com/yebrai/tasteit-client',
         linkDemo: 'https://taste-it-app.netlify.app/',
+    },
+    {
+        imageSrc: retroscript,
+        title: "Retroscript",
+        techs: [['Typescript']],
+        linkCode: 'https://github.com/yebrai/retroscript',
+        linkDemo: 'https://yebrai.github.io/retroscript/',
     },
     {
         imageSrc: ourhome,
