@@ -22,10 +22,10 @@ export default function Welcome() {
         <>
         <section className={styles.containerMainSection}>
         <div className={styles.avatar}>
-        <Image src={ivanPng} fill={true} />
+        <Image src={ivanPng} fill={true} alt="Profile Image"/>
         </div>
         <div>
-        <h1 className={styles.presentation}>Hello 👋🏼, i'm <name>Ivan</name></h1>
+        <h1 className={styles.presentation}>Hello 👋🏼, i´m <name>Ivan</name></h1>
         <p className={styles.position} ref={textRef}></p>
     </div>
     </section>
