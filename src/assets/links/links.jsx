@@ -5,10 +5,10 @@ import ourhome from '../../assets/images/ourhome.jpg'
 import infecnation from '../../assets/images/infectnation.jpg'
 import flappy from '../../assets/images/flappy.jpg'
 import alleawey from '../../assets/images/alleawey.jpg'
-import { AiFillLinkedin, AiFillGithub } from "react-icons/Ai";
-import { MdEmail } from "react-icons/Md";
-import { BsPersonCircle } from "react-icons/Bs";
-import { ImProfile } from "react-icons/Im";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
+import { BsPersonCircle } from "react-icons/bs";
+import { ImProfile } from "react-icons/im";
 
 export const portfolioLinks = [
     {
