@@ -68,3 +68,19 @@
   background-color: #4b8de1;
   color: #f4f4f4;
 }
+
+@media (max-width: 1200px) {
+    .mainUl {
+        justify-content: center;
+      }
+}
+
+@media (max-width: 627px) {
+    .image {
+        width: 250px;
+        height: 150px;
+
+      }
+}
+
+

@@ -1,26 +1,39 @@
 .avatar {
-    width: 200px;
-    height: 200px;
-    position: relative;
-  }
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
 
-  
+.containerMainSection {
+  display: flex;
+  gap: 8vw;
+}
+
+.presentation {
+  font-size: 3rem;
+  height: 5vh;
+}
+
+.position {
+  color: grey;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
   .containerMainSection {
-    display: flex;
-    gap: 8vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
   }
+}
 
-  
+@media (max-width: 627px) {
   .presentation {
-    font-size: 3rem;
-    height: 5vh;
+    font-size: 2rem;
   }
-  
-  .position {
-    color: grey;
-    font-size: 1.5rem;
-    font-weight: 400;
+  .avatar {
+    width: 150px;
+    height: 150px;
   }
-
-  
-
+}

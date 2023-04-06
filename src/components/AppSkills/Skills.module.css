@@ -35,3 +35,11 @@
   color: grey;
   margin-left: 5px;
 }
+
+@media (max-width: 627px) {
+    .skillsUl {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 25% 25% 25%;
+        
+      }
+}

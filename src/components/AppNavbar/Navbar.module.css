@@ -13,7 +13,6 @@
 
 .navLinks{
   display: flex;
-
 }
 
 .container a {
@@ -56,4 +55,10 @@
   text-decoration: underline;
   color: black;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    display: none;
+  }
 }
