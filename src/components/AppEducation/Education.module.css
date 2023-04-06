@@ -1,19 +1,23 @@
 .titleEducation {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
 }
 
-.educationContainer a{
-    cursor: pointer;
-    text-decoration: none;
-    color: grey;
+.educationContainer {
+  font-size: 1.1rem;
 }
 
-.educationContainer a:hover{
-color: #4b8de1;
+.educationContainer a {
+  cursor: pointer;
+  text-decoration: none;
+  color: grey;
 }
 
-.educationContainer h4{
-    font-size: 1.2rem;
+.educationContainer a:hover {
+  color: #4b8de1;
+}
+
+.educationContainer h4 {
+  font-size: 1.2rem;
 }

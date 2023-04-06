@@ -8,6 +8,7 @@ import alleawey from '../../assets/images/alleawey.jpg'
 import { AiFillLinkedin, AiFillGithub } from "react-icons/Ai";
 import { MdEmail } from "react-icons/Md";
 import { BsPersonCircle } from "react-icons/Bs";
+import { ImProfile } from "react-icons/Im";
 
 export const portfolioLinks = [
     {
@@ -81,5 +82,10 @@ export const portfolioLinks = [
       label: <MdEmail />,
       route: "mailto:adrian.perez.conde22@gmail.com",
       description: "Let´s talk!",
+    },
+    {
+      label: <ImProfile />,
+      route: "https://drive.google.com/file/d/1stE7ndCjlA-zk9KQYWh4GfewJXXERdev/view?usp=share_link",
+      description: "My Resume",
     },
   ];

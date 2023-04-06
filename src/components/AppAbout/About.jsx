@@ -1,5 +1,4 @@
 import styles from "./About.module.css";
-import stylesBtn from "../AppPortfolio/Portfolio.module.css";
 import Skills from "../AppSkills/Skills";
 
 export default function About() {
@@ -25,15 +24,6 @@ export default function About() {
           and <u>teamwork values</u>. In short, a work environment that fosters
           collaboration and learning.
         </p>
-        <div className={styles.btnContainer}>
-          <a
-            href="https://drive.google.com/file/d/1stE7ndCjlA-zk9KQYWh4GfewJXXERdev/view?usp=share_link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className={stylesBtn.btn}>Check my resume</button>
-          </a>
-        </div>
       </div>
     </>
   );

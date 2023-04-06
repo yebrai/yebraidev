@@ -11,7 +11,7 @@ export default function Portfolio() {
           {portfolioLinks.map(({ imageSrc, title, techs, linkCode, linkDemo }, i) => {
             return (
               <li key={i}>
-                <h4>{title}</h4>
+                <h3>{title}</h3>
                 <div className={styles.image}>
                   <Image className={styles.imageCard} src={imageSrc} fill={true} alt={title}></Image>
                 </div>

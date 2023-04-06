@@ -3,9 +3,10 @@
     flex-wrap: wrap;
     overflow: scroll;
     height: 55vh;
-    gap: 5vw;
-    justify-content: center;
+    gap: 40px;
+    justify-content: space-between;
     text-align: center;
+    padding: 0;
 }
 
 .mainUl li{
@@ -13,12 +14,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 3vw;
 }
 
 .image{
     position: relative;
-    width: 500px;
-    height: 250px;
+    width: 400px;
+    height: 200px;
     transition: transform 1s;
     overflow: hidden;
     

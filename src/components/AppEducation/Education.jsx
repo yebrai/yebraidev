@@ -3,9 +3,8 @@ import styles from "./Education.module.css";
 export default function Education() {
   return (
     <>
-        <h2>Education & Certifications</h2>
+      <h2>Education & Certifications</h2>
       <div className={styles.educationContainer}>
-
         <div>
           <h4>Scrum Fundamentals Certified</h4>
           <p className={styles.titleEducation}>
@@ -14,7 +13,11 @@ export default function Education() {
             </b>{" "}
             March 2023
           </p>
-          <p>Understanding of how the Scrum framework works to carry out a successful project, project initiation phases, and how the Scrum framework works.</p>
+          <p>
+            Understanding of how the Scrum framework works to carry out a
+            successful project, project initiation phases, and how the Scrum
+            framework works.
+          </p>
           <a href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-Iv%C3%A1nGarc%C3%ADaYebra-972400.pdf">
             Certification
           </a>

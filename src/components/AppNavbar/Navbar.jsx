@@ -1,12 +1,16 @@
 import {navbarLinks} from "../../assets/links/links";
 import styles from "./Navbar.module.css";
+import stylesBtn from "../AppPortfolio/Portfolio.module.css";
+import { GrDownload } from "react-icons/Gr";
+
 
 export default function Navbar() {
 
 
   return (
     <>
-      <ul className={styles.container}>
+            <ul className={styles.container}>
+    <div className={styles.navLinks}>
         {navbarLinks.map(({ label, route, description }) => {
           return (
             <div key={route}>
@@ -16,7 +20,10 @@ export default function Navbar() {
             </div>
           );
         })}
+    </div>
+    <div></div>
       </ul>
+
     </>
   );
 }
