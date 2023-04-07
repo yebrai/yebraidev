@@ -21,7 +21,7 @@ export default function Skills() {
         <li>
           <p>NodeJS</p>
         </li>
-        
+
         <li>
           <p>Git</p>
           <span className={styles.details}>(Github)</span>

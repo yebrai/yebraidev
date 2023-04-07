@@ -71,24 +71,21 @@
 }
 
 @media (max-width: 1200px) {
-    .mainUl {
-        justify-content: center;
-      }
+  .mainUl {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 627px) {
-    .image {
-        width: 250px;
-        height: 150px;
-      }
+  .image {
+    width: 250px;
+    height: 150px;
+  }
 
-      .techsContainer p {
-        background-color: #f4f4f4;
-        color: rgb(155, 154, 154);
-        padding: 2px;
-        margin: 10px 3px 10px 3px;
-      }
-      
+  .techsContainer p {
+    background-color: #f4f4f4;
+    color: rgb(155, 154, 154);
+    padding: 2px;
+    margin: 10px 3px 10px 3px;
+  }
 }
-
-

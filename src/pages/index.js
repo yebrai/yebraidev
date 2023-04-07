@@ -3,21 +3,18 @@ import Welcome from "@/components/AppWelcome/Welcome";
 import Portfolio from "@/components/AppPortfolio/Portfolio";
 import About from "@/components/AppAbout/About";
 import Education from "@/components/AppEducation/Education";
-import { NextSeo } from 'next-seo'
+import { NextSeo } from "next-seo";
 
 export default function Home() {
   return (
     <>
-        <NextSeo
-      title="Ivan Garcia Yebra"
-      description="Yebraidev Website"
-    />
+      <NextSeo title="Ivan Garcia Yebra" description="Yebraidev Website" />
       <Navbar />
       <section className="main">
         <Welcome />
         <Portfolio />
-          <About />
-          <Education />
+        <About />
+        <Education />
       </section>
       <footer>© 2023 Ivan Yebra</footer>
     </>

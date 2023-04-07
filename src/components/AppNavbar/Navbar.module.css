@@ -11,7 +11,7 @@
   height: 10vh;
 }
 
-.navLinks{
+.navLinks {
   display: flex;
 }
 
@@ -38,8 +38,8 @@
 }
 
 .icons {
-    margin: 40px;
-    font-size: 1.5rem;
+  margin: 40px;
+  font-size: 1.5rem;
 }
 
 .navSections {
@@ -47,11 +47,11 @@
   gap: 1vw;
 }
 
-.navSections a{
+.navSections a {
   font-weight: 400;
 }
 
-.navSections a:hover{
+.navSections a:hover {
   font-weight: 400;
   text-decoration: underline;
   color: black;

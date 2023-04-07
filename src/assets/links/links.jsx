@@ -80,7 +80,7 @@ export const portfolioLinks = [
     },
     {
       label: <MdEmail />,
-      route: "mailto:adrian.perez.conde22@gmail.com",
+      route: "mailto:yebraidev@gmail.com",
       description: "Let´s talk!",
     },
     {
