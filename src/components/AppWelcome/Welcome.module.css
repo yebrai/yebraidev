@@ -46,6 +46,10 @@
 
 @media (max-width: 450px) {
   .presentation {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+  .position {
+    font-size: 0.8rem;
+    width: 60vw;
   }
 }
