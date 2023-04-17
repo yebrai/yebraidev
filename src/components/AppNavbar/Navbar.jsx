@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { navbarLinks } from "../../assets/links/links";
 import styles from "./Navbar.module.css";
+import { useStore } from "@/pages/hooks/useLanguage";
+import { useEffect } from "react";
 
 export default function Navbar() {
+  const { interchangeLanguage } = useStore()
   return (
     <>
       <ul className={styles.container}>
@@ -18,6 +21,7 @@ export default function Navbar() {
               </div>
             );
           })}
+            <button onClick={interchangeLanguage}>En/Es</button>
         </div>
         <div className={styles.navSections}>
           <Link href="#portfolio">Portfolio</Link>
