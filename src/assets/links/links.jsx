@@ -1,3 +1,5 @@
+
+import gc from '../../assets/images/gc.jpg'
 import tmb from '../../assets/images/tmb.jpg'
 import retroscript from '../../assets/images/retroscript.jpg'
 import tasteit from '../../assets/images/tasteit.jpg'
@@ -11,6 +13,13 @@ import { BsPersonCircle } from "react-icons/bs";
 import { ImProfile } from "react-icons/im";
 
 export const portfolioLinks = [
+  {
+    imageSrc: gc,
+    title: "Google Translate Clone",
+    techs: [['Typescript'], ['React'], ['Chat-gpt API'], ['React Testing-library']],
+    linkCode: 'https://github.com/yebrai/google-translate-chatgpt',
+    linkDemo: 'https://yebrai.github.io/google-translate-chatgpt/'
+  },
     {
       imageSrc: tmb,
       title: "The Movie Bulletin",
