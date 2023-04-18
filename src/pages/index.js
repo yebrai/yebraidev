@@ -4,14 +4,8 @@ import Portfolio from "@/components/AppPortfolio/Portfolio";
 import About from "@/components/AppAbout/About";
 import Education from "@/components/AppEducation/Education";
 import { NextSeo } from "next-seo";
-import { useEffect } from "react";
-import { useStore } from "./hooks/useLanguage";
 
 export default function Home() {
-  const { english} = useStore()
-  useEffect(() => {
-    console.log('hola¿?')
-  }, [english]);
   return (
     <>
       <NextSeo title="Ivan Garcia Yebra" description="Yebraidev Website" />

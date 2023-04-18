@@ -1,11 +1,17 @@
 import Link from "next/link";
 import { navbarLinks } from "../../assets/links/links";
 import styles from "./Navbar.module.css";
-import { useStore } from "@/pages/hooks/useLanguage";
+import { useStore } from "@/hooks/useLanguage";
 import { useEffect } from "react";
+import { languageAction } from '../../hooks/useLanguage'
 
 export default function Navbar() {
-  const { interchangeLanguage } = useStore()
+  const { interchangeLanguage, toLanguage } = useStore()
+
+  useEffect(() => {
+    console.log(languageAction)
+  },[toLanguage])
+
   return (
     <>
       <ul className={styles.container}>

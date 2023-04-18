@@ -3,7 +3,7 @@ import ivanPng from "../../assets/images/ivanAv.png";
 import styles from "./Welcome.module.css";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
-import { useStore } from "@/pages/hooks/useLanguage";
+import { useStore } from "../../hooks/useLanguage";
 
 export default function Welcome() {
   const textRef = useRef();
@@ -17,8 +17,8 @@ export default function Welcome() {
       strings: ["<Junior Front-End Developer />"],
     });
     
-    console.log(toLanguage)
-  }, [toLanguage]);
+  }, []);
+
   return (
     <>
       <section className={styles.containerMainSection}>

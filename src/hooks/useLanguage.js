@@ -1,6 +1,4 @@
-import { useReducer } from "react";
-
-const languageAction = { language: "en" } || { language: "es" };
+import { useReducer, useState } from "react";
 
 const initialState = {
   toLanguage: 'en',
