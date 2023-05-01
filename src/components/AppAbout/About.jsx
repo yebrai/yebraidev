@@ -1,10 +1,8 @@
 import styles from "./About.module.css";
-import Skills from "../AppSkills/Skills";
 
 export default function About() {
   return (
     <>
-      <Skills />
       <h2 id="about">About me</h2>
       <div className={styles.aboutContainer}>
         <p>

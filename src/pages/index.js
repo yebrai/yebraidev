@@ -4,6 +4,7 @@ import Portfolio from "@/components/AppPortfolio/Portfolio";
 import About from "@/components/AppAbout/About";
 import Education from "@/components/AppEducation/Education";
 import { NextSeo } from "next-seo";
+import Skills from "@/components/AppSkills/Skills";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <Navbar />
       <section className="main">
         <Welcome />
-        <Portfolio />
         <About />
+        <Portfolio />
+        <Skills />
         <Education />
       </section>
       <footer>© 2023 Ivan Yebra</footer>
