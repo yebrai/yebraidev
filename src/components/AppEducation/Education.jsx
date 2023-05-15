@@ -11,7 +11,7 @@ export default function Education() {
             <b>
               <a href="https://www.scrumstudy.com/">SCRUMstudy</a>
             </b>{" "}
-            March 2023
+            April 2023
           </p>
           <p>
             Understanding of how the Scrum framework works to carry out a

@@ -94,7 +94,7 @@ export const portfolioLinks = [
     },
     {
       label: <ImProfile />,
-      route: "https://drive.google.com/file/d/1K4K1C9jvJ2E0jnPilNqqqJdgCIDxaQJG/view?usp=share_link",
+      route: "https://drive.google.com/file/d/1t28dzLvQyImqozE05587_8fKOTsrCEPT/view?usp=share_link",
       description: "My Resume",
     },
   ];
