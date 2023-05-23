@@ -6,15 +6,18 @@ export default function About() {
       <h2 id="about">About me</h2>
       <div className={styles.aboutContainer}>
         <p>
-          With a background in <b>team management</b>, curious and enthusiastic
-          about new technologies and web development, I like to spend my free
-          time learning new things. After several years working with people and
-          e-commerce, I´m seeking new horizons and opportunities on web
-          development world. Due to my restless mind, I wanted to go further in
-          my professional career and began learning by myself. I also studied
-          the <b>Full Stack Web Development Bootcamp at Ironhack</b>, where I
-          did my first projects and learned a lot of new and exciting things
-          about coding.
+          As an enthusiastic individual passionate about new technologies and
+          web development, I actively dedicate my free time to continuous
+          learning. Motivated by a relentless drive for personal and
+          professional growth, I took the initiative to expand my skills through
+          self-directed learning. Additionally, I successfully completed the{" "}
+          <b>Full Stack Web Development Bootcamp at Ironhack</b>, where I gained
+          hands-on experience and acquired valuable knowledge in various coding
+          concepts. Currently, I am actively seeking an organization that
+          embraces a fast-paced environment, encourages ongoing learning and
+          professional development, and offers exciting products. Above all, I
+          value teamwork and seek a collaborative work environment that fosters
+          both personal and collective growth.
         </p>
         <p>
           I´m looking for an organization that moves fast, gives{" "}
