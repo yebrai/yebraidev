@@ -8,7 +8,9 @@ export default function About() {
         <p>
           As an enthusiastic individual passionate about new technologies and
           web development, I actively dedicate my free time to continuous
-          learning. Motivated by a relentless drive for personal and
+          learning.</p>
+          
+          <p> Motivated by a relentless drive for personal and
           professional growth, I took the initiative to expand my skills through
           self-directed learning. Additionally, I successfully completed the{" "}
           <b>Full Stack Web Development Bootcamp at Ironhack</b>, where I gained
