@@ -1,14 +1,18 @@
 .mainUl {
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
-  height: 55vh;
+  
   gap: 5vh 10vw;
   justify-content: center;
   text-align: center;
   padding: 35px 0 70px 0;
+
+  /* scrollbar
+  height: 55vh;
+  */
 }
 
+  /* scrollbar
 .mainUl::-webkit-scrollbar {
   width: 3px;
   height: 0;
@@ -21,6 +25,7 @@
 .mainUl::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
+*/
 
 .mainUl li {
   list-style: none;

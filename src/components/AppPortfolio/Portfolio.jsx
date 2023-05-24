@@ -4,7 +4,7 @@ import { portfolioLinks } from "../../assets/links/links";
 export default function Portfolio() {
   return (
     <section id="portfolioSection">
-        <h2 id="portfolio">Portfolio </h2>
+        <h2 id="portfolio">Proyects </h2>
         <ul className={styles.mainUl}>
           {portfolioLinks.map(
             ({ imageSrc, title, techs, linkCode, linkDemo }, i) => {

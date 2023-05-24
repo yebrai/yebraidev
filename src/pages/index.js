@@ -23,16 +23,16 @@ export default function Home() {
   return (
     <>
       <NextSeo title="Ivan Garcia Yebra" description="Yebraidev Website" />
+        <div className={`introMain ${isVisible ? "visible" : ""}`}>
       <Navbar />
       <section className="main">
-        <div className={`introMain ${isVisible ? "visible" : ""}`}>
           <Welcome />
           <About />
         <Portfolio />
         <Skills />
         <Education />
-        </div>
       </section>
+        </div>
       <footer>© 2023 Ivan Yebra</footer>
     </>
   );
