@@ -12,6 +12,8 @@ import { MdEmail } from "react-icons/md";
 import { BsPersonCircle } from "react-icons/bs";
 import { ImProfile } from "react-icons/im";
 
+import { toLanguage} from "../../hooks/useLanguage"
+
 export const portfolioLinks = [
   {
     imageSrc: gc,
@@ -85,7 +87,7 @@ export const portfolioLinks = [
     {
       label: <AiFillLinkedin />,
       route: "https://www.linkedin.com/in/ivangarciayebra",
-      description: "My Linkedin Profile",
+      description: toLanguage === 'en' ? "My Linkedin Profile" : "Mi Perfil de Linkedin",
     },
     {
       label: <MdEmail />,
