@@ -1,7 +1,7 @@
 import styles from "./Skills.module.css";
 export default function Skills() {
   return (
-    <>
+    <section id="skillsSection">
       <h2 id="skills">Skills</h2>
       <ul className={styles.skillsUl}>
         <li>
@@ -40,6 +40,6 @@ export default function Skills() {
           <p>NextJS</p>
         </li>
       </ul>
-    </>
+    </section>
   );
 }

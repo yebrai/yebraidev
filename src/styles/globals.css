@@ -56,20 +56,10 @@ footer {
 }
 
 .introMain {
-  transition: opacity 3s;
+  transition: opacity 2s;
   opacity: 0;
 }
 
 .introMain.visible {
-  opacity: 1;
-}
-
-/* Scroll transition sections */
-.scroll-section {
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-
-.scroll-section.visible{
   opacity: 1;
 }

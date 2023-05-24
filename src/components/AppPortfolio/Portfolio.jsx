@@ -3,8 +3,7 @@ import styles from "./Portfolio.module.css";
 import { portfolioLinks } from "../../assets/links/links";
 export default function Portfolio() {
   return (
-    <>
-      <div>
+    <section id="portfolioSection">
         <h2 id="portfolio">Portfolio </h2>
         <ul className={styles.mainUl}>
           {portfolioLinks.map(
@@ -38,7 +37,6 @@ export default function Portfolio() {
             }
           )}
         </ul>
-      </div>
-    </>
+    </section>
   );
 }

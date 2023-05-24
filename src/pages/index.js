@@ -6,7 +6,6 @@ import About from "@/components/AppAbout/About";
 import Education from "@/components/AppEducation/Education";
 import { NextSeo } from "next-seo";
 import Skills from "@/components/AppSkills/Skills";
-import { Element } from "react-scroll";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,18 +23,15 @@ export default function Home() {
   return (
     <>
       <NextSeo title="Ivan Garcia Yebra" description="Yebraidev Website" />
-
       <Navbar />
       <section className="main">
-        <div className={`introMain ${isVisible && "visible"}`}>
+        <div className={`introMain ${isVisible ? "visible" : ""}`}>
           <Welcome />
           <About />
+        <Portfolio />
+        <Education />
+        <Skills />
         </div>
-        <Element name="section1" className="scroll-section">
-          <Portfolio />
-          <Skills />
-          <Education />
-        </Element>
       </section>
       <footer>© 2023 Ivan Yebra</footer>
     </>
