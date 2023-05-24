@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.avatarImage {
+  border-radius: 50%;
+}
+
 .containerMainSection {
   display: flex;
   gap: 5vw;

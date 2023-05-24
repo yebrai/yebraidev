@@ -3,6 +3,7 @@ import ivanPng from "../../assets/images/ivanAv.png";
 import styles from "./Welcome.module.css";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
+import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 export default function Welcome() {
   const textRef = useRef();
@@ -16,11 +17,36 @@ export default function Welcome() {
     });
   }, []);
 
+  useEffect(() => {
+    scrollSpy.update();
+  }, []);
+
+  const handleScroll = () => {
+    const scrollOffset = 100
+    const scrollPosition = window.innerHeight + window.pageYOffset;
+
+    // Agregar o quitar la clase "visible" según la posición del scroll
+    const sections = document.getElementsByClassName('scroll-section');
+    Array.from(sections).forEach((section) => {
+      const sectionPosition = section.offsetTop;
+      if (scrollPosition >= sectionPosition + scrollOffset) {
+        section.classList.add('visible');
+      } else {
+        section.classList.remove('visible');
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <section className={styles.containerMainSection}>
         <div className={styles.avatar}>
-          <Image src={ivanPng} fill={true} alt="Profile Image" />
+          <Image className={styles.avatarImage} src={ivanPng} fill={true} alt="Profile Image" />
         </div>
         <div>
           <h1 className={styles.presentation}>

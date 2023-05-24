@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./Portfolio.module.css";
 import { portfolioLinks } from "../../assets/links/links";
-
 export default function Portfolio() {
   return (
     <>
