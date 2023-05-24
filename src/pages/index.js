@@ -29,8 +29,8 @@ export default function Home() {
           <Welcome />
           <About />
         <Portfolio />
-        <Education />
         <Skills />
+        <Education />
         </div>
       </section>
       <footer>© 2023 Ivan Yebra</footer>
