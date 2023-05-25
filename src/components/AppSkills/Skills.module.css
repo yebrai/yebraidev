@@ -27,7 +27,6 @@
 
 .skillsUl li:hover {
   border-left: 2px solid #4b8de1;
-  background-color: #4b8de1;
   transition: all 0.5s;
 }
 
