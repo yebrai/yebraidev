@@ -24,7 +24,7 @@ export default function Welcome() {
         </div>
         <div className={styles.presentationContainer}>
           <h1 className={styles.presentation}>
-            Hello 👋🏼, i´m <name>Ivan</name>
+            Hello <span className={styles.waveIcon}>👋🏼</span>, i´m <name>Ivan</name>
           </h1>
           <p className={styles.position} ref={textRef}></p>
         </div>
