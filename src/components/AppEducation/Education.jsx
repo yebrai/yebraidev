@@ -18,7 +18,7 @@ export default function Education() {
             framework works.
           </p>
           <a href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-Iv%C3%A1nGarc%C3%ADaYebra-972400.pdf">
-            Certification
+          🔗  Certification
           </a>
         </div>
 
@@ -45,7 +45,7 @@ export default function Education() {
             APIs, Fetch APIs, Axios.
           </p>
           <a href="https://drive.google.com/file/d/1eicZaI4vGKEmJz8iqbBlp2hbtzMYWeCO/view?usp=sharing">
-            Certification
+          🔗 Certification
           </a>
         </div>
       </div>
