@@ -13,7 +13,7 @@
 .containerMainSection {
   display: flex;
   gap: 5vw;
-  height: 30vh;
+  height: 50%;
 }
 
 .presentation {
