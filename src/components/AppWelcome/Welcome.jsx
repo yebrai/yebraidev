@@ -22,7 +22,7 @@ export default function Welcome() {
         <div className={styles.avatar}>
           <Image className={styles.avatarImage} src={ivanPng} fill={true} alt="Profile Image" />
         </div>
-        <div>
+        <div className={styles.presentationContainer}>
           <h1 className={styles.presentation}>
             Hello 👋🏼, i´m <name>Ivan</name>
           </h1>

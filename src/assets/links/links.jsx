@@ -13,13 +13,7 @@ import { BsPersonCircle } from "react-icons/bs";
 import { ImProfile } from "react-icons/im";
 
 export const portfolioLinks = [
-  {
-    imageSrc: gc,
-    title: "Google Translate Clone",
-    techs: [['Typescript'], ['React'], ['Chat-gpt API'], ['React Testing-library']],
-    linkCode: 'https://github.com/yebrai/google-translate-chatgpt',
-    linkDemo: 'https://yebrai.github.io/google-translate-chatgpt/'
-  },
+  
     {
       imageSrc: tmb,
       title: "The Movie Bulletin",
@@ -56,6 +50,14 @@ export const portfolioLinks = [
         linkDemo: 'https://yebrai.github.io/Infectnation/',
     },
     {
+      imageSrc: gc,
+      title: "Google Translate Clone",
+      techs: [['Typescript'], ['React'], ['Chat-gpt API'], ['React Testing-library']],
+      linkCode: 'https://github.com/yebrai/google-translate-chatgpt',
+      linkDemo: 'https://yebrai.github.io/google-translate-chatgpt/'
+    }/*
+    ,
+    {
         imageSrc: flappy,
         title: "FlappyBird",
         techs: [['Javascript']],
@@ -69,6 +71,7 @@ export const portfolioLinks = [
         linkCode: 'https://github.com/yebrai/Alleyway-Canvas',
         linkDemo: 'https://yebrai.github.io/Alleyway-Canvas/',
     },
+    */
   ];
 
   export const navbarLinks = [

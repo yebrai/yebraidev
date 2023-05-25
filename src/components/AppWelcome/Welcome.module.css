@@ -1,5 +1,3 @@
-
-
 .avatar {
   width: 250px;
   height: 250px;
@@ -12,23 +10,33 @@
 
 .containerMainSection {
   display: flex;
-  gap: 5vw;
   height: 50%;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.presentationContainer {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .presentation {
-  font-size: 3rem;
-  height: 5vh;
+  font-size: 2rem;
+  height: 3vh;
+  color: grey;
 }
 
 .position {
-  color: grey;
-  font-size: 1.5rem;
-  font-weight: 400;
+
+  font-size: 2rem;
+  font-weight: 900;
   height: 1vh;
 }
 
 @media (max-width: 1200px) {
+
   .containerMainSection {
     flex-direction: column;
     align-items: center;
@@ -60,3 +68,14 @@
     width: 60vw;
   }
 }
+
+@media (max-width: 320px) {
+  .presentation {
+    font-size: 1.3rem;
+  }
+  .position {
+    font-size: 0.8rem;
+    width: 60vw;
+  }
+}
+

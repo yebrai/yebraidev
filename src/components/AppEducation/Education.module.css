@@ -1,17 +1,19 @@
 .titleEducation {
   display: flex;
-  justify-content: space-between;
-  font-size: 1.1rem;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.2rem;
 }
 
 .educationContainer {
   font-size: 1.1rem;
+  
 }
 
 .educationContainer a {
   cursor: pointer;
   text-decoration: none;
-  color: grey;
+  color: black;
 }
 
 .educationContainer a:hover {
