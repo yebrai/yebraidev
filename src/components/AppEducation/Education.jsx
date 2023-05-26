@@ -29,12 +29,12 @@ export default function Education() {
               <b>
                 <a href="https://www.ironhack.com/">IRONHACK</a>
               </b>{" "}
-              September 2022 - December 2022
+              September 2022 - November 2022
             </p>
           </div>
           <p>
             Immersive Bootcamp specialized in developing projects with MERN
-            stack under agile methodologies for 3 months.
+            stack under agile methodologies.
           </p>
           <p>
             <b>Frontend technologies:</b> HTML, CSS, JavaScript(ES6), React
