@@ -74,7 +74,7 @@ export const portfolioLinks = [
     */
   ];
 
-  export const navbarLinks = [
+  export const iconsLink = [
     {
       label: <BsPersonCircle />,
       route: "https://wa.me/34692806198",
@@ -94,10 +94,10 @@ export const portfolioLinks = [
       label: <MdEmail />,
       route: "mailto:yebraidev@gmail.com",
       description: "Let´s talk!",
-    },
+    }/*,
     {
       label: <ImProfile />,
       route: "https://drive.google.com/file/d/1K4K1C9jvJ2E0jnPilNqqqJdgCIDxaQJG/view?usp=share_link",
       description: "My Resume",
-    },
+    },*/
   ];

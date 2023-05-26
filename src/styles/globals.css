@@ -70,3 +70,9 @@ footer {
     padding: 10vh 10vw 10vh 10vw
   }
 }
+
+@media (max-width: 780px) {
+  body, p{
+    font-size: 0.8rem;
+  }
+  }

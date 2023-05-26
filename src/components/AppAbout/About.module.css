@@ -2,10 +2,61 @@
   display: flex;
   width: 100%;
   justify-content: center;
-
 }
 
 .aboutContainer {
   font-size: 1.1rem;
-  margin-top: 5vh;
 }
+
+.iconsMain {
+  color: black;
+  display: flex;
+  margin: 4vh auto;
+  list-style: none;
+  gap: 2vw;
+  font-size: 2rem;
+  padding: 0;
+}
+
+.iconContainer {
+  transition: transform 0.3s;
+}
+
+.iconContainer:hover {
+  transform: translateY(-5px);
+}
+
+.iconsMain a {
+  text-decoration: none;
+  color: black;
+}
+
+.icons a{
+  cursor: default;
+}
+
+
+.downloadContainer a{
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 2px solid #7e7e7e;
+  padding: 8px 35px 7px;
+  transition: all .7s ease;
+  cursor: pointer;
+}
+
+.downloadContainer a:hover{
+  background-color: #1a1a1a;
+  color: white;
+  transition: all .7s ease;
+  box-shadow: var(--shadow-elevation);
+  transform: translateY(-5px)!important;
+}
+
+.aboutText {
+  margin-top: 7vh;
+}
+
