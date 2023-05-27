@@ -23,7 +23,7 @@
 }
 
 .iconContainer:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px); 
 }
 
 .iconsMain a {
@@ -33,6 +33,11 @@
 
 .icons a{
   cursor: default;
+}
+
+.icons a:hover {
+  color: #4b8de1;
+  cursor: pointer;
 }
 
 
@@ -53,7 +58,6 @@
   color: white;
   transition: all .7s ease;
   box-shadow: var(--shadow-elevation);
-  transform: translateY(-5px)!important;
 }
 
 .aboutText {

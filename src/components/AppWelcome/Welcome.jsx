@@ -3,6 +3,7 @@ import ivanPng from "../../assets/images/ivanAv.png";
 import styles from "./Welcome.module.css";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
+import { motion, useAnimation } from 'framer-motion';
 
 export default function Welcome() {
   const textRef = useRef();
@@ -16,8 +17,20 @@ export default function Welcome() {
     });
   }, []);
 
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({ y: 0, opacity: 1, transition: { duration: 2 } });
+  }, []);
+
   return (
     <>
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={controls}
+      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    >
+
       <section className={styles.containerMainSection}>
         <div className={styles.avatar}>
           <Image className={styles.avatarImage} src={ivanPng} fill={true} alt="Profile Image" />
@@ -29,6 +42,7 @@ export default function Welcome() {
           <p className={styles.position} ref={textRef}></p>
         </div>
       </section>
+    </motion.div>
     </>
   );
 }

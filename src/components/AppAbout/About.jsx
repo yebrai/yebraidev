@@ -1,9 +1,28 @@
 import { iconsLink } from "@/assets/links/links";
 import styles from "./About.module.css";
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from "react";
 
 export default function About() {
+
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      controls.start({ y: 0, opacity: 1, transition: { duration: 2 } });
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
+        <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      animate={controls}
+      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    >
+
         <p className={styles.aboutText}>
           I'm a creative Web Developer based in Seville. My focus is on developing intuitive and visually appealing interfaces. I'm actively seeking opportunities to grow and collaborate on projects that enhance my skills, while remaining committed to delivering quality and high-performance solutions. I'm always ready to take on new challenges as a developer.
         </p>
@@ -25,6 +44,7 @@ export default function About() {
       </div>
       <div className={styles.aboutContainer}>
       </div>
+    </motion.div>
     </>
   );
 }
