@@ -1,27 +1,13 @@
 import Image from "next/image";
 import ivanPng from "../../assets/images/ivanAv.png";
 import styles from "./Welcome.module.css";
-import { useEffect, useRef } from "react";
-import { init } from "ityped";
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
+import useInit from "@/hooks/useInit";
+import useAnimations from "@/hooks/useAnimations";
 
 export default function Welcome() {
-  const textRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: false,
-      backDelay: 2000,
-      typeSpeed: 100,
-      strings: ["<Junior Front-End Developer />"],
-    });
-  }, []);
-
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start({ y: 0, opacity: 1, transition: { duration: 2 } });
-  }, []);
+  const textRef = useInit()
+  const controls = useAnimations(2, false)
 
   return (
     <>
@@ -29,6 +15,7 @@ export default function Welcome() {
       initial={{ y: -100, opacity: 0 }}
       animate={controls}
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      id="about"
     >
 
       <section className={styles.containerMainSection}>

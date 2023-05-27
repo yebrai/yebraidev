@@ -1,19 +1,11 @@
 import { iconsLink } from "@/assets/links/links";
 import styles from "./About.module.css";
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from "react";
+import useAnimations from "@/hooks/useAnimations";
 
 export default function About() {
 
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      controls.start({ y: 0, opacity: 1, transition: { duration: 2 } });
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const controls = useAnimations(2, true);
 
   return (
     <>
@@ -21,6 +13,7 @@ export default function About() {
       initial={{ y: 100, opacity: 0 }}
       animate={controls}
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      transition={{ duration: 0.5, delay: 1 }}
     >
 
         <p className={styles.aboutText}>
