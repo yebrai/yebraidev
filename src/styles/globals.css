@@ -67,12 +67,18 @@ footer {
 
 @media (max-width: 1200px) {
   .main {
-    padding: 10vh 10vw 10vh 10vw
+    padding: 3vh 10vw 10vh 10vw
   }
 }
 
-@media (max-width: 780px) {
-  body, p{
-    font-size: 0.8rem;
+@media (max-width: 505px) {
+  body, p, h4{
+    font-size: 0.9rem;
   }
   }
+
+  @media (max-width: 343px) {
+    body, p, h4{
+      font-size: 0.8rem;
+    }
+    }

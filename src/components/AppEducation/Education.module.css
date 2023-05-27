@@ -28,4 +28,8 @@
 .titleEducation{
   gap: 10vw;
 }
+
+.educationContainer h4, .titleEducation{
+  font-size: 1rem;
+}
 }
