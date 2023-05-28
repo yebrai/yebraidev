@@ -69,4 +69,7 @@
   .downloadContainer a{
     font-size: 0.8rem;
   }
+  .aboutText {
+    margin-top: 2vh;
+  }
   }
