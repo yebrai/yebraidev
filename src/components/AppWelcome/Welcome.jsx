@@ -17,7 +17,6 @@ export default function Welcome() {
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       id="about"
     >
-
       <section className={styles.containerMainSection}>
         <div className={styles.avatar}>
           <Image className={styles.avatarImage} src={ivanPng} fill={true} alt="Profile Image" />
