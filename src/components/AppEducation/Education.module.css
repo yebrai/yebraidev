@@ -26,10 +26,6 @@
   font-size: 1.2rem;
 }
 
-.titleEducationDescription {
-  text-align: start;
-}
-
 @media (max-width: 627px) {
 .titleEducation{
   gap: 10vw;

@@ -8,7 +8,7 @@ export default function Education() {
           <h4>Scrum Fundamentals Certified</h4>
           <p className={styles.titleEducation}>
             <b>
-              <a href="https://www.scrumstudy.com/">SCRUMstudy</a>
+              <a target="_blank" href="https://www.scrumstudy.com/" rel="noreferrer">SCRUMstudy</a>
             </b>{" "}
             April 2023
           </p>
@@ -17,7 +17,7 @@ export default function Education() {
             successful project, project initiation phases, and how the Scrum
             framework works.
           </p>
-          <a className={styles.certification} href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-Iv%C3%A1nGarc%C3%ADaYebra-972400.pdf">
+          <a target="_blank" className={styles.certification} href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-Iv%C3%A1nGarc%C3%ADaYebra-972400.pdf" rel="noreferrer">
           🔗  Certification
           </a>
         </div>
@@ -27,7 +27,7 @@ export default function Education() {
           <div className={styles.titleContainer}>
             <p className={styles.titleEducation}>
               <b>
-                <a href="https://www.ironhack.com/">IRONHACK</a>
+                <a target="_blank" href="https://www.ironhack.com/" rel="noreferrer">IRONHACK</a>
               </b>{" "}
               September 2022 - November 2022
             </p>
@@ -44,7 +44,7 @@ export default function Education() {
             <b>Backend technologies:</b> Express.js, Node.js, MongoDB, REST
             APIs, Fetch APIs, Axios.
           </p>
-          <a className={styles.certification} href="https://drive.google.com/file/d/1eicZaI4vGKEmJz8iqbBlp2hbtzMYWeCO/view?usp=sharing">
+          <a className={styles.certification} target="_blank" href="https://drive.google.com/file/d/1eicZaI4vGKEmJz8iqbBlp2hbtzMYWeCO/view?usp=sharing" rel="noreferrer">
           🔗 Certification
           </a>
         </div>

@@ -33,7 +33,7 @@ export default function About() {
         })}
       </ul>
       <div className={styles.downloadContainer}>
-      <a href="https://drive.google.com/file/d/1K4K1C9jvJ2E0jnPilNqqqJdgCIDxaQJG/view?usp=share_link" download="true">Download CV</a>
+      <a href="https://drive.google.com/file/d/1t3ksd1QnlN8mKNk-nDuRkyK-mRiyqxyW/view?usp=drive_link" download="true">Download CV</a>
       </div>
       <div className={styles.aboutContainer}>
       </div>
