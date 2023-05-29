@@ -1,15 +1,19 @@
-import Link from "next/link";
 import styles from "./Navbar.module.css";
+import ToggleMenu from "../AppToggleMenu/Toggle";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+
+  };
   return (
     <>
-      <ul className={styles.container}>
+      <ul className={isOpen ? styles.openContainer : styles.container}>
         <div className={styles.navSections}>
-          <Link href="#portfolio">Portfolio</Link>
-          <Link href="#skills">Skills</Link>
-          <Link href="#education">Education</Link>
-          <Link href="#about">About me</Link>
+        <ToggleMenu toggleDropdown={toggleDropdown} isOpen={isOpen}/>
         </div>
       </ul>
     </>

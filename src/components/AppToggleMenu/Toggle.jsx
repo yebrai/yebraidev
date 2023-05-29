@@ -1,38 +1,28 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from "./Toggle.module.css";
+import {ToggleIcon, ToggleIconCancel} from "../../assets/icons/icons"
 
-const ToggleMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const ToggleMenu = ({toggleDropdown, isOpen}) => {
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <div>
-      <motion.button onClick={toggleDropdown}>Abrir</motion.button>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          style={{ backgroundColor: 'white', padding: '20px' }}
-        >
-                <ul className={styles.container}>
-        <div className={styles.navSections}>
-          <Link href="#portfolio">Portfolio</Link>
-          <Link href="#skills">Skills</Link>
-          <Link href="#education">Education</Link>
-          <Link href="#about">About me</Link>
-        </div>
-          <ToggleMenu/>
-          
-      </ul>
-        </motion.div>
-      )}
+      <motion.button onClick={toggleDropdown} className={styles.toggleButton}>{isOpen ? <ToggleIconCancel/> : <ToggleIcon/>}</motion.button>
+      <motion.div
+        initial={{ opacity: 0, x: 0 }}
+        animate={{ opacity: 1, x: isOpen ? 0 : -200 }}
+        exit={{ opacity: 0, x: -20 }}
+        transition={{ duration: 0.6 }}
+        className={isOpen ? styles.openContainer : styles.container}
+      >
+        <ul className={styles.toggleLinks}>
+          <Link href="#portfolio" onClick={toggleDropdown}>Portfolio</Link>
+          <Link href="#skills" onClick={toggleDropdown}>Skills</Link>
+          <Link href="#education" onClick={toggleDropdown}>Education</Link>
+          <Link href="#about" onClick={toggleDropdown}>About me</Link>
+        </ul>
+      </motion.div>
     </div>
   );
 };
