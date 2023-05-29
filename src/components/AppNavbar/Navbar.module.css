@@ -79,9 +79,17 @@
   font-weight: 400;
   text-decoration: none;
   color: #4b8de1;
+  transform: scale(1.1);
 }
 
 @media (max-width: 800px) {
+  .navSections {
+    width:85%;
+  }
+
+}
+
+@media (max-width: 300px) {
   .navSections {
     width:85%;
   }
