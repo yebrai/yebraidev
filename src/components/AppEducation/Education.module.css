@@ -7,7 +7,9 @@
 
 .educationContainer {
   font-size: 1.1rem;
-  
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
 }
 
 .educationContainer a {
@@ -24,9 +26,17 @@
   font-size: 1.2rem;
 }
 
+.titleEducationDescription {
+  text-align: start;
+}
+
 @media (max-width: 627px) {
 .titleEducation{
   gap: 10vw;
+}
+
+.certification {
+  font-size: 0.9rem;
 }
 
 .educationContainer h4, .titleEducation{

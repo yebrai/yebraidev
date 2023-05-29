@@ -65,8 +65,9 @@
 
 .navSections {
   display: flex;
-  gap: 1vw;
-  
+  justify-content: space-between;
+  width: 95%;
+  align-items: center;
 }
 
 .navSections a {
@@ -80,3 +81,9 @@
   color: #4b8de1;
 }
 
+@media (max-width: 800px) {
+  .navSections {
+    width:85%;
+  }
+
+}

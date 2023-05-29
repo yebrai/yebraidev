@@ -17,7 +17,7 @@ const ToggleMenu = ({toggleDropdown, isOpen}) => {
         className={isOpen ? styles.openContainer : styles.container}
       >
         <ul className={styles.toggleLinks}>
-          <Link href="#portfolio" onClick={toggleDropdown}>Portfolio</Link>
+          <Link href="#portfolio" onClick={toggleDropdown}>Proyects</Link>
           <Link href="#skills" onClick={toggleDropdown}>Skills</Link>
           <Link href="#education" onClick={toggleDropdown}>Education</Link>
           <Link href="#about" onClick={toggleDropdown}>About me</Link>

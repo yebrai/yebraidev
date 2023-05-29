@@ -12,12 +12,12 @@ export default function Education() {
             </b>{" "}
             April 2023
           </p>
-          <p>
+          <p className={styles.titleEducationDescription}>
             Understanding of how the Scrum framework works to carry out a
             successful project, project initiation phases, and how the Scrum
             framework works.
           </p>
-          <a href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-Iv%C3%A1nGarc%C3%ADaYebra-972400.pdf">
+          <a className={styles.certification} href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-Iv%C3%A1nGarc%C3%ADaYebra-972400.pdf">
           🔗  Certification
           </a>
         </div>
@@ -44,7 +44,7 @@ export default function Education() {
             <b>Backend technologies:</b> Express.js, Node.js, MongoDB, REST
             APIs, Fetch APIs, Axios.
           </p>
-          <a href="https://drive.google.com/file/d/1eicZaI4vGKEmJz8iqbBlp2hbtzMYWeCO/view?usp=sharing">
+          <a className={styles.certification} href="https://drive.google.com/file/d/1eicZaI4vGKEmJz8iqbBlp2hbtzMYWeCO/view?usp=sharing">
           🔗 Certification
           </a>
         </div>

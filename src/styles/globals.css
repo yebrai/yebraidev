@@ -42,6 +42,7 @@ hr {
   padding-top: 10vh;
 }
 
+
 .about {
   display: flex;
   gap: 5vw;
@@ -50,8 +51,8 @@ hr {
 
 footer {
   text-align: center;
-  margin-bottom: 10vh;
-  font-size: 1.1rem;
+  margin-bottom: 1vh;
+  font-size: 1rem;
 }
 
 .introMain {
@@ -65,7 +66,7 @@ footer {
 
 @media (max-width: 1200px) {
   .main {
-    padding: 3vh 10vw 10vh 10vw
+    padding: 6vh 10vw 10vh 10vw
   }
 }
 

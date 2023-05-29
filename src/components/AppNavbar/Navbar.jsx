@@ -14,6 +14,7 @@ export default function Navbar() {
       <ul className={isOpen ? styles.openContainer : styles.container}>
         <div className={styles.navSections}>
         <ToggleMenu toggleDropdown={toggleDropdown} isOpen={isOpen}/>
+        <h1>Yebrai<name>dev</name></h1>
         </div>
       </ul>
     </>
