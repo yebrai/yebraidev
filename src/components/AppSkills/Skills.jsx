@@ -8,8 +8,7 @@ export default function Skills() {
           <p>Javascript</p>
         </li>
         <li>
-          <p>Unit Testing</p>
-          <span className={styles.details}>(Jest)</span>
+          <p>React Testing-library</p>
         </li>
         <li>
           <p>ExpressJS</p>
@@ -23,18 +22,15 @@ export default function Skills() {
 
         <li>
           <p>Git</p>
-          <span className={styles.details}>(Github)</span>
         </li>
         <li>
           <p>ReactJS</p>
         </li>
         <li>
-          <p>NoSql</p>
-          <span className={styles.details}>(MongoDB)</span>
+          <p>MongoDB</p>
         </li>
         <li>
-          <p>Scrum</p>
-          <span className={styles.details}>(Agile)</span>
+          <p>Agile</p>
         </li>
         <li>
           <p>NextJS</p>
