@@ -49,13 +49,13 @@
   font-size: 18px;
   border-radius: 20px;
   padding: 8px 35px 7px;
-  transition: all .7s ease;
+  transition: all .5s ease;
   cursor: pointer;
 }
 
 .downloadContainer a:hover{
   background-color: #4b8de1;
-  transition: all .7s ease;
+  transition: all .5s ease;
   box-shadow: var(--shadow-elevation);
 }
 

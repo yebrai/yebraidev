@@ -4,13 +4,41 @@ export default function Education() {
     <section id="educationSection">
       <h2 id="education">Education & Certifications</h2>
       <div className={styles.educationContainer}>
+      <div>
+          <h4>Full Stack Web Development Degree</h4>
+          <div>
+            <p className={styles.titleEducation}>
+              <b>
+                <a target="_blank" href="https://www.ironhack.com/" rel="noreferrer">IRONHACK</a>
+              </b>{" "}
+              <span> September 2022 - November 2022 </span> 
+            </p>
+          </div>
+          <p>
+            Immersive Bootcamp specialized in developing projects with MERN
+            stack under agile methodologies.
+          </p>
+          <p>
+            <b>Frontend technologies:</b> HTML, CSS, JavaScript(ES6), React, Handlebars.
+          </p>
+          <p>
+            <b>Backend technologies:</b> Express.js, Node.js, MongoDB, REST
+            APIs, Fetch APIs, Axios.
+          </p>
+          <p>
+            <b>Testing:</b> Jasmine.
+          </p>
+          <a className={styles.certification} target="_blank" href="https://drive.google.com/file/d/1eicZaI4vGKEmJz8iqbBlp2hbtzMYWeCO/view?usp=sharing" rel="noreferrer">
+          🔗 Certification
+          </a>
+        </div>
         <div>
           <h4>Scrum Fundamentals Certified</h4>
           <p className={styles.titleEducation}>
             <b>
               <a target="_blank" href="https://www.scrumstudy.com/" rel="noreferrer">SCRUMstudy</a>
             </b>{" "}
-            April 2023
+            <span> April 2023 </span> 
           </p>
           <p className={styles.titleEducationDescription}>
             Understanding of how the Scrum framework works to carry out a
@@ -22,32 +50,7 @@ export default function Education() {
           </a>
         </div>
 
-        <div>
-          <h4>Full Stack Web Development Degree</h4>
-          <div className={styles.titleContainer}>
-            <p className={styles.titleEducation}>
-              <b>
-                <a target="_blank" href="https://www.ironhack.com/" rel="noreferrer">IRONHACK</a>
-              </b>{" "}
-              September 2022 - November 2022
-            </p>
-          </div>
-          <p>
-            Immersive Bootcamp specialized in developing projects with MERN
-            stack under agile methodologies.
-          </p>
-          <p>
-            <b>Frontend technologies:</b> HTML, CSS, JavaScript(ES6), React
-            (with Hooks), Handlebars.
-          </p>
-          <p>
-            <b>Backend technologies:</b> Express.js, Node.js, MongoDB, REST
-            APIs, Fetch APIs, Axios.
-          </p>
-          <a className={styles.certification} target="_blank" href="https://drive.google.com/file/d/1eicZaI4vGKEmJz8iqbBlp2hbtzMYWeCO/view?usp=sharing" rel="noreferrer">
-          🔗 Certification
-          </a>
-        </div>
+        
       </div>
     </section>
   );

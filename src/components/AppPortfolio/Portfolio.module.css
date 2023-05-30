@@ -58,8 +58,8 @@
   transition: transform 1s;
 }
 
-.buttonContainer {
-  height: 5vh;
+.card h4 {
+  margin: 10px 0 0 0;
 }
 
 .techsContainer {
@@ -70,10 +70,12 @@
 }
 
 .techsContainer p {
-  background-color: #f4f4f4;
-  color: rgb(155, 154, 154);
-  padding: 5px;
-  border-radius: 7px;
+  color: #4b8de1;
+  font-weight: 800;
+}
+
+.descriptionText {
+  width: 80%;
 }
 
 .btn,
@@ -105,8 +107,6 @@
   }
 
   .techsContainer p {
-    background-color: #f4f4f4;
-    color: rgb(155, 154, 154);
     padding: 2px;
     margin: 10px 3px 10px 3px;
     font-size: 0.6rem;

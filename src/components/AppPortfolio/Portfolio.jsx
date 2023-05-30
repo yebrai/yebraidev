@@ -7,18 +7,22 @@ export default function Portfolio() {
       <h2 id="portfolio">Proyects </h2>
       <ul className={styles.mainUl}>
         {portfolioLinks.map(
-          ({ imageSrc, title, techs, linkCode, linkDemo }, i) => {
+          ({ imageSrc, title, techs, linkCode, linkDemo, description }, i) => {
             return (
               <li key={i} className={styles.card}>
                 <h3>{title}</h3>
                 <div className={styles.image}>
-                  <Image
+                  <a href={linkDemo} target="_blank" rel="noreferrer">
+                    <Image
                     className={styles.imageCard}
                     src={imageSrc}
                     fill={true}
                     alt={title}
                   ></Image>
+                  </a>
                 </div>
+                  <p className={styles.descriptionText}>{description}</p>
+                <h4>Tech stack:</h4>
                 <div className={styles.techsContainer}>
                   {techs.map((each, i) => (
                     <p key={i}>

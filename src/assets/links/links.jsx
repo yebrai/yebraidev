@@ -19,7 +19,8 @@ export const portfolioLinks = [
       title: "The Movie Bulletin",
       techs: [['Typescript'], ['React'], ['NextJS'], ['Redux']],
       linkCode: 'https://github.com/yebrai/the-movie-bulletin',
-      linkDemo: 'https://the-movie-bulletin.vercel.app/'
+      linkDemo: 'https://the-movie-bulletin.vercel.app/',
+      description: 'Dynamic movie web platform with API integration for listings, SSR for performance, detailed filtering, and favorite movie functionality'
     },
     {
         imageSrc: tasteit,
@@ -27,6 +28,7 @@ export const portfolioLinks = [
         techs: [['Javascript'], ['React'], ['NodeJS'], ['Express'], ['MongoDB']],
         linkCode: 'https://github.com/yebrai/tasteit-client',
         linkDemo: 'https://taste-it-app.netlify.app/',
+        description: 'Dynamic e-commerce website facilitating the publication, buying, and selling of diverse products. It includes payment integration, social interaction features for users, and purchase registration'
     },
     {
         imageSrc: retroscript,
@@ -34,6 +36,8 @@ export const portfolioLinks = [
         techs: [['Typescript']],
         linkCode: 'https://github.com/yebrai/retroscript',
         linkDemo: 'https://yebrai.github.io/retroscript/',
+        description: 'Developed game using TypeScript with DOM manipulation and OOP principles. Implemented player movements, skills, and boss stages to enhance user experience'
+
     },
     {
         imageSrc: ourhome,
@@ -41,6 +45,7 @@ export const portfolioLinks = [
         techs: [['Javascript'], ['Handlebars'], ['NodeJS'], ['Express'], ['MongoDB']],
         linkCode: 'https://github.com/yebrai/OurHome',
         linkDemo: 'https://ourhome.cyclic.app/',
+        description: 'Secure SSR web application for real estate transactions, providing a platform for buying and selling properties. Implemented robust authentication mechanisms with multiple levels of security'
     },
     {
         imageSrc: infecnation,
@@ -48,13 +53,15 @@ export const portfolioLinks = [
         techs: [['Javascript']],
         linkCode: 'https://github.com/yebrai/Infectnation',
         linkDemo: 'https://yebrai.github.io/Infectnation/',
+        description: 'Developed optimized 2D game with canvas and JavaScript, featuring captivating intro, animations, movements, and sound effects. Implemented diverse skills and multiple endings to enhance user experience'
     },
     {
       imageSrc: gc,
       title: "Google Translate Clone",
       techs: [['Typescript'], ['React'], ['Chat-gpt API'], ['React Testing-library']],
       linkCode: 'https://github.com/yebrai/google-translate-chatgpt',
-      linkDemo: 'https://yebrai.github.io/google-translate-chatgpt/'
+      linkDemo: 'https://yebrai.github.io/google-translate-chatgpt/',
+      description: 'Developed a user-friendly web application for text translation, utilizing the ChatGPT API. Implemented unit tests, custom hooks, and UseReducer for enhanced functionality and state management'
     }/*
     ,
     {

@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <NextSeo title="Ivan Garcia Yebra" description="Yebraidev Website" />
+      <NextSeo title="Portfolio | Yebraidev" description="Yebraidev Website" />
         <div className={`introMain ${isVisible ? "visible" : ""}`}>
       <Navbar />
       <section className="main">

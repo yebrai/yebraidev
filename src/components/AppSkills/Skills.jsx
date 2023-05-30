@@ -8,7 +8,7 @@ export default function Skills() {
           <p>Javascript</p>
         </li>
         <li>
-          <p>React Testing-library</p>
+          <p>Testing <span>(Jest) </span></p>
         </li>
         <li>
           <p>ExpressJS</p>
