@@ -1,6 +1,6 @@
 .avatar {
   width: 250px;
-  height: 230px;
+  height: 250px;
   position: relative;
   box-shadow: var(--shadow-elevation);
   border-radius: 50%;
@@ -96,7 +96,7 @@ align-items: center;
   }
   .avatar {
     width: 170px;
-    height: 155px;
+    height: 170px;
   }
 }
 
@@ -106,7 +106,7 @@ align-items: center;
   }
   .avatar {
     width: 150px;
-    height: 135px;
+    height: 150px;
   }
 
   .position {
