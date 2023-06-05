@@ -54,24 +54,21 @@
   display: inline-block;
   animation-name: waveAnimation;
   animation-duration: 2.5s;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
-
 
 .containerMainSection {
   display: flex;
   height: 50%;
   align-items: center;
   flex-direction: column;
-
 }
 
 .presentationContainer {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .presentation {
@@ -88,7 +85,6 @@ align-items: center;
 }
 
 @media (max-width: 1200px) {
-
   .containerMainSection {
     flex-direction: column;
     align-items: center;
@@ -134,4 +130,3 @@ align-items: center;
     width: 60vw;
   }
 }
-
