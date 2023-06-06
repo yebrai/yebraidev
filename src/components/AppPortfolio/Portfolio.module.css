@@ -7,7 +7,11 @@
   padding: 35px 0 70px 0;
   height: 55vh;
   overflow-y: auto;
+  box-shadow: inset 0px 0px 8px 1px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 15px;
 }
+
 
 .mainUl::-webkit-scrollbar {
   width: 2px;
