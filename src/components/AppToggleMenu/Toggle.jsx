@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from "./Toggle.module.css";
 import {ToggleIcon, ToggleIconCancel} from "../../assets/icons/icons"
-import {BiHomeAlt2} from "react-icons/Bi"
-import {TbSchool} from 'react-icons/Tb'
-import {RiPagesLine} from 'react-icons/Ri'
+import {BiHomeAlt2} from "react-icons/bi"
+import {TbSchool} from 'react-icons/tb'
+import {RiPagesLine} from 'react-icons/ri'
 import {MdOutlineLanguage} from 'react-icons/md'
 
 const ToggleMenu = ({toggleDropdown, isOpen}) => {
