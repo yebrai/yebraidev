@@ -14,14 +14,14 @@ export default function Skills() {
           <p>ExpressJS</p>
         </li>
         <li>
-          <p>Typescript</p>
+          <p>PHP</p>
         </li>
         <li>
           <p>NodeJS</p>
         </li>
 
         <li>
-          <p>Git</p>
+          <p>JQuery</p>
         </li>
         <li>
           <p>ReactJS</p>
@@ -30,7 +30,7 @@ export default function Skills() {
           <p>MongoDB</p>
         </li>
         <li>
-          <p>Agile</p>
+          <p>CakePHP</p>
         </li>
         <li>
           <p>NextJS</p>
