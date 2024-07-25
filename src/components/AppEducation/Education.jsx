@@ -4,7 +4,7 @@ export default function Education() {
     <section id="educationSection">
       <h2 id="education">Education & Certifications</h2>
       <div className={styles.educationContainer}>
-      <div>
+        <div>
           <h4>Full Stack Web Development Degree</h4>
           <div>
             <p className={styles.titleEducation}>
@@ -33,24 +33,26 @@ export default function Education() {
           </a>
         </div>
         <div>
-          <h4>Scrum Fundamentals Certified</h4>
+          <h4>Backend Development Course</h4>
           <p className={styles.titleEducation}>
             <b>
-              <a target="_blank" href="https://www.scrumstudy.com/" rel="noreferrer">SCRUMstudy</a>
+              <a target="_blank" href="https://www.corenetworks.es/" rel="noreferrer">Core Networks</a>
             </b>{" "}
-            <span> April 2023 </span> 
+            <span>June 2022 - August 2022</span>
           </p>
-          <p className={styles.titleEducationDescription}>
-            Understanding of how the Scrum framework works to carry out a
-            successful project, project initiation phases, and how the Scrum
-            framework works.
+          <p>
+            Intensive hands-on training focused on advanced backend development, covering essential concepts and practical skills.
           </p>
-          <a target="_blank" className={styles.certification} href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-Iv%C3%A1nGarc%C3%ADaYebra-972400.pdf" rel="noreferrer">
-          🔗  Certification
-          </a>
+          <p>
+            <b>Frontend technologies covered:</b> HTML, CSS, JavaScript (ES6).
+          </p>
+          <p>
+            <b>Backend technologies covered:</b> PHP, C++.
+          </p>
+          <p>
+            <b>Infrastructure & Database:</b> MySQL, Linux, Virtual Machine Architecture (VMA), Docker.
+          </p>
         </div>
-
-        
       </div>
     </section>
   );

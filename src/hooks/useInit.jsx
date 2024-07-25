@@ -9,7 +9,7 @@ const useInit = () => {
       showCursor: false,
       backDelay: 2000,
       typeSpeed: 100,
-      strings: ["<Junior Full-stack Developer />"],
+      strings: ["Backend Developer"],
     });
   }, []);
 

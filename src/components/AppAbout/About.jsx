@@ -15,10 +15,9 @@ export default function About() {
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       transition={{ duration: 0.5, delay: 1 }}
     >
-
-        <p className={styles.aboutText}>
-          A creative Web Developer based in Seville. My focus is on developing intuitive and visually appealing interfaces. I'm actively seeking opportunities to grow and collaborate on projects that enhance my skills, while remaining committed to delivering quality and high-performance solutions. I'm always ready to take on new challenges as a developer.
-        </p>
+      <p className={styles.aboutText}>
+        I'm a Backend Developer with over 2 years of experience, based in Seville. I specialize in server-side solutions and have experience with front-end development and cloud technologies. I'm passionate about building high-quality applications and excited to take on new challenges and collaborative projects.
+      </p>
       <ul className={styles.iconsMain}>
         {iconsLink.map(({ label, route }) => {
           return (

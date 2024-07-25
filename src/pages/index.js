@@ -4,6 +4,7 @@ import Welcome from "@/components/AppWelcome/Welcome";
 import Portfolio from "@/components/AppPortfolio/Portfolio";
 import About from "@/components/AppAbout/About";
 import Education from "@/components/AppEducation/Education";
+import Experience from "@/components/AppExperience/Experience";
 import { NextSeo } from "next-seo";
 import Skills from "@/components/AppSkills/Skills";
 
@@ -28,6 +29,7 @@ export default function Home() {
       <section className="main">
           <Welcome />
           <About />
+        <Experience />
         <Portfolio />
         <Skills />
         <Education />
