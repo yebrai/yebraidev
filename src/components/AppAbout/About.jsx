@@ -16,7 +16,7 @@ export default function About() {
       transition={{ duration: 0.5, delay: 1 }}
     >
       <p className={styles.aboutText}>
-        Backend Developer with more than 2 years of experience in Seville. Specialized in server-side solutions with strong background in front-end and cloud technologies. Passionate about SOLID principles and delivering readable, scalable and maintainable products. Eager to learn and grow continuously.
+      Backend Developer with 2+ years of experience. Specialised in server-side solutions with strong background in front-end, cloud and linux technologies. Passionate about SOLID principles and delivering readable, scalable and maintainable products.
       </p>
       <ul className={styles.iconsMain}>
         {iconsLink.map(({ label, route }) => {

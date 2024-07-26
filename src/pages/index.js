@@ -24,18 +24,18 @@ export default function Home() {
 
   return (
     <>
-      <NextSeo title="Portfolio | Yebraidev" description="Yebraidev Website" />
+      <NextSeo title="Yebraidev" description="Yebraidev Website" />
         <div className={`introMain ${isVisible ? "visible" : ""}`}>
-      <Navbar />
-      <section className="main">
-        <Welcome />
-        <About />
-        <Experience />
-        <Skills />
-        <CommunityInvolvement/>
-        <Portfolio />
-        <Education />
-      </section>
+          <Navbar />
+          <section className="main">
+            <Welcome />
+            <About />
+            <Experience />
+            <Skills />
+            <CommunityInvolvement/>
+            <Portfolio />
+            <Education />
+          </section>
         </div>
       <footer>© 2023 Ivan Yebra</footer>
     </>
