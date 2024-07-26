@@ -1,6 +1,6 @@
 .avatar {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   position: relative;
   box-shadow: var(--shadow-elevation);
   border-radius: 50%;
@@ -72,14 +72,14 @@
 }
 
 .presentation {
-  font-size: 2rem;
+  font-size: 1.9rem;
   height: 3vh;
   color: grey;
 }
 
 .position {
   width: 64vw;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   height: 1vh;
 }
