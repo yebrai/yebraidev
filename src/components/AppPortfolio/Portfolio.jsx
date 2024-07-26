@@ -1,10 +1,14 @@
 import Image from "next/image";
 import styles from "./Portfolio.module.css";
 import { portfolioLinks } from "../../assets/links/links";
+
 export default function Portfolio() {
   return (
     <section id="portfolioSection">
-      <h2 id="portfolio">Proyects </h2>
+      <h2 id="portfolio">Projects</h2>
+      <p>
+        I enjoy working on personal projects, collaborating with others, and participating in open source. You can find many more on my <a href="https://github.com/yebrai" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </p>
       <ul className={styles.mainUl}>
         {portfolioLinks.map(
           ({ imageSrc, title, techs, linkCode, linkDemo, description }, i) => {
@@ -14,20 +18,18 @@ export default function Portfolio() {
                 <div className={styles.image}>
                   <a href={linkDemo} target="_blank" rel="noreferrer">
                     <Image
-                    className={styles.imageCard}
-                    src={imageSrc}
-                    fill={true}
-                    alt={title}
-                  ></Image>
+                      className={styles.imageCard}
+                      src={imageSrc}
+                      fill={true}
+                      alt={title}
+                    ></Image>
                   </a>
                 </div>
-                  <p className={styles.descriptionText}>{description}</p>
+                <p className={styles.descriptionText}>{description}</p>
                 <h4>Tech stack:</h4>
                 <div className={styles.techsContainer}>
                   {techs.map((each, i) => (
-                    <p key={i}>
-                      {each}
-                    </p>
+                    <p key={i}>{each}</p>
                   ))}
                 </div>
                 <div className={styles.buttonContainer}>

@@ -2,7 +2,7 @@ import styles from "./Education.module.css";
 export default function Education() {
   return (
     <section id="educationSection">
-      <h2 id="education">Education & Certifications</h2>
+      <h2 id="education">Education</h2>
       <div className={styles.educationContainer}>
         <div>
           <h4>Full Stack Web Development Degree</h4>

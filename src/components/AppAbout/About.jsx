@@ -16,7 +16,7 @@ export default function About() {
       transition={{ duration: 0.5, delay: 1 }}
     >
       <p className={styles.aboutText}>
-        I'm a Backend Developer with over 2 years of experience, based in Seville. I specialize in server-side solutions and have experience with front-end development and cloud technologies. I'm passionate about building high-quality applications and excited to take on new challenges and collaborative projects.
+      I'm a Backend Developer with over 2 years of experience, based in Seville. I specialize in server-side solutions and have experience with front-end development and cloud technologies. I thrive on challenging projects, enjoy collaborating with individuals, and am dedicated to continuously growing my developer skills.
       </p>
       <ul className={styles.iconsMain}>
         {iconsLink.map(({ label, route }) => {
@@ -32,7 +32,7 @@ export default function About() {
         })}
       </ul>
       <div className={styles.downloadContainer}>
-      <a href="https://drive.google.com/file/d/1xq_HRb2TOGa7NnFM7Xp3dLz3rt9k19OC/view?usp=sharing" target="_blank" rel="noreferrer" download="true">Download CV</a>
+      <a href="https://drive.google.com/file/d/1Cs92rk2A4Pyj0Fo0AyfVvUbAdjl15Trh/view?usp=drive_link" target="_blank" rel="noreferrer" download="true">Download CV</a>
       </div>
       <div className={styles.aboutContainer}>
       </div>

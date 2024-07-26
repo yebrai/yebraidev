@@ -1,19 +1,24 @@
 
 import gc from '../../assets/images/gc.jpg'
 import tmb from '../../assets/images/tmb.jpg'
+import lb from '../../assets/images/lb.png'
 import retroscript from '../../assets/images/retroscript.jpg'
 import tasteit from '../../assets/images/tasteit.jpg'
 import ourhome from '../../assets/images/ourhome.jpg'
 import infecnation from '../../assets/images/infectnation.jpg'
-import flappy from '../../assets/images/flappy.jpg'
-import alleawey from '../../assets/images/alleawey.jpg'
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { BsPersonCircle } from "react-icons/bs";
-import { ImProfile } from "react-icons/im";
 
 export const portfolioLinks = [
-  
+    {
+      imageSrc: lb,
+      title: "Lectores Beta",
+      techs: [['PHP'], ['Symfony'], ['Docker'], ['MYSQL'], ['Redis'], ['PHPunit']],
+      linkCode: 'https://github.com/lectoresbeta/lectores-beta-api-core/blob/main/.etc/how-to/PROJECT_STRUCTURE.md',
+      linkDemo: 'https://lectoresbeta.com/',
+      description: 'Contributed to the Lectores Beta API, transforming it from a monolith to a modular monolith with hexagonal architecture and DDD principles, using PHPUnit for testing.'
+    },
     {
       imageSrc: tmb,
       title: "The Movie Bulletin",

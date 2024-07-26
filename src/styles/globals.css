@@ -13,6 +13,7 @@
     -0.4px 8.1px 12.2px hsl(var(--shadow-color) / 0.33),
     -0.5px 10.5px 15.8px hsl(var(--shadow-color) / 0.37),
     -0.6px 13.4px 20.1px hsl(var(--shadow-color) / 0.42);
+    --background-card-elements: #e9eded;
 }
 
 
@@ -38,6 +39,7 @@ body {
 name,
 h2,
 hr {
+  font-size: 2rem;
   color: #4b8de1;
   padding-top: 10vh;
 }
