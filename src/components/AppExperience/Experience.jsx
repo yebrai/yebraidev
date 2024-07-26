@@ -62,7 +62,7 @@ export default function Experience() {
         <ExperienceItem
           title="Full-stack Developer"
           company="DSS Network"
-          website="https://www.dssnetwork.com"
+          website="https://www.dssnetwork.es"
           startDate="Apr. 2023"
           endDate="Mar. 2024"
         >
