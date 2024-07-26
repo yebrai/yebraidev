@@ -7,14 +7,14 @@ export default function Navbar() {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
-
   };
+
   return (
     <>
       <ul className={isOpen ? styles.openContainer : styles.container}>
         <div className={styles.navSections}>
-        <ToggleMenu toggleDropdown={toggleDropdown} isOpen={isOpen}/>
-        <h1>Yebrai<name>dev</name></h1>
+          <ToggleMenu toggleDropdown={toggleDropdown} isOpen={isOpen} />
+          <h1 className={styles.brandName}>Yebrai<name>dev</name></h1>
         </div>
       </ul>
     </>

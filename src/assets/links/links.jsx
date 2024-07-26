@@ -104,7 +104,7 @@ export const portfolioLinks = [
     },
     {
       label: <MdEmail />,
-      route: "mailto:yebraidev@gmail.com",
+      route: "mailto:ivanyebra@yebraidev.es",
       description: "Let´s talk!",
     }/*,
     {
