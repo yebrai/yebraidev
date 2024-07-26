@@ -113,3 +113,13 @@
   }
 }
 
+@media (max-width: 460px) {
+  .titleExperience span {
+    align-items: start;
+  }
+
+  .titleExperience span svg{
+    padding: 3px;
+  }
+}
+
