@@ -19,7 +19,7 @@ export default function Skills() {
         </li>
 
         <li className={styles.skillsCategory}>
-          <h3 className={styles.categoryTitle}>Frameworks & Libraries</h3>
+          <h3 className={styles.categoryTitle}>Frameworks</h3>
           <ul className={styles.skillsList}>
             <li><FontAwesomeIcon icon={faPhp} /><p>Symfony</p></li>
             <li><FontAwesomeIcon icon={faPhp} /><p>Codeigniter</p></li>
