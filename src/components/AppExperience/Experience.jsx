@@ -32,7 +32,11 @@ const ExperienceItem = ({ title, company, website, startDate, endDate, children 
             <span><FontAwesomeIcon icon={faCalendarAlt} /> {startDate} - {endDate} ({duration})</span>
           </div>
         </div>
-        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+        <span 
+          className={`${styles.toggleIcon} ${isOpen ? styles.open : ""}`}
+        >
+          🔼
+        </span>
       </div>
       <div className={`${styles.experienceContent} ${isOpen ? styles.contentOpen : styles.contentClosed}`}>
         {children}
