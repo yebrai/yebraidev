@@ -68,6 +68,11 @@ export default function Portfolio() {
                   </a>
                 </div>
               </div>
+              <div className={styles.techsContainer}>
+                {techs.map((each, i) => (
+                  <p key={i}>{each}</p>
+                ))}
+              </div>
             </li>
           );
         })}

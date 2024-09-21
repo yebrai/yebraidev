@@ -12,19 +12,42 @@
   border-radius: 15px;
 }
 
+.mainUl::-webkit-scrollbar {
+  width: 12px;
+}
+
+.mainUl::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+.mainUl::-webkit-scrollbar-thumb {
+  background: #4b8de1;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.mainUl::-webkit-scrollbar-thumb:hover {
+  background: #1e90ff;
+}
+
+/* Card general */
 .card {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px; 
+  width: 300px;
   border-radius: 15px;
   padding: 10px;
   background-color: var(--background-card-elements);
+  box-shadow: var(--shadow-elevation); /* Mantener el box-shadow */
   position: relative;
   transition: transform 0.3s;
 }
 
+/* Card header para abrir/cerrar */
 .cardHeader {
   display: flex;
   justify-content: space-between;
@@ -47,6 +70,7 @@
   transform: rotate(180deg);
 }
 
+/* Animación del contenido desplegable */
 .cardContent {
   display: flex;
   flex-direction: column;
@@ -64,24 +88,33 @@
 }
 
 .cardContent.alwaysOpen {
-  max-height: none; 
+  max-height: none;
   opacity: 1;
-  overflow: visible; 
+  overflow: visible;
   transform: none;
 }
 
+/* Imagen en la tarjeta */
 .image {
   position: relative;
-  width: 100%;
+  width: 300px;
   height: 150px;
+  transition: transform 1s;
   overflow: hidden;
-  margin-bottom: 10px;
 }
 
 .imageCard {
   height: 100%;
+  transition: transform 1s;
+  opacity: 1;
 }
 
+.imageCard:hover {
+  transform: scale(1.1);
+  transition: transform 1s;
+}
+
+/* Contenedor de tecnologías */
 .techsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -90,6 +123,12 @@
   margin-bottom: 10px;
 }
 
+.techsContainer p {
+  color: #4b8de1;
+  font-weight: 800; /* Mantener el peso de la fuente */
+}
+
+/* Botones */
 .btn,
 .btnDemo {
   margin: 5px;
@@ -99,7 +138,6 @@
   background-color: #f4f4f4;
   transition: all 0.5s;
   border: 0.1px solid grey;
-  width: 100%;
 }
 
 .btn:hover,
@@ -107,16 +145,20 @@
   box-shadow: var(--shadow-elevation);
 }
 
-.previewDetails {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #4b8de1;
+/* Descripción */
+.descriptionText {
+  width: 80%;
 }
 
-/* Estilos para pantallas menores a 627px */
+/* Responsivo para pantallas pequeñas */
 @media (max-width: 627px) {
   .card {
     width: 85%;
+  }
+
+  .cardHeader {
+    justify-content: center;
+    gap: 10px;
   }
 
   .toggleIcon {
@@ -127,8 +169,21 @@
     height: 120px;
   }
 
+  .techsContainer p {
+    padding: 2px;
+    margin: 10px 3px 10px 3px;
+    font-size: 0.9rem;
+    column-gap: 0;
+  }
+
   .btn,
   .btnDemo {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .card {
+    margin: 0 250px 0 250px;
   }
 }
