@@ -24,20 +24,29 @@ export default function Home() {
 
   return (
     <>
-      <NextSeo title="Yebraidev" description="Yebraidev Website" />
-        <div className={`introMain ${isVisible ? "visible" : ""}`}>
-          <Navbar />
-          <section className="main">
-            <Welcome />
-            <About />
-            <Experience />
-            <Skills />
-            <CommunityInvolvement/>
-            <Portfolio />
-            <Education />
-          </section>
-        </div>
-      <footer>© 2023 Ivan Yebra</footer>
+      <NextSeo
+        title="Yebraidev"
+        description="Yebraidev Website"
+        openGraph={{
+          title: 'Yebraidev',
+          description: 'Portfolio of Ivan Yebra',
+          url: 'https://www.yebraidev.es',
+          site_name: 'Yebraidev',
+        }}
+      />
+      <div className={`introMain ${isVisible ? "visible" : ""}`}>
+        <Navbar />
+        <section className="main">
+          <Welcome />
+          <About />
+          <Experience />
+          <Skills />
+          <CommunityInvolvement />
+          <Portfolio />
+          <Education />
+        </section>
+      </div>
+      <footer>© 2021 Ivan Yebra</footer>
     </>
   );
 }
