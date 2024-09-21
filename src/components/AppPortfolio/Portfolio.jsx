@@ -53,12 +53,6 @@ export default function Portfolio() {
                   </a>
                 </div>
                 <p className={styles.descriptionText}>{description}</p>
-                <h4>Tech stack:</h4>
-                <div className={styles.techsContainer}>
-                  {techs.map((each, i) => (
-                    <p key={i}>{each}</p>
-                  ))}
-                </div>
                 <div className={styles.buttonContainer}>
                   <a href={linkCode} target="_blank" rel="noreferrer">
                     <button className={styles.btn}>Code</button>
@@ -67,6 +61,7 @@ export default function Portfolio() {
                     <button className={styles.btnDemo}>Demo</button>
                   </a>
                 </div>
+              <h4 className={styles.techTitle}>Tech stack:</h4>
               </div>
               <div className={styles.techsContainer}>
                 {techs.map((each, i) => (

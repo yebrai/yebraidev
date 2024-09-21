@@ -1,7 +1,7 @@
 .mainUl {
   display: flex;
   flex-wrap: wrap;
-  gap: 5vh 5vw;
+  gap: 5vh 3vw;
   justify-content: center;
   text-align: center;
   padding: 35px 0 70px 0;
@@ -32,22 +32,20 @@
   background: #1e90ff;
 }
 
-/* Card general */
 .card {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 380px;
   border-radius: 15px;
   padding: 10px;
   background-color: var(--background-card-elements);
-  box-shadow: var(--shadow-elevation); /* Mantener el box-shadow */
+  box-shadow: var(--shadow-elevation);
   position: relative;
   transition: transform 0.3s;
 }
 
-/* Card header para abrir/cerrar */
 .cardHeader {
   display: flex;
   justify-content: space-between;
@@ -70,7 +68,6 @@
   transform: rotate(180deg);
 }
 
-/* Animación del contenido desplegable */
 .cardContent {
   display: flex;
   flex-direction: column;
@@ -94,7 +91,6 @@
   transform: none;
 }
 
-/* Imagen en la tarjeta */
 .image {
   position: relative;
   width: 300px;
@@ -114,7 +110,6 @@
   transition: transform 1s;
 }
 
-/* Contenedor de tecnologías */
 .techsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -125,7 +120,11 @@
 
 .techsContainer p {
   color: #4b8de1;
-  font-weight: 800; /* Mantener el peso de la fuente */
+  font-weight: 800; 
+}
+
+.techTitle {
+  margin-bottom: 0;
 }
 
 /* Botones */
@@ -150,7 +149,12 @@
   width: 80%;
 }
 
-/* Responsivo para pantallas pequeñas */
+@media (max-width: 1200px) {
+  .card {
+    width: 300px;
+  }
+}
+
 @media (max-width: 627px) {
   .card {
     width: 85%;
