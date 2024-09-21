@@ -16,7 +16,7 @@ This is a Next.js powered portfolio website. It includes sections for showcasing
 
 - **Framework**: Next.js
 - **Styling**: CSS, framer-motion
-- **Deployment**: Vercel / Netlify (or any other deployment platform)
+- **Deployment**: Vercel
 
 
 
