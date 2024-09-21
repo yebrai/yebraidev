@@ -58,6 +58,8 @@ export default function Experience() {
           <p>• Utilized NewRelic for real-time performance monitoring and optimization.</p>
           <p>• Managed deployments with AWS and Docker, and integrated CI/CD pipelines using Bitbucket.</p>
           <p>• Refined session and JWT token systems to support multiple users and sessions efficiently.</p>
+          <p>• Refactored legacy code to improve readability and transformed it into scalable models.</p>
+          <p>• Simplified and unified team code contributions, merging them into production branches.</p>
         </ExperienceItem>
         <ExperienceItem
           title="Full-stack Developer"

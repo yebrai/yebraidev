@@ -22,8 +22,10 @@ export default function Skills() {
           <h3 className={styles.categoryTitle}>Frameworks</h3>
           <ul className={styles.skillsList}>
             <li><FontAwesomeIcon icon={faPhp} /><p>Symfony</p></li>
-            <li><FontAwesomeIcon icon={faNodeJs} /><p>Node.js</p></li>
             <li><FontAwesomeIcon icon={faPhp} /><p>Codeigniter</p></li>
+            <li><FontAwesomeIcon icon={faGolang} /><p>Gin</p></li>
+            <li><FontAwesomeIcon icon={faGolang} /><p>Echo</p></li>
+            <li><FontAwesomeIcon icon={faNodeJs} /><p>Node.js</p></li>
             <li><FontAwesomeIcon icon={faReact} /><p>ReactJS</p></li>
             <li><FontAwesomeIcon icon={faReact} /><p>NextJS</p></li>
           </ul>
@@ -33,6 +35,7 @@ export default function Skills() {
           <h3 className={styles.categoryTitle}>DB & Infrastructure</h3>
           <ul className={styles.skillsList}>
             <li><FontAwesomeIcon icon={faDatabase} /><p>MySQL</p></li>
+            <li><FontAwesomeIcon icon={faDatabase} /><p>PostgreSQL</p></li>
             <li><FontAwesomeIcon icon={faDatabase} /><p>MongoDB</p></li>
             <li><FontAwesomeIcon icon={faDatabase} /><p>Redis</p></li>
             <li><FontAwesomeIcon icon={faLinux} /><p>Linux</p></li>
@@ -45,6 +48,8 @@ export default function Skills() {
           <ul className={styles.skillsList}>
             <li><FontAwesomeIcon icon={faCheckCircle} /><p>DDD (Domain-Driven Design)</p></li>
             <li><FontAwesomeIcon icon={faCheckCircle} /><p>TDD (Test-Driven Development)</p></li>
+            <li><FontAwesomeIcon icon={faCheckCircle} /><p>Event-Driven Architecture</p></li>
+            <li><FontAwesomeIcon icon={faCheckCircle} /><p>SOLID</p></li>
             <li><FontAwesomeIcon icon={faCheckCircle} /><p>Hexagonal Architecture</p></li>
             <li><FontAwesomeIcon icon={faCheckCircle} /><p>SOLID</p></li>
           </ul>

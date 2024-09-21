@@ -6,11 +6,20 @@ import retroscript from '../../assets/images/retroscript.jpg'
 import tasteit from '../../assets/images/tasteit.jpg'
 import ourhome from '../../assets/images/ourhome.jpg'
 import infecnation from '../../assets/images/infectnation.jpg'
+import passgenie from '../../assets/images/passgenie.png'
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { BsPersonCircle } from "react-icons/bs";
 
 export const portfolioLinks = [
+    {
+      imageSrc: passgenie,
+      title: "PassGenie",
+      techs: [['Golang'], ['GitHub Actions'], ['CLI'], ['CI/CD']],
+      linkCode: 'https://github.com/yebrai/PassGenie',
+      linkDemo: 'https://github.com/yebrai/PassGenie/releases',
+      description: 'CLI tool built with Go for generating secure passwords. Configured GitHub Actions to automate binary builds and publish executables for Linux, macOS, and Windows.'
+    },
     {
       imageSrc: lb,
       title: "Lectores Beta",

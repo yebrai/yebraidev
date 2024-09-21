@@ -15,21 +15,19 @@ export default function Education() {
             </p>
           </div>
           <p>
-            Immersive Bootcamp specialized in developing projects with MERN
-            stack under agile methodologies.
+            Immersive Bootcamp specialized in developing projects with MERN stack under agile methodologies.
           </p>
           <p>
             <b>Frontend technologies:</b> HTML, CSS, JavaScript(ES6), React, Handlebars.
           </p>
           <p>
-            <b>Backend technologies:</b> Express.js, Node.js, MongoDB, REST
-            APIs, Fetch APIs, Axios.
+            <b>Backend technologies:</b> Express.js, Node.js, MongoDB, REST APIs, Fetch APIs, Axios.
           </p>
           <p>
             <b>Testing:</b> Jasmine.
           </p>
           <a className={styles.certification} target="_blank" href="https://drive.google.com/file/d/1eicZaI4vGKEmJz8iqbBlp2hbtzMYWeCO/view?usp=sharing" rel="noreferrer">
-          🔗 Certification
+            🔗 Certification
           </a>
         </div>
         <div>
@@ -51,6 +49,18 @@ export default function Education() {
           </p>
           <p>
             <b>Infrastructure & Database:</b> MySQL, Linux, Virtual Machine Architecture (VMA), Docker.
+          </p>
+        </div>
+        <div>
+          <h4>Self-taught Web and Cloud Development</h4>
+          <p className={styles.titleEducation}>
+            <span>2021 - Present</span>
+          </p>
+          <p>
+            Passionate about exploring and mastering development environments, focusing on low-level systems and full-stack solutions.
+          </p>
+          <p>
+            <b>Tools & Technologies:</b> PHPStorm, GoLand, VSCode, Docker, Kubernetes, Jenkins, GitHub Actions, AWS, New Relic, Grafana, Elastic.
           </p>
         </div>
       </div>
