@@ -12,60 +12,74 @@
   border-radius: 15px;
 }
 
-.mainUl::-webkit-scrollbar {
-  width: 12px;
-}
-
-.mainUl::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-  border-radius: 10px;
-  border: 2px solid #ddd;
-}
-
-.mainUl::-webkit-scrollbar-thumb {
-  background: #4b8de1; 
-  border-radius: 10px;
-  transition: background 0.3s ease;
-}
-
-.mainUl::-webkit-scrollbar-thumb:hover {
-  background: #1e90ff; 
-}
-
-.mainUl li {
+.card {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
-  box-shadow: var(--shadow-elevation);
-  width: 400px;
+  width: 300px; 
   border-radius: 15px;
-  padding-bottom: 20px;
+  padding: 10px;
   background-color: var(--background-card-elements);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cardHeader:hover {
+  background-color: rgba(75, 141, 225, 0.1);
+}
+
+.toggleIcon {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.open {
+  transform: rotate(180deg);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease, opacity 0.8s ease;
+}
+
+.card.active .cardContent {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.cardContent.alwaysOpen {
+  max-height: none; 
+  opacity: 1;
+  overflow: visible; 
+  transform: none;
 }
 
 .image {
   position: relative;
-  width: 300px;
+  width: 100%;
   height: 150px;
-  transition: transform 1s;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .imageCard {
   height: 100%;
-  transition: transform 1s;
-  opacity: 1;
-}
-
-.imageCard:hover {
-  transform: scale(1.1);
-  transition: transform 1s;
-}
-
-.card h4 {
-  margin: 10px 0 0 0;
 }
 
 .techsContainer {
@@ -73,15 +87,7 @@
   flex-wrap: wrap;
   column-gap: 10px;
   justify-content: center;
-}
-
-.techsContainer p {
-  color: #4b8de1;
-  font-weight: 800;
-}
-
-.descriptionText {
-  width: 80%;
+  margin-bottom: 10px;
 }
 
 .btn,
@@ -93,6 +99,7 @@
   background-color: #f4f4f4;
   transition: all 0.5s;
   border: 0.1px solid grey;
+  width: 100%;
 }
 
 .btn:hover,
@@ -100,40 +107,28 @@
   box-shadow: var(--shadow-elevation);
 }
 
-@media (max-width: 1200px) {
-  .mainUl {
-    justify-content: center;
-  }
+.previewDetails {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #4b8de1;
 }
 
+/* Estilos para pantallas menores a 627px */
 @media (max-width: 627px) {
-  .image {
-    width: 190px;
-    height: 100px;
-  }
-
-  .techsContainer p {
-    padding: 2px;
-    margin: 10px 3px 10px 3px;
-    font-size: 0.6rem;
-  }
-
-  .buttonContainer button{
-    font-size: 0.6rem;
-  }
-
-  .mainUl li {
-    width: 200px;
-  }
-
-
-}
-
-@media (max-width: 350px) {
-
   .card {
-    margin:0 250px 0 250px;
+    width: 85%;
   }
 
+  .toggleIcon {
+    font-size: 1.2rem;
+  }
 
+  .image {
+    height: 120px;
+  }
+
+  .btn,
+  .btnDemo {
+    font-size: 0.9rem;
+  }
 }
