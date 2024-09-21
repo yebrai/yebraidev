@@ -1,29 +1,48 @@
 .titleEducation {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   font-size: 1.1rem;
+}
+
+.titleEducation span{
+  font-size: 0.9rem;
+  color:rgb(88, 86, 86);
 }
 
 .educationContainer {
   font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .educationContainer a {
   cursor: pointer;
   text-decoration: none;
-  color: grey;
+  color: #4b8de1;
 }
 
 .educationContainer a:hover {
-  color: #4b8de1;
+  color: blue;
 }
 
 .educationContainer h4 {
   font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.educationContainer p {
+  font-size: 1rem;
 }
 
 @media (max-width: 627px) {
 .titleEducation{
   gap: 10vw;
 }
+
+.certification {
+  font-size: 0.9rem;
+}
+
 }

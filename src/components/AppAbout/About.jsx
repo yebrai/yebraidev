@@ -1,32 +1,55 @@
+import { iconsLink } from "@/assets/links/links";
 import styles from "./About.module.css";
+import { motion, useAnimation } from 'framer-motion';
+import useAnimations from "@/hooks/useAnimations";
+
 export default function About() {
+  const controls = useAnimations(2, true);
+
+  const handleDownload = () => {
+    window.gtag('event', 'download', {
+      event_category: 'CV',
+      event_label: 'CV Download',
+      value: 1,
+    });
+  };
+
   return (
     <>
-      <h2 id="about">About me</h2>
-      <div className={styles.aboutContainer}>
-        <p>
-          As an enthusiastic individual passionate about new technologies and
-          web development, I actively dedicate my free time to continuous
-          learning.</p>
-          
-          <p> Motivated by a relentless drive for personal and
-          professional growth, I took the initiative to expand my skills through
-          self-directed learning. Additionally, I successfully completed the{" "}
-          <b>Full Stack Web Development Bootcamp at Ironhack</b>, where I gained
-          hands-on experience and acquired valuable knowledge in various coding
-          concepts. Currently, I am actively seeking an organization that
-          embraces a fast-paced environment, encourages ongoing learning and
-          professional development, and offers exciting products. Above all, I
-          value teamwork and seek a collaborative work environment that fosters
-          both personal and collective growth.
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={controls}
+        style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+        <p className={styles.aboutText}>
+          Backend Developer with 2+ years of experience. Specialized in server-side solutions with a strong background in front-end, cloud, and Linux technologies. Passionate about Clean Code and focused on creating scalable, readable code to support team collaboration and efficient workflows.
         </p>
-        <p>
-          I´m looking for an organization that moves fast, gives{" "}
-          <u>time and resources to learn and grow</u>, with exciting products,
-          and <u>teamwork values</u>. In short, a work environment that fosters
-          collaboration and learning.
-        </p>
-      </div>
+        <ul className={styles.iconsMain}>
+          {iconsLink.map(({ label, route }) => (
+            <div key={route} className={styles.iconContainer}>
+              <li className={styles.icons}>
+                <a href={route} target="_blank" rel="noreferrer">
+                  {label}
+                </a>
+              </li>
+            </div>
+          ))}
+        </ul>
+        <div className={styles.downloadContainer}>
+          <a 
+            href="https://drive.google.com/file/d/1Cs92rk2A4Pyj0Fo0AyfVvUbAdjl15Trh/view?usp=drive_link" 
+            target="_blank" 
+            rel="noreferrer" 
+            onClick={handleDownload} // Agregar el manejador de clics aquí
+            download="true"
+          >
+            Download CV
+          </a>
+        </div>
+        <div className={styles.aboutContainer}>
+        </div>
+      </motion.div>
     </>
   );
 }

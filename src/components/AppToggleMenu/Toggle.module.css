@@ -1,0 +1,53 @@
+.toggleButton {
+    border: 0;
+    font-size: 2rem;
+    display: flex;
+    cursor:pointer;
+    background-color: transparent;
+}
+
+
+.container {
+    position: fixed;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    height: 100vh;
+    left: 0;
+    top: 5vh;
+    position: fixed;
+    z-index: 2;
+    background-color: #eceef1;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+.openContainer {
+    position: fixed;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    height: 100vh;
+    left: 0;
+    top: 5vh;
+    position: fixed;
+    z-index: 1;
+    background-color: #d1d4d7;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+.toggleLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    margin-top: 5vh;
+    padding-left: 20px;
+}
+
+@media (max-width: 410px) {
+    .toggleButton {
+       margin-left: -10vw;
+    }
+
+  }
