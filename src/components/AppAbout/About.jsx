@@ -41,7 +41,7 @@ export default function About() {
             href="https://drive.google.com/file/d/1Cs92rk2A4Pyj0Fo0AyfVvUbAdjl15Trh/view?usp=drive_link" 
             target="_blank" 
             rel="noreferrer" 
-            onClick={handleDownload} // Agregar el manejador de clics aquí
+            onClick={handleDownload}
             download="true"
           >
             Download CV
