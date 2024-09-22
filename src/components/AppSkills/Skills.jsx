@@ -22,8 +22,10 @@ export default function Skills() {
           <h3 className={styles.categoryTitle}>Frameworks</h3>
           <ul className={styles.skillsList}>
             <li><FontAwesomeIcon icon={faPhp} /><p>Symfony</p></li>
-            <li><FontAwesomeIcon icon={faNodeJs} /><p>Node.js</p></li>
             <li><FontAwesomeIcon icon={faPhp} /><p>Codeigniter</p></li>
+            <li><FontAwesomeIcon icon={faGolang} /><p>Gin</p></li>
+            <li><FontAwesomeIcon icon={faGolang} /><p>Echo</p></li>
+            <li><FontAwesomeIcon icon={faNodeJs} /><p>Node.js</p></li>
             <li><FontAwesomeIcon icon={faReact} /><p>ReactJS</p></li>
             <li><FontAwesomeIcon icon={faReact} /><p>NextJS</p></li>
           </ul>

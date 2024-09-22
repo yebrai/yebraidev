@@ -15,7 +15,7 @@ export const portfolioLinks = [
     {
       imageSrc: passgenie,
       title: "PassGenie",
-      techs: [['Golang'], ['GitHub Actions'], ['CLI'], ['CI/CD']],
+      techs: [['Go'], ['GitHub Actions CI/CD'], ['CLI'], ['Bash']],
       linkCode: 'https://github.com/yebrai/PassGenie',
       linkDemo: 'https://github.com/yebrai/PassGenie/releases',
       description: 'CLI tool built with Go for generating secure passwords. Configured GitHub Actions to automate binary builds and publish executables for Linux, macOS, and Windows.'
