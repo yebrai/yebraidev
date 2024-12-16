@@ -23,7 +23,7 @@ export default function About() {
         transition={{ duration: 0.5, delay: 1 }}
       >
         <p className={styles.aboutText}>
-          Backend Developer with 2+ years of experience. Specialized in server-side solutions with a strong background in front-end, cloud, and Linux technologies. Passionate about Clean Code and focused on creating scalable, readable code to support team collaboration and efficient workflows.
+        Backend Developer specialized in building robust server-side solutions. With a strong background in front-end, cloud, and Linux technologies, I focus on delivering clean, scalable code that fosters team collaboration and efficient workflows. Passionate about Clean Code principles, I aim to create systems that are not only functional but maintainable and adaptable.
         </p>
         <ul className={styles.iconsMain}>
           {iconsLink.map(({ label, route }) => (
@@ -38,7 +38,7 @@ export default function About() {
         </ul>
         <div className={styles.downloadContainer}>
           <a 
-            href="https://drive.google.com/file/d/1Cs92rk2A4Pyj0Fo0AyfVvUbAdjl15Trh/view?usp=drive_link" 
+            href="https://drive.google.com/file/d/1lFYYH5g6LbH2NaLgEeJiL_yFPh2f9iRU/view?usp=drive_link" 
             target="_blank" 
             rel="noreferrer" 
             onClick={handleDownload}

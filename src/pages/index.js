@@ -42,11 +42,11 @@ export default function Home() {
           <Experience />
           <Skills />
           <CommunityInvolvement />
-          <Portfolio />
-          <Education />
+          {/* <Portfolio /> */}
+          {/* <Education /> */}
         </section>
       </div>
-      <footer>© 2021 Ivan Yebra</footer>
+      <footer>© 2024 Yebraidev</footer>
     </>
   );
 }
