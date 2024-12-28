@@ -46,7 +46,7 @@ export default function Home() {
           {/* <Education /> */}
         </section>
       </div>
-      <footer>© 2024 Yebraidev</footer>
+      <footer>© 2025 Yebraidev</footer>
     </>
   );
 }
