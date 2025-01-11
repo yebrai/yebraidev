@@ -12,9 +12,8 @@ export default function Skills() {
           <h3 className={styles.categoryTitle}>Technologies</h3>
           <ul className={styles.skillsList}>
             <li><FontAwesomeIcon icon={faPhp} /><p>PHP</p></li>
-            <li><FontAwesomeIcon icon={faJs} /><p>JavaScript</p></li>
-            <li><FontAwesomeIcon icon={faJs} /><p>TypeScript</p></li>
             <li><FontAwesomeIcon icon={faGolang} /><p>Go</p></li>
+            <li><FontAwesomeIcon icon={faJs} /><p>JavaScript</p></li>
           </ul>
         </li>
 

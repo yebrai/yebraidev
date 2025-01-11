@@ -42,7 +42,7 @@ export default function Home() {
           <Experience />
           <Skills />
           <CommunityInvolvement />
-          {/* <Portfolio /> */}
+          <Portfolio />
           {/* <Education /> */}
         </section>
       </div>
