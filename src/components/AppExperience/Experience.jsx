@@ -55,27 +55,28 @@ export default function Experience() {
     <section id="experienceSection">
       <h2 id="experience">Jobs</h2>
       <div className={styles.experienceContainer}>
+        
         <ExperienceItem
-          title="Backend Developer"
-          company="CoverManager"
-          website="https://www.covermanager.com"
-          startDate="Mar. 2024"
+          title="Backend Engineer"
+          company="Knowmad Mood"
+          website="https://www.knowmadmood.com/es"
+          startDate="Feb. 2025"
           endDate="Present"
-          description="CoverManager is a SaaS solution for managing event coverage and ticketing, designed to streamline the workflow of event organizers and enhance customer experience."
-          techs="PHP, Node.js, CodeIgniter, Docker, AWS, Redis, MongoDB, MySQL"
-          projects={[{ name: 'CoverManager', url: 'https://www.covermanager.com' }]}
+          description="Working at Knowmad Mood as a consultant for Sercide, an energy distribution company that provides comprehensive services for energy management, including billing, settlements, customer onboarding, and other essential services for energy distribution operations."
+          techs="Go, Google Cloud Platform, Kubernetes, Pub/Sub, Domain-Driven Design, Event-Driven Architecture, Microservices, PostgreSQL, MongoDB, Redis"
+          projects={[{ name: 'Sercide Energy Platform', url: 'https://www.sercide.com' }]}
           achievements={[
-            "Optimized high-concurrency endpoints, enhancing response times by over 50% with asynchronous operations.",
-            "Migrated a monolithic system to a scalable microservices architecture using Domain-Driven Design (DDD) and Hexagonal Architecture principles.",
-            "Utilized NewRelic for real-time performance monitoring and optimization.",
-            "Managed deployments with AWS and Docker, and integrated CI/CD pipelines using Bitbucket.",
-            "Refined session and JWT token systems to support multiple users and sessions efficiently.",
-            "Refactored legacy code to improve readability and transformed it into scalable models.",
-            "Simplified and unified team code contributions, merging them into production branches."
+            "Designed and implemented microservices architecture for critical energy distribution operations handling thousands of daily transactions.",
+            "Created a generic action framework using acyclic graph processing to manage event-driven state transitions, reducing development time by 40%.",
+            "Implemented design patterns (Factory, Facade, DRY) to standardize service interfaces and improve maintainability across the platform.",
+            "Optimized PostgreSQL queries and MongoDB aggregations for collections with millions of records, improving response times by 60%.",
+            "Orchestrated deployments on Google Cloud Platform using GKE and Pub/Sub for resilient inter-service communication.",
+            "Coordinated cross-functional teams to develop new client-requested services while maintaining existing platform functionality.",
+            "Collaborated on implementing CI/CD workflows and deployed solutions to Google Cloud Platform ecosystem, utilizing Kubernetes Engine, Pub/Sub messaging, Cloud Trace monitoring, Storage services, and automated builds."
           ]}
         />
         <ExperienceItem
-          title="Full-stack Developer"
+          title="Software Developer"
           company="DSS Network"
           website="https://www.dssnetwork.es"
           startDate="Apr. 2023"
@@ -99,7 +100,7 @@ export default function Experience() {
           ]}
         />
         <ExperienceItem
-          title="Full-stack Developer"
+          title="Software Developer"
           company="Antler"
           website="https://www.antler.co"
           startDate="Nov. 2022"
