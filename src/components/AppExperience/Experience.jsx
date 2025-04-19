@@ -74,6 +74,25 @@ export default function Experience() {
             "Collaborated on implementing CI/CD workflows and deployed solutions to Google Cloud Platform ecosystem, utilizing Kubernetes Engine, Pub/Sub messaging, Cloud Trace monitoring, Storage services, and automated builds."
           ]}
         />
+          <ExperienceItem
+          title="Software Engineer"
+          company="CoverManager"
+          website="https://www.covermanager.com"
+          startDate="Mar. 2024"
+          endDate="Present"
+          description="CoverManager is a SaaS solution for managing event coverage and ticketing, designed to streamline the workflow of event organizers and enhance customer experience."
+          techs="PHP, Node.js, CodeIgniter, Docker, AWS, Redis, MongoDB, MySQL"
+          projects={[{ name: 'CoverManager', url: 'https://www.covermanager.com' }]}
+          achievements={[
+            "Optimized high-concurrency endpoints, enhancing response times by over 50% with asynchronous operations.",
+            "Migrated a monolithic system to a scalable microservices architecture using Domain-Driven Design (DDD) and Hexagonal Architecture principles.",
+            "Utilized NewRelic for real-time performance monitoring and optimization.",
+            "Managed deployments with AWS and Docker, and integrated CI/CD pipelines using Bitbucket.",
+            "Refined session and JWT token systems to support multiple users and sessions efficiently.",
+            "Refactored legacy code to improve readability and transformed it into scalable models.",
+            "Simplified and unified team code contributions, merging them into production branches."
+          ]}
+        />
         <ExperienceItem
           title="Software Developer"
           company="DSS Network"
