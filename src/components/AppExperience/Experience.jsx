@@ -15,7 +15,7 @@ const calculateDuration = (startDate, endDate) => {
 
 const ExperienceItem = ({ title, company, website, startDate, endDate, description, techs, projects, achievements }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const duration = calculateDuration(startDate, endDate);
+  //const duration = calculateDuration(startDate, endDate);
 
   return (
     <div className={`${styles.experienceBlock} ${isOpen ? styles.open : ''}`}>
@@ -27,7 +27,7 @@ const ExperienceItem = ({ title, company, website, startDate, endDate, descripti
             <span className={styles.companyName}> at {company}</span>
           </h4>
           <div className={styles.titleExperience}>
-            <span><FontAwesomeIcon icon={faCalendarAlt} /> {startDate} - {endDate} ({duration})</span>
+            <span><FontAwesomeIcon icon={faCalendarAlt} /> {startDate} - {endDate}</span>
           </div>
         </div>
         <span className={`${styles.toggleIcon} ${isOpen ? styles.open : ""}`}>🔼</span>
@@ -70,7 +70,6 @@ export default function Experience() {
             "Created a generic action framework using acyclic graph processing to manage event-driven state transitions, reducing development time by 40%.",
             "Implemented design patterns (Factory, Facade, DRY) to standardize service interfaces and improve maintainability across the platform.",
             "Optimized PostgreSQL queries and MongoDB aggregations for collections with millions of records, improving response times by 60%.",
-            "Orchestrated deployments on Google Cloud Platform using GKE and Pub/Sub for resilient inter-service communication.",
             "Coordinated cross-functional teams to develop new client-requested services while maintaining existing platform functionality.",
             "Collaborated on implementing CI/CD workflows and deployed solutions to Google Cloud Platform ecosystem, utilizing Kubernetes Engine, Pub/Sub messaging, Cloud Trace monitoring, Storage services, and automated builds."
           ]}
