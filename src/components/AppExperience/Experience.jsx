@@ -27,7 +27,7 @@ const ExperienceItem = ({ title, company, website, startDate, endDate, descripti
             <span className={styles.companyName}> at {company}</span>
           </h4>
           <div className={styles.titleExperience}>
-            <span><FontAwesomeIcon icon={faCalendarAlt} /> {startDate} - {endDate}</span>
+            <span><FontAwesomeIcon icon={faCalendarAlt} /> {startDate} - {endDate} </span>
           </div>
         </div>
         <span className={`${styles.toggleIcon} ${isOpen ? styles.open : ""}`}>🔼</span>

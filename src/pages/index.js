@@ -41,12 +41,12 @@ export default function Home() {
           <About />
           <Experience />
           <Skills />
-          <Portfolio />
+          <Portfolio /> 
           <CommunityInvolvement />
           {/* <Education /> */}
         </section>
       </div>
-      <footer>© 2025 Yebraidev</footer>
+      <footer>© 2024 Yebraidev</footer>
     </>
   );
 }
