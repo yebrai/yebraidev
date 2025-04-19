@@ -1,195 +1,176 @@
-.mainUl {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5vh 3vw;
-  justify-content: center;
-  text-align: center;
-  padding: 35px 0 70px 0;
-  height: 65vh;
-  overflow-y: auto;
-  box-shadow: inset 0px 0px 8px 1px rgba(0, 0, 0, 0.4);
-  z-index: 1;
-  border-radius: 15px;
-}
-
-.mainUl::-webkit-scrollbar {
-  width: 12px;
-}
-
-.mainUl::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-  border: 2px solid #ddd;
-  cursor: pointer;
-}
-
-.mainUl::-webkit-scrollbar-thumb {
-  background: #4b8de1;
-  border-radius: 10px;
-  transition: background 0.3s ease;
-  cursor: pointer;
-}
-
-.mainUl::-webkit-scrollbar-thumb:hover {
-  background: #1e90ff;
-}
-
-.card {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 380px;
-  border-radius: 15px;
-  padding: 10px;
-  background-color: var(--background-card-elements);
-  box-shadow: var(--shadow-elevation);
+.portfolioSection {
+  padding: 2rem 0;
   position: relative;
-  transition: transform 0.3s;
+  margin-bottom: 3rem;
 }
 
-.cardHeader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.cardHeader:hover {
-  background-color: rgba(75, 141, 225, 0.1);
-}
-
-.toggleIcon {
-  font-size: 1.5rem;
-  transition: transform 0.6s;
-}
-
-.open {
-  transform: rotate(180deg);
-}
-
-.cardContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.8s ease, opacity 0.8s ease;
-}
-
-.card.active .cardContent {
-  max-height: 1000px;
-  opacity: 1;
-}
-
-.cardContent.alwaysOpen {
-  max-height: none;
-  opacity: 1;
-  overflow: visible;
-  transform: none;
-}
-
-.image {
-  position: relative;
-  width: 280px;
-  height: 180px;
-  transition: transform 1s;
-  overflow: hidden;
-  object-fit: cover;
-}
-
-.imageCard {
-  height: 100%;
-  transition: transform 1s;
-  opacity: 1;
-}
-
-.imageCard:hover {
-  transform: scale(1.1);
-  transition: transform 1s;
-}
-
-.techsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 10px;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.techsContainer p {
+.portfolioSection h2 {
+  font-size: 2rem;
   color: #4b8de1;
-  font-weight: 800; 
+  margin-bottom: 2rem;
 }
 
-.techTitle {
-  margin-bottom: 0;
+.terminalContainer {
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
 }
 
-.btn,
-.btnDemo {
-  margin: 5px;
-  padding: 10px;
-  border-radius: 7px;
-  cursor: pointer;
-  background-color: #f4f4f4;
-  transition: all 0.5s;
-  border: 0.1px solid grey;
+.terminalHeader {
+  background-color: #323232;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #444;
 }
 
-.btn:hover,
-.btnDemo:hover {
-  box-shadow: var(--shadow-elevation);
+.terminalButtons {
+  display: flex;
+  gap: 8px;
+  margin-right: 15px;
 }
 
-/* Descripción */
-.descriptionText {
-  width: 80%;
+.terminalButton {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-@media (max-width: 1200px) {
-  .card {
-    width: 300px;
+.closeButton {
+  background-color: #ff5f56;
+}
+
+.minimizeButton {
+  background-color: #ffbd2e;
+}
+
+.maximizeButton {
+  background-color: #27c93f;
+}
+
+.terminalTitle {
+  color: #ddd;
+  font-size: 0.9rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.terminalBody {
+  padding: 20px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.terminalLine {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.terminalPrompt {
+  color: #4b8de1;
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+.terminalCommand {
+  color: #e0e0e0;
+}
+
+.terminalOutput {
+  color: #b0b0b0;
+  margin: 8px 0 20px 0;
+  padding-left: 15px;
+  border-left: 2px solid rgba(75, 141, 225, 0.3);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 1px;
+  width: 10px;
+  height: 20px;
+  background-color: transparent;
+  color: #4b8de1;
+  animation: blink 1s step-end infinite;
+  opacity: 0;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
+
+.terminalLink {
+  color: #4bc5e1;
+  text-decoration: none;
+  position: relative;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.terminalLink:hover {
+  color: #69d2ea;
+  text-decoration: underline;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
-@media (max-width: 627px) {
-  .card {
-    width: 85%;
+@media (max-width: 768px) {
+  .terminalContainer {
+    margin: 0 20px;
   }
-
-  .cardHeader {
-    justify-content: center;
-    gap: 10px;
+  
+  .terminalBody {
+    padding: 15px;
   }
-
-  .toggleIcon {
-    font-size: 1.2rem;
+  
+  .terminalOutput {
+    font-size: 0.95rem;
   }
+}
 
-  .image {
-    height: 120px;
+@media (max-width: 480px) {
+  .portfolioSection h2 {
+    font-size: 1.8rem;
   }
-
-  .techsContainer p {
-    padding: 2px;
-    margin: 10px 3px 10px 3px;
+  
+  .terminalContainer {
+    margin: 0 10px;
+  }
+  
+  .terminalBody {
+    padding: 10px;
+  }
+  
+  .terminalPrompt {
     font-size: 0.9rem;
-    column-gap: 0;
   }
-
-  .btn,
-  .btnDemo {
+  
+  .terminalOutput {
     font-size: 0.9rem;
+    padding-left: 10px;
   }
-}
-
-@media (max-width: 350px) {
-  .card {
-    margin: 0 250px 0 250px;
+  
+  .terminalButtons {
+    gap: 6px;
+  }
+  
+  .terminalButton {
+    width: 10px;
+    height: 10px;
   }
 }
