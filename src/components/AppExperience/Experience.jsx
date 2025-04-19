@@ -15,7 +15,7 @@ const calculateDuration = (startDate, endDate) => {
 
 const ExperienceItem = ({ title, company, website, startDate, endDate, description, techs, projects, achievements }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const duration = calculateDuration(startDate, endDate);
+  //const duration = calculateDuration(startDate, endDate);
 
   return (
     <div className={`${styles.experienceBlock} ${isOpen ? styles.open : ''}`}>
@@ -27,7 +27,7 @@ const ExperienceItem = ({ title, company, website, startDate, endDate, descripti
             <span className={styles.companyName}> at {company}</span>
           </h4>
           <div className={styles.titleExperience}>
-            <span><FontAwesomeIcon icon={faCalendarAlt} /> {startDate} - {endDate} ({duration})</span>
+            <span><FontAwesomeIcon icon={faCalendarAlt} /> {startDate} - {endDate} </span>
           </div>
         </div>
         <span className={`${styles.toggleIcon} ${isOpen ? styles.open : ""}`}>🔼</span>
