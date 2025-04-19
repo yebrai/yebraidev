@@ -1,77 +1,76 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import styles from "./Portfolio.module.css";
-import { portfolioLinks } from "../../assets/links/links";
 
 export default function Portfolio() {
-  const [openIndex, setOpenIndex] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-
+  const [terminalText, setTerminalText] = useState('');
+  const [cursorVisible, setCursorVisible] = useState(true);
+  
+  const fullText = "I enjoy working on personal projects and open source. My most ambitious projects are currently in private development with market launch planned for late 2025. One of these projects is https://psonder.com";
+  
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 627);
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      if (index < fullText.length) {
+        setTerminalText(fullText.substring(0, index + 1));
+        index++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 40);
+    
+    // Blinking cursor effect
+    const cursorInterval = setInterval(() => {
+      setCursorVisible(prev => !prev);
+    }, 500);
+    
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
     };
-
-    handleResize(); // Check initial screen width
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const toggleCard = (index) => {
-    if (isMobile) {
-      setOpenIndex(openIndex === index ? null : index);
-    }
-  };
-
+  
   return (
-    <section id="portfolioSection">
-      <h2 id="portfolio">Personal Projects</h2>
-      <p>
-        I enjoy working on personal projects, collaborating with others, and participating in open source. You can find many more on my <a href="https://github.com/yebrai" target="_blank" rel="noopener noreferrer">GitHub</a>.
-      </p>
-      <ul className={styles.mainUl}>
-        {portfolioLinks.map(({ imageSrc, title, techs, linkCode, linkDemo, description }, i) => {
-          const isOpen = openIndex === i;
-          return (
-            <li key={i} className={`${styles.card} ${isMobile && isOpen ? styles.active : ""}`}>
-              <div className={styles.cardHeader} onClick={() => toggleCard(i)}>
-                <h3>{title}</h3>
-                {isMobile && (
-                  <span className={`${styles.toggleIcon} ${isOpen ? styles.open : ""}`}>🔽</span>
-                )}
-              </div>
-              <div className={`${styles.cardContent} ${isMobile && isOpen ? styles.openContent : ""} ${!isMobile ? styles.alwaysOpen : ""}`}>
-                <div className={styles.image}>
-                  <a href={linkDemo} target="_blank" rel="noreferrer">
-                    <Image
-                      className={styles.imageCard}
-                      src={imageSrc}
-                      fill={true}
-                      alt={title}
-                    />
-                  </a>
-                </div>
-                <p className={styles.descriptionText}>{description}</p>
-                <div className={styles.buttonContainer}>
-                  <a href={linkCode} target="_blank" rel="noreferrer">
-                    <button className={styles.btn}>Code</button>
-                  </a>
-                  <a href={linkDemo} target="_blank" rel="noreferrer">
-                    <button className={styles.btnDemo}>Demo</button>
-                  </a>
-                </div>
-              <h4 className={styles.techTitle}>Tech stack:</h4>
-              </div>
-              <div className={styles.techsContainer}>
-                {techs.map((each, i) => (
-                  <p key={i}>{each}</p>
-                ))}
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+    <section id="portfolioSection" className={styles.portfolioSection}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 id="portfolio">Personal Projects</h2>
+        
+        <div className={styles.terminalContainer}>
+          <div className={styles.terminalHeader}>
+            <div className={styles.terminalButtons}>
+              <span className={`${styles.terminalButton} ${styles.closeButton}`}></span>
+              <span className={`${styles.terminalButton} ${styles.minimizeButton}`}></span>
+              <span className={`${styles.terminalButton} ${styles.maximizeButton}`}></span>
+            </div>
+            <div className={styles.terminalTitle}>yebraidev-projects</div>
+          </div>
+          
+          <div className={styles.terminalBody}>
+            <div className={styles.terminalLine}>
+              <span className={styles.terminalPrompt}>→ yebraidev@dev:~$</span>
+              <span className={styles.terminalCommand}> get-projects --status</span>
+            </div>
+            
+            <div className={styles.terminalOutput}>
+              {terminalText}
+              <span className={`${styles.cursor} ${cursorVisible ? styles.visible : ''}`}>▋</span>
+            </div>
+            
+            <div className={styles.terminalLine}>
+              <span className={styles.terminalPrompt}>→ yebraidev@dev:~$</span>
+              <span className={styles.terminalCommand}> open-link --github</span>
+            </div>
+            
+            <div className={styles.terminalOutput}>
+              Opening <a href="https://github.com/yebrai" target="_blank" rel="noopener noreferrer" className={styles.terminalLink}>github.com/yebrai</a> in browser...
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

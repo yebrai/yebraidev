@@ -41,8 +41,8 @@ export default function Home() {
           <About />
           <Experience />
           <Skills />
+          <Portfolio /> 
           <CommunityInvolvement />
-          {/* <Portfolio /> */}
           {/* <Education /> */}
         </section>
       </div>
