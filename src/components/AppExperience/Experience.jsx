@@ -57,7 +57,7 @@ export default function Experience() {
       <div className={styles.experienceContainer}>
         
         <ExperienceItem
-          title="Backend Engineer"
+          title="Software Engineer"
           company="Knowmad Mood"
           website="https://www.knowmadmood.com/es"
           startDate="Feb. 2025"
