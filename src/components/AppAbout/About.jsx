@@ -69,7 +69,7 @@ export default function About() {
         
         <div className={styles.downloadContainer}>
           <a 
-            href="https://drive.google.com/file/d/1lFYYH5g6LbH2NaLgEeJiL_yFPh2f9iRU/view?usp=drive_link" 
+            href="https://drive.google.com/file/d/1mJA_Krgl5RoANg0wP2fjA-SGt15LEZPA/view?usp=drive_link" 
             target="_blank" 
             rel="noreferrer" 
             onClick={handleDownload}
