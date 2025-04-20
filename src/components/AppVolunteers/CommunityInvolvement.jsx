@@ -1,17 +1,17 @@
 import Image from 'next/image';
 import mongodbImage from '../../assets/images/mongodb-meetup.webp';
-import aiImage from '../../assets/images/ia-meetup.webp';
+import goImage from '../../assets/images/Golang.webp';
 import styles from './CommunityInvolvement.module.css';
 import { FaMeetup } from "react-icons/fa";
 
 const communityImages = {
   mongodb: mongodbImage,
-  ai: aiImage,
+  go: goImage,
 };
 
 const communityLinks = {
   mongodb: 'https://www.meetup.com/seville-mongodb-meetup-group/',
-  ai: 'https://www.meetup.com/ia-generativa-sevilla/',
+  ai: 'https://www.meetup.com/golang-sevilla/',
 };
 
 const CommunityInvolvementItem = ({ title, role, description, date, image, link }) => (
@@ -48,12 +48,12 @@ export default function CommunityInvolvement() {
           link={communityLinks.mongodb}
         />
         <CommunityInvolvementItem
-          title="Inteligencia Artificial Generativa Sevilla"
+          title="Golang Sevilla"
           role="Community Organizer"
-          description="Organize meetups for Generative AI in Sevilla, coordinating workshops and facilitating collaborative knowledge sharing for mutual support and growth."
-          date="July 2023 - Current"
-          image={communityImages.ai}
-          link={communityLinks.ai}
+          description="Host Go meetups in Seville where we create workshops, share latest developments and best practices, while connecting with passionate developers in a collaborative environment focused on collective growth."
+          date="July 2024 - Current"
+          image={communityImages.go}
+          link={communityLinks.go}
         />
       </div>
     </section>

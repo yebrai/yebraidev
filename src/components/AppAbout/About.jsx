@@ -1,7 +1,9 @@
 import { iconsLink } from "@/assets/links/links";
 import styles from "./About.module.css";
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import useAnimations from "@/hooks/useAnimations";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faUsers, faBullseye } from '@fortawesome/free-solid-svg-icons';
 
 export default function About() {
   const controls = useAnimations(2, true);
@@ -22,9 +24,37 @@ export default function About() {
         style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
         transition={{ duration: 0.5, delay: 1 }}
       >
-        <p className={styles.aboutText}>
-        Backend Developer specialized in building robust server-side solutions. With a strong background in front-end, cloud, and Linux technologies, I focus on delivering clean, scalable code that fosters team collaboration and efficient workflows. Passionate about Clean Code principles, I aim to create systems that are not only functional but maintainable and adaptable.
-        </p>
+        <div className={styles.aboutContainer}>
+          <p className={styles.profileSummary}>
+          Backend specialist building robust server-side solutions with cloud and Linux technologies. I deliver clean, scalable code while prioritizing team collaboration, maintainability, and adaptability.
+          </p>
+          
+          <div className={styles.experienceBoxes}>
+            <div className={styles.expBox}>
+              <FontAwesomeIcon icon={faCode} className={styles.expIcon} />
+              <div className={styles.expText}>
+                <span className={styles.expYears}>4+</span>
+                <span className={styles.expLabel}>Years as Software Engineer</span>
+              </div>
+            </div>
+            
+            <div className={styles.expBox}>
+              <FontAwesomeIcon icon={faUsers} className={styles.expIcon} />
+              <div className={styles.expText}>
+                <span className={styles.expYears}>8+</span>
+                <span className={styles.expLabel}>Years Leading Teams</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className={styles.missionContainer}>
+            <FontAwesomeIcon icon={faBullseye} className={styles.missionIcon} />
+            <p className={styles.missionText}>
+              Building sustainable systems that deliver real impact and long-term value
+            </p>
+          </div>
+        </div>
+        
         <ul className={styles.iconsMain}>
           {iconsLink.map(({ label, route }) => (
             <div key={route} className={styles.iconContainer}>
@@ -36,6 +66,7 @@ export default function About() {
             </div>
           ))}
         </ul>
+        
         <div className={styles.downloadContainer}>
           <a 
             href="https://drive.google.com/file/d/1lFYYH5g6LbH2NaLgEeJiL_yFPh2f9iRU/view?usp=drive_link" 
@@ -46,8 +77,6 @@ export default function About() {
           >
             Download CV
           </a>
-        </div>
-        <div className={styles.aboutContainer}>
         </div>
       </motion.div>
     </>

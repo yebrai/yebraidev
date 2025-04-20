@@ -1,11 +1,94 @@
+.aboutContainer {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.profileSummary {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #444;
+  padding: 0 20px;
+}
+
+.experienceBoxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.expBox {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-card-elements);
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 240px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.expIcon {
+  font-size: 28px;
+  color: #4b8de1;
+  margin-right: 20px;
+}
+
+.expText {
+  display: flex;
+  flex-direction: column;
+}
+
+.expYears {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+}
+
+.expLabel {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.missionContainer {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(75, 141, 225, 0.1) 0%, rgba(75, 141, 225, 0.3) 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.missionIcon {
+  font-size: 24px;
+  color: #4b8de1;
+  margin-right: 15px;
+}
+
+.missionText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-style: italic;
+}
+
 .btnContainer {
   display: flex;
   width: 100%;
   justify-content: center;
-}
-
-.aboutContainer {
-  font-size: 1.1rem;
 }
 
 .iconsMain {
@@ -40,7 +123,6 @@
   cursor: pointer;
 }
 
-
 .downloadContainer a{
   text-decoration: none;
   color: white;
@@ -63,22 +145,49 @@
   margin-top: 7vh;
 }
 
+@media (max-width: 768px) {
+  .experienceBoxes {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .expBox {
+    min-width: unset;
+    width: 80%;
+  }
+  
+  .profileSummary {
+    font-size: 1.2rem;
+  }
+  
+  .missionText {
+    font-size: 1rem;
+  }
+}
 
-@media (max-width: 700px) {
-  .downloadContainer a{
-    font-size: 0.8rem;
+@media (max-width: 480px) {
+  .expBox {
+    width: 90%;
   }
-  .aboutText {
-    margin-top: 2vh;
+  
+  .profileSummary {
+    font-size: 1.1rem;
   }
+  
+  .missionContainer {
+    flex-direction: column;
+    text-align: center;
   }
-
-  @media (max-width: 250px) {
-      .downloadContainer a{
-        font-size: 0.5rem;
-        padding: 5px 30px 6px;
-      }
-      .aboutText {
-        margin-top: 2vh;
-      }
-    }
+  
+  .missionIcon {
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .downloadContainer a {
+    font-size: 0.9rem;
+    padding: 7px 25px;
+  }
+}

@@ -30,7 +30,7 @@ const ToggleMenu = ({toggleDropdown, isOpen}) => {
           <Link href="#skills" onClick={toggleDropdown}><MdOutlineLanguage/>Skills</Link>
           <Link href="#communityInvolvement" onClick={toggleDropdown}><FaMeetup/>Community</Link>
           <Link href="#portfolio" onClick={toggleDropdown}><RiPagesLine/>Proyects</Link>
-          <Link href="#education" onClick={toggleDropdown}><TbSchool size={20}/>Education</Link>
+          {/* <Link href="#education" onClick={toggleDropdown}><TbSchool size={20}/>Education</Link> */}
         </ul>
       </motion.div>
     </div>
