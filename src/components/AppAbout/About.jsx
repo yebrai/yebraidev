@@ -3,7 +3,7 @@ import styles from "./About.module.css";
 import { motion } from 'framer-motion';
 import useAnimations from "@/hooks/useAnimations";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faUsers, faBullseye } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faLayerGroup, faBullseye } from '@fortawesome/free-solid-svg-icons';
 
 export default function About() {
   const controls = useAnimations(2, true);
@@ -26,7 +26,7 @@ export default function About() {
       >
         <div className={styles.aboutContainer}>
           <p className={styles.profileSummary}>
-          Backend specialist building robust server-side solutions with cloud and Linux technologies. I deliver clean, scalable code while prioritizing team collaboration, maintainability, and adaptability.
+          Backend specialist building robust server-side solutions with cloud and Linux background. I deliver clean, scalable code with a proven ability to rapidly adapt to new environments, technologies, and requirements while maintaining high quality standards.
           </p>
           
           <div className={styles.experienceBoxes}>
@@ -39,10 +39,10 @@ export default function About() {
             </div>
             
             <div className={styles.expBox}>
-              <FontAwesomeIcon icon={faUsers} className={styles.expIcon} />
+              <FontAwesomeIcon icon={faLayerGroup} className={styles.expIcon} />
               <div className={styles.expText}>
-                <span className={styles.expYears}>8+</span>
-                <span className={styles.expLabel}>Years Leading Teams</span>
+                <span className={styles.expYears}>9+</span>
+                <span className={styles.expLabel}>Services, Systems & Teams</span>
               </div>
             </div>
           </div>
