@@ -42,6 +42,9 @@ export default function Skills() {
               <span>Node.js/Express</span>
             </div>
             <div className={styles.skillItem}>
+              <span>Vue.js</span>
+            </div>
+            <div className={styles.skillItem}>
               <span>React/Next.js</span>
             </div>
           </div>
@@ -57,9 +60,6 @@ export default function Skills() {
               <span>Google Cloud Platform</span>
             </div>
             <div className={styles.skillItem}>
-              <span>AWS</span>
-            </div>
-            <div className={styles.skillItem}>
               <span>Kubernetes</span>
             </div>
             <div className={styles.skillItem}>
@@ -67,9 +67,6 @@ export default function Skills() {
             </div>
             <div className={styles.skillItem}>
               <span>Terraform</span>
-            </div>
-            <div className={styles.skillItem}>
-              <span>Jenkins</span>
             </div>
             <div className={styles.skillItem}>
               <span>GitHub Actions</span>
@@ -87,6 +84,9 @@ export default function Skills() {
               <span>PostgreSQL</span>
             </div>
             <div className={styles.skillItem}>
+              <span>MySQL</span>
+            </div>
+            <div className={styles.skillItem}>
               <span>MongoDB</span>
             </div>
             <div className={styles.skillItem}>
@@ -96,10 +96,10 @@ export default function Skills() {
               <span>Elasticsearch</span>
             </div>
             <div className={styles.skillItem}>
-              <span>GraphQL</span>
+              <span>RabbitMQ</span>
             </div>
             <div className={styles.skillItem}>
-              <span>Kafka</span>
+              <span>PUB/SUB</span>
             </div>
           </div>
         </div>
@@ -118,6 +118,9 @@ export default function Skills() {
             </div>
             <div className={styles.skillItem}>
               <span>Microservices</span>
+            </div>
+            <div className={styles.skillItem}>
+              <span>Modular Monolithic</span>
             </div>
             <div className={styles.skillItem}>
               <span>Hexagonal Architecture</span>
@@ -139,9 +142,6 @@ export default function Skills() {
           <div className={styles.skillsList}>
             <div className={styles.skillItem}>
               <span>New Relic</span>
-            </div>
-            <div className={styles.skillItem}>
-              <span>Prometheus</span>
             </div>
             <div className={styles.skillItem}>
               <span>Grafana</span>
