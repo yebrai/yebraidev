@@ -1,8 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faDatabase, faCheckCircle, faServer, faCloud } from '@fortawesome/free-solid-svg-icons';
 import styles from "./Skills.module.css";
+import { useRouter } from 'next/router';
 
 export default function Skills() {
+  const router = useRouter();
+  
+  const handleGoClick = () => {
+    router.push('/golang');
+  };
+
   return (
     <section id="skillsSection">
       <h2 id="skills">Skills</h2>
@@ -14,8 +21,12 @@ export default function Skills() {
             <h3 className={styles.categoryTitle}>Core Languages</h3>
           </div>
           <div className={styles.skillsList}>
-            <div className={styles.skillItem}>
-              <span>Go</span>
+            <div 
+              className={`${styles.skillItem} ${styles.goSkill}`}
+              onClick={handleGoClick}
+              title="Ver guía completa de Go"
+            >
+              <span>Go (Golang)</span>
             </div>
             <div className={styles.skillItem}>
               <span>PHP</span>

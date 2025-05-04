@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Code, Server, Database, Cloud, Globe, Cpu, Zap, Navigation, GitBranch, Clock, Shield } from 'lucide-react';
+import styles from './GoStackGuide.module.css';
 
 const GoStackGuide = () => {
   const [activeTab, setActiveTab] = useState('fundamentos');
@@ -9,19 +10,19 @@ const GoStackGuide = () => {
   };
 
   return (
-    <div className="flex flex-col bg-slate-50 rounded-lg shadow-lg p-4 font-sans">
-      <header className="mb-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-blue-800">Stack Completo de Aplicaciones Modernas con Go</h1>
-          <div className="p-2 bg-blue-100 rounded-full">
-            <Code size={24} className="text-blue-700" />
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <div className={styles.headerContent}>
+          <h1 className={styles.headerTitle}>Stack Completo de Aplicaciones Escalables y Distribuidas con Go</h1>
+          <div className={styles.headerIconContainer}>
+            <Code size={24} className={styles.headerIcon} />
           </div>
         </div>
-        <p className="text-gray-600 mt-2">Una guía completa para desarrolladores backend que quieren dominar Go y sistemas distribuidos</p>
+        <p className={styles.headerDescription}>Guía completa para backenders que quieran dominar Go y sistemas distribuidos :)</p>
       </header>
 
-      <nav className="mb-6 sticky top-0 z-10">
-        <div className="flex flex-wrap gap-2 justify-center">
+      <nav className={styles.nav}>
+        <div className={styles.tabList}>
           <TabButton 
             label="Fundamentos de Go" 
             icon={<BookOpen size={18} />} 
@@ -73,7 +74,7 @@ const GoStackGuide = () => {
         </div>
       </nav>
 
-      <main className="bg-white p-6 rounded-lg shadow border border-gray-100 flex-grow transition-all duration-300">
+      <main className={styles.mainContent}>
         {activeTab === 'fundamentos' && <FundamentosContent />}
         {activeTab === 'concurrencia' && <ConcurrenciaContent />}
         {activeTab === 'runtime' && <RuntimeContent />}
@@ -84,8 +85,8 @@ const GoStackGuide = () => {
         {activeTab === 'recursos' && <RecursosContent />}
       </main>
 
-      <footer className="mt-4 text-center text-sm text-gray-500">
-        <p>Diseñado para ayudarte a dominar el stack completo de desarrollo de aplicaciones modernas con Go - 2025</p>
+      <footer className={styles.footer}>
+        <p>Diseñado para ayudarte a dominar el stack completo de desarrollo con Go en sitemas distribuidos</p>
       </footer>
     </div>
   );
@@ -93,9 +94,7 @@ const GoStackGuide = () => {
 
 const TabButton = ({ label, icon, active, onClick }) => (
   <button
-    className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-colors ${
-      active ? 'bg-blue-600 text-white shadow-md transform scale-105' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-    }`}
+    className={`${styles.tabButton} ${active ? styles.tabButtonActive : styles.tabButtonInactive}`}
     onClick={onClick}
   >
     {icon}
@@ -104,67 +103,67 @@ const TabButton = ({ label, icon, active, onClick }) => (
 );
 
 const SectionTitle = ({ title, icon }) => (
-  <div className="flex items-center gap-2 mb-4">
-    <div className="p-2 bg-blue-100 rounded-full">
+  <div className={styles.sectionTitleContainer}>
+    <div className={styles.sectionIconContainer}>
       {icon}
     </div>
-    <h2 className="text-xl font-bold text-blue-800">{title}</h2>
+    <h2 className={styles.sectionTitle}>{title}</h2>
   </div>
 );
 
 const TopicCard = ({ title, description, level }) => {
-  const levelColors = {
-    básico: 'bg-green-100 text-green-800 border-green-200',
-    intermedio: 'bg-yellow-100 text-yellow-800 border-yellow-200',
-    avanzado: 'bg-red-100 text-red-800 border-red-200',
+  const levelStyleMap = {
+    básico: styles.topicCardLevelBasic,
+    intermedio: styles.topicCardLevelIntermediate,
+    avanzado: styles.topicCardLevelAdvanced,
   };
 
   return (
-    <div className="border border-gray-200 rounded-lg p-4 transition-all hover:shadow-md hover:translate-y-1">
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="font-bold text-gray-800">{title}</h3>
-        <span className={`px-2 py-1 rounded text-xs font-medium ${levelColors[level]}`}>
+    <div className={styles.topicCard}>
+      <div className={styles.topicCardHeader}>
+        <h3 className={styles.topicCardTitle}>{title}</h3>
+        <span className={`${styles.topicCardLevel} ${levelStyleMap[level]}`}>
           {level}
         </span>
       </div>
-      <p className="text-gray-600 text-sm">{description}</p>
+      <p className={styles.topicCardDescription}>{description}</p>
     </div>
   );
 };
 
 const ResourceCard = ({ title, type, link, description }) => {
   const typeIcons = {
-    libro: <BookOpen size={16} className="text-purple-600" />,
-    tutorial: <Code size={16} className="text-green-600" />,
-    documentación: <BookOpen size={16} className="text-blue-600" />,
-    artículo: <BookOpen size={16} className="text-orange-600" />,
-    video: <BookOpen size={16} className="text-red-600" />,
-    herramienta: <Cpu size={16} className="text-gray-600" />,
+    libro: <BookOpen size={16} />,
+    tutorial: <Code size={16} />,
+    documentación: <BookOpen size={16} />,
+    artículo: <BookOpen size={16} />,
+    video: <BookOpen size={16} />,
+    herramienta: <Cpu size={16} />,
   };
 
-  const typeColors = {
-    libro: 'bg-purple-100 text-purple-800',
-    tutorial: 'bg-green-100 text-green-800',
-    documentación: 'bg-blue-100 text-blue-800',
-    artículo: 'bg-orange-100 text-orange-800',
-    video: 'bg-red-100 text-red-800',
-    herramienta: 'bg-gray-100 text-gray-800',
+  const typeStyleMap = {
+    libro: styles.resourceCardTypeBook,
+    tutorial: styles.resourceCardTypeTutorial,
+    documentación: styles.resourceCardTypeDocumentation,
+    artículo: styles.resourceCardTypeArticle,
+    video: styles.resourceCardTypeVideo,
+    herramienta: styles.resourceCardTypeTool,
   };
 
   return (
-    <div className="border border-gray-200 rounded-lg p-4 transition-all hover:shadow-md hover:-translate-y-1">
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="font-bold text-gray-800">{title}</h3>
-        <span className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium ${typeColors[type]}`}>
+    <div className={styles.resourceCard}>
+      <div className={styles.resourceCardHeader}>
+        <h3 className={styles.resourceCardTitle}>{title}</h3>
+        <span className={`${styles.resourceCardType} ${typeStyleMap[type]}`}>
           {typeIcons[type]} {type}
         </span>
       </div>
-      <p className="text-gray-600 text-sm mb-3">{description}</p>
+      <p className={styles.resourceCardDescription}>{description}</p>
       <a 
         href={link} 
         target="_blank" 
         rel="noopener noreferrer"
-        className="text-blue-600 text-sm hover:underline inline-flex items-center gap-1"
+        className={styles.resourceCardLink}
       >
         Ver recurso <Navigation size={14} />
       </a>
@@ -175,11 +174,11 @@ const ResourceCard = ({ title, type, link, description }) => {
 // Contenido de las pestañas
 const FundamentosContent = () => (
   <div>
-    <SectionTitle title="Fundamentos de Go" icon={<BookOpen size={20} className="text-blue-700" />} />
+    <SectionTitle title="Fundamentos de Go" icon={<BookOpen size={20} className={styles.sectionIcon} />} />
     
-    <p className="mb-4">Go (o Golang) es un lenguaje de programación desarrollado por Google, diseñado para ser simple, eficiente y potente. Aquí encontrarás los conceptos fundamentales que necesitas dominar.</p>
+    <p className={styles.headerDescription}>Go (o Golang) es un lenguaje de programación desarrollado por Google, diseñado para ser simple, eficiente y potente. Aquí encontrarás los conceptos fundamentales que necesitas dominar.</p>
     
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div className={styles.topicGrid}>
       <TopicCard 
         title="Sintaxis y tipos de datos" 
         description="Aprende la sintaxis básica de Go, tipos de datos primitivos, estructuras, interfaces y cómo trabajar con ellos." 
@@ -212,15 +211,15 @@ const FundamentosContent = () => (
       />
     </div>
 
-    <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
-      <h3 className="font-bold text-blue-800 mb-2">¿Por qué Go?</h3>
-      <ul className="list-disc pl-5 space-y-1 text-gray-700">
-        <li><span className="font-medium">Simplicidad:</span> Sintaxis clara y concisa que facilita el mantenimiento y la legibilidad.</li>
-        <li><span className="font-medium">Compilación:</span> Genera binarios nativos sin dependencias externas para múltiples plataformas.</li>
-        <li><span className="font-medium">Rendimiento:</span> Ofrece rendimiento cercano a C/C++ con la facilidad de un lenguaje moderno.</li>
-        <li><span className="font-medium">Concurrencia:</span> Soporte nativo para programación concurrente con goroutines y channels.</li>
-        <li><span className="font-medium">Biblioteca estándar:</span> Amplia y potente, reduce la necesidad de dependencias externas.</li>
-        <li><span className="font-medium">Ecosistema cloud:</span> Muchas herramientas cloud están escritas en Go (Docker, Kubernetes, etc.).</li>
+    <div className={`${styles.infoBox} ${styles.infoBoxBlue}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleBlue}`}>¿Por qué Go?</h3>
+      <ul className={styles.list}>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Simplicidad:</span> Sintaxis clara y concisa que facilita el mantenimiento y la legibilidad.</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Compilación:</span> Genera binarios nativos sin dependencias externas para múltiples plataformas.</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Rendimiento:</span> Ofrece rendimiento cercano a C/C++ con la facilidad de un lenguaje moderno.</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Concurrencia:</span> Soporte nativo para programación concurrente con goroutines y channels.</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Biblioteca estándar:</span> Amplia y potente, reduce la necesidad de dependencias externas.</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Ecosistema cloud:</span> Muchas herramientas cloud están escritas en Go (Docker, Kubernetes, etc.).</li>
       </ul>
     </div>
   </div>
@@ -228,11 +227,11 @@ const FundamentosContent = () => (
 
 const ConcurrenciaContent = () => (
   <div>
-    <SectionTitle title="Concurrencia en Go" icon={<Zap size={20} className="text-blue-700" />} />
+    <SectionTitle title="Concurrencia en Go" icon={<Zap size={20} className={styles.sectionIcon} />} />
     
-    <p className="mb-4">La concurrencia es una de las características más potentes de Go. El modelo de concurrencia de Go basado en goroutines y channels permite crear programas eficientes que aprovechan los sistemas multinúcleo modernos.</p>
+    <p className={styles.headerDescription}>La concurrencia es una de las características más potentes de Go. El modelo de concurrencia de Go basado en goroutines y channels permite crear programas eficientes que aprovechan los sistemas multinúcleo modernos.</p>
     
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div className={styles.topicGrid}>
       <TopicCard 
         title="Goroutines" 
         description="Aprende sobre las goroutines - hilos ligeros manejados por el runtime de Go que permiten ejecutar funciones de forma concurrente." 
@@ -265,33 +264,33 @@ const ConcurrenciaContent = () => (
       />
     </div>
 
-    <div className="p-4 bg-blue-50 rounded-lg border border-blue-100 mb-6">
-      <h3 className="font-bold text-blue-800 mb-2">Diferencias entre Concurrencia y Paralelismo</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="p-3 bg-white rounded-lg shadow-sm">
-          <h4 className="font-semibold text-blue-700">Concurrencia</h4>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700">
-            <li>Lidiar con múltiples tareas al mismo tiempo</li>
-            <li>No implica ejecución simultánea</li>
-            <li>Estructura de un programa</li>
-            <li>Gestión de múltiples tareas</li>
+    <div className={`${styles.infoBox} ${styles.infoBoxBlue}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleBlue}`}>Diferencias entre Concurrencia y Paralelismo</h3>
+      <div className={styles.twoColGrid}>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Concurrencia</h4>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>Lidiar con múltiples tareas al mismo tiempo</li>
+            <li className={styles.listItem}>No implica ejecución simultánea</li>
+            <li className={styles.listItem}>Estructura de un programa</li>
+            <li className={styles.listItem}>Gestión de múltiples tareas</li>
           </ul>
         </div>
-        <div className="p-3 bg-white rounded-lg shadow-sm">
-          <h4 className="font-semibold text-blue-700">Paralelismo</h4>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700">
-            <li>Ejecutar múltiples tareas simultáneamente</li>
-            <li>Requiere múltiples procesadores/núcleos</li>
-            <li>Ejecución de un programa</li>
-            <li>Aprovechamiento de múltiples CPU</li>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Paralelismo</h4>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>Ejecutar múltiples tareas simultáneamente</li>
+            <li className={styles.listItem}>Requiere múltiples procesadores/núcleos</li>
+            <li className={styles.listItem}>Ejecución de un programa</li>
+            <li className={styles.listItem}>Aprovechamiento de múltiples CPU</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-100">
-      <h3 className="font-bold text-yellow-800 mb-2">Consejo práctico</h3>
-      <p className="text-gray-700">
+    <div className={`${styles.infoBox} ${styles.infoBoxYellow}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleYellow}`}>Consejo práctico</h3>
+      <p className={styles.listItem}>
         "No comuniques compartiendo memoria; comparte memoria comunicando" - Es uno de los principios fundamentales de concurrencia en Go. En lugar de usar variables compartidas protegidas por locks, usa channels para pasar datos entre goroutines.
       </p>
     </div>
@@ -300,11 +299,11 @@ const ConcurrenciaContent = () => (
 
 const RuntimeContent = () => (
   <div>
-    <SectionTitle title="Runtime y Compilación de Go" icon={<Cpu size={20} className="text-blue-700" />} />
+    <SectionTitle title="Runtime y Compilación de Go" icon={<Cpu size={20} className={styles.sectionIcon} />} />
     
-    <p className="mb-4">Uno de los aspectos distintivos de Go es su proceso de compilación y su runtime. Entender cómo funciona internamente te ayudará a optimizar tus aplicaciones y comprender mejor el comportamiento del lenguaje.</p>
+    <p className={styles.headerDescription}>Uno de los aspectos distintivos de Go es su proceso de compilación y su runtime. Entender cómo funciona internamente te ayudará a optimizar tus aplicaciones y comprender mejor el comportamiento del lenguaje.</p>
     
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div className={styles.topicGrid}>
       <TopicCard 
         title="Compilación a binarios nativos" 
         description="Cómo Go compila directamente a código máquina nativo para cada arquitectura sin necesidad de una VM." 
@@ -337,40 +336,40 @@ const RuntimeContent = () => (
       />
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-      <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
-        <h3 className="font-bold text-blue-800 mb-2">Ventajas de la compilación en Go</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li>Binarios autónomos sin dependencias externas</li>
-          <li>Rendimiento nativo cercano a C/C++</li>
-          <li>No requiere intérpretes o máquinas virtuales</li>
-          <li>Verificación de tipos en tiempo de compilación</li>
-          <li>Tiempos de compilación rápidos</li>
-          <li>Fácil despliegue en contenedores</li>
+    <div className={styles.twoColGrid}>
+      <div className={`${styles.infoBox} ${styles.infoBoxBlue}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleBlue}`}>Ventajas de la compilación en Go</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>Binarios autónomos sin dependencias externas</li>
+          <li className={styles.listItem}>Rendimiento nativo cercano a C/C++</li>
+          <li className={styles.listItem}>No requiere intérpretes o máquinas virtuales</li>
+          <li className={styles.listItem}>Verificación de tipos en tiempo de compilación</li>
+          <li className={styles.listItem}>Tiempos de compilación rápidos</li>
+          <li className={styles.listItem}>Fácil despliegue en contenedores</li>
         </ul>
       </div>
-      <div className="p-4 bg-green-50 rounded-lg border border-green-100">
-        <h3 className="font-bold text-green-800 mb-2">Diferencias con PHP</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li>PHP: Interpretado, Go: Compilado</li>
-          <li>PHP: Tipado dinámico, Go: Tipado estático</li>
-          <li>PHP: Requiere intérprete para ejecutarse, Go: Binarios autónomos</li>
-          <li>PHP: Orientado a scripting web, Go: Propósito general</li>
-          <li>PHP: Mayor overhead de memoria, Go: Muy eficiente en memoria</li>
-          <li>PHP: Concurrencia limitada, Go: Excelente soporte para concurrencia</li>
+      <div className={`${styles.infoBox} ${styles.infoBoxGreen}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleGreen}`}>Diferencias con PHP</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>PHP: Interpretado, Go: Compilado</li>
+          <li className={styles.listItem}>PHP: Tipado dinámico, Go: Tipado estático</li>
+          <li className={styles.listItem}>PHP: Requiere intérprete para ejecutarse, Go: Binarios autónomos</li>
+          <li className={styles.listItem}>PHP: Orientado a scripting web, Go: Propósito general</li>
+          <li className={styles.listItem}>PHP: Mayor overhead de memoria, Go: Muy eficiente en memoria</li>
+          <li className={styles.listItem}>PHP: Concurrencia limitada, Go: Excelente soporte para concurrencia</li>
         </ul>
       </div>
     </div>
 
-    <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
-      <h3 className="font-bold text-gray-800 mb-2">Proceso de compilación de Go</h3>
-      <ol className="list-decimal pl-5 space-y-2 text-gray-700">
-        <li><span className="font-medium">Análisis léxico:</span> Convierte el código fuente en tokens</li>
-        <li><span className="font-medium">Análisis sintáctico:</span> Construye el árbol de sintaxis abstracta (AST)</li>
-        <li><span className="font-medium">Comprobación de tipos:</span> Verifica la consistencia de tipos</li>
-        <li><span className="font-medium">Optimizaciones:</span> Análisis de escape, inlining, eliminación de código muerto</li>
-        <li><span className="font-medium">Generación de código:</span> Traducción a código máquina nativo</li>
-        <li><span className="font-medium">Enlazado (linking):</span> Resolución de referencias y creación del binario final</li>
+    <div className={`${styles.infoBox} ${styles.infoBoxGray}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleGray}`}>Proceso de compilación de Go</h3>
+      <ol className={styles.orderedList}>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Análisis léxico:</span> Convierte el código fuente en tokens</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Análisis sintáctico:</span> Construye el árbol de sintaxis abstracta (AST)</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Comprobación de tipos:</span> Verifica la consistencia de tipos</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Optimizaciones:</span> Análisis de escape, inlining, eliminación de código muerto</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Generación de código:</span> Traducción a código máquina nativo</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Enlazado (linking):</span> Resolución de referencias y creación del binario final</li>
       </ol>
     </div>
   </div>
@@ -378,11 +377,11 @@ const RuntimeContent = () => (
 
 const MicroserviciosContent = () => (
   <div>
-    <SectionTitle title="Microservicios con Go" icon={<Server size={20} className="text-blue-700" />} />
+    <SectionTitle title="Microservicios con Go" icon={<Server size={20} className={styles.sectionIcon} />} />
     
-    <p className="mb-4">Go es un lenguaje ideal para implementar arquitecturas de microservicios gracias a su eficiencia, rendimiento y soporte para concurrencia. Aprende a construir sistemas robustos y escalables basados en microservicios.</p>
+    <p className={styles.headerDescription}>Go es un lenguaje ideal para implementar arquitecturas de microservicios gracias a su eficiencia, rendimiento y soporte para concurrencia. Aprende a construir sistemas robustos y escalables basados en microservicios.</p>
     
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div className={styles.topicGrid}>
       <TopicCard 
         title="Arquitectura de microservicios" 
         description="Principios, ventajas y desafíos de las arquitecturas basadas en microservicios." 
@@ -415,44 +414,44 @@ const MicroserviciosContent = () => (
       />
     </div>
 
-    <div className="p-4 bg-blue-50 rounded-lg border border-blue-100 mb-6">
-      <h3 className="font-bold text-blue-800 mb-2">¿Por qué Go para microservicios?</h3>
-      <ul className="list-disc pl-5 space-y-1 text-gray-700">
-        <li><span className="font-medium">Eficiencia:</span> Bajo consumo de recursos y inicio rápido, ideal para contenedores</li>
-        <li><span className="font-medium">Concurrencia:</span> Manejo nativo de múltiples conexiones simultáneas</li>
-        <li><span className="font-medium">Binarios pequeños:</span> Despliegues rápidos y contenedores ligeros</li>
-        <li><span className="font-medium">Biblioteca estándar:</span> Soporte nativo para HTTP, JSON, etc.</li>
-        <li><span className="font-medium">Ecosistema:</span> Múltiples frameworks y herramientas para microservicios</li>
-        <li><span className="font-medium">Compilación estática:</span> Fácil distribución y despliegue sin dependencias</li>
+    <div className={`${styles.infoBox} ${styles.infoBoxBlue}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleBlue}`}>¿Por qué Go para microservicios?</h3>
+      <ul className={styles.list}>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Eficiencia:</span> Bajo consumo de recursos y inicio rápido, ideal para contenedores</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Concurrencia:</span> Manejo nativo de múltiples conexiones simultáneas</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Binarios pequeños:</span> Despliegues rápidos y contenedores ligeros</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Biblioteca estándar:</span> Soporte nativo para HTTP, JSON, etc.</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Ecosistema:</span> Múltiples frameworks y herramientas para microservicios</li>
+        <li className={styles.listItem}><span className={styles.listItemLabel}>Compilación estática:</span> Fácil distribución y despliegue sin dependencias</li>
       </ul>
     </div>
 
-    <div className="p-4 bg-purple-50 rounded-lg border border-purple-100">
-      <h3 className="font-bold text-purple-800 mb-2">Frameworks populares para microservicios en Go</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">Go Kit</h4>
-          <p className="text-sm text-gray-600">Toolkit para construir microservicios robustos y de nivel empresarial</p>
+    <div className={`${styles.infoBox} ${styles.infoBoxPurple}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitlePurple}`}>Frameworks populares para microservicios en Go</h3>
+      <div className={styles.topicGrid}>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Go Kit</h4>
+          <p className={styles.topicCardDescription}>Toolkit para construir microservicios robustos y de nivel empresarial</p>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">Gin</h4>
-          <p className="text-sm text-gray-600">Framework web ligero con excelente rendimiento para APIs</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Gin</h4>
+          <p className={styles.topicCardDescription}>Framework web ligero con excelente rendimiento para APIs</p>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">Echo</h4>
-          <p className="text-sm text-gray-600">Framework minimalista de alto rendimiento</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Echo</h4>
+          <p className={styles.topicCardDescription}>Framework minimalista de alto rendimiento</p>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">Micro</h4>
-          <p className="text-sm text-gray-600">Plataforma para desarrollo de microservicios</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Micro</h4>
+          <p className={styles.topicCardDescription}>Plataforma para desarrollo de microservicios</p>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">Fiber</h4>
-          <p className="text-sm text-gray-600">Framework web inspirado en Express.js con alto rendimiento</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Fiber</h4>
+          <p className={styles.topicCardDescription}>Framework web inspirado en Express.js con alto rendimiento</p>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">gRPC-Go</h4>
-          <p className="text-sm text-gray-600">Implementación de gRPC para comunicación entre servicios</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>gRPC-Go</h4>
+          <p className={styles.topicCardDescription}>Implementación de gRPC para comunicación entre servicios</p>
         </div>
       </div>
     </div>
@@ -461,11 +460,11 @@ const MicroserviciosContent = () => (
 
 const KubernetesContent = () => (
   <div>
-    <SectionTitle title="Kubernetes y Orquestación" icon={<Cloud size={20} className="text-blue-700" />} />
+    <SectionTitle title="Kubernetes y Orquestación" icon={<Cloud size={20} className={styles.sectionIcon} />} />
     
-    <p className="mb-4">Kubernetes (K8s) es la plataforma líder para orquestar contenedores, permitiendo automatizar el despliegue, escalado y gestión de aplicaciones. Aprende cómo utilizarlo para desplegar tus microservicios en Go.</p>
+    <p className={styles.headerDescription}>Kubernetes (K8s) es la plataforma líder para orquestar contenedores, permitiendo automatizar el despliegue, escalado y gestión de aplicaciones. Aprende cómo utilizarlo para desplegar tus microservicios en Go.</p>
     
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div className={styles.topicGrid}>
       <TopicCard 
         title="Conceptos básicos de Kubernetes" 
         description="Pods, ReplicaSets, Deployments, Services y demás objetos fundamentales de Kubernetes." 
@@ -498,66 +497,66 @@ const KubernetesContent = () => (
       />
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-      <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
-        <h3 className="font-bold text-blue-800 mb-2">¿Por qué Kubernetes?</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li>Autoescalado de aplicaciones basado en uso de recursos</li>
-          <li>Alta disponibilidad mediante réplicas y autorecuperación</li>
-          <li>Distribución de tráfico y balanceo de carga</li>
-          <li>Despliegues y rollbacks automatizados</li>
-          <li>Gestión de secretos y configuraciones</li>
-          <li>Abstracción sobre múltiples proveedores cloud</li>
+    <div className={styles.twoColGrid}>
+      <div className={`${styles.infoBox} ${styles.infoBoxBlue}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleBlue}`}>¿Por qué Kubernetes?</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>Autoescalado de aplicaciones basado en uso de recursos</li>
+          <li className={styles.listItem}>Alta disponibilidad mediante réplicas y autorecuperación</li>
+          <li className={styles.listItem}>Distribución de tráfico y balanceo de carga</li>
+          <li className={styles.listItem}>Despliegues y rollbacks automatizados</li>
+          <li className={styles.listItem}>Gestión de secretos y configuraciones</li>
+          <li className={styles.listItem}>Abstracción sobre múltiples proveedores cloud</li>
         </ul>
       </div>
-      <div className="p-4 bg-green-50 rounded-lg border border-green-100">
-        <h3 className="font-bold text-green-800 mb-2">Go y Kubernetes</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li>Kubernetes está escrito en Go</li>
-          <li>Cliente oficial (client-go) para integración con Kubernetes</li>
-          <li>Excelente soporte para crear operadores y extensiones</li>
-          <li>Aplicaciones Go generan binarios pequeños, ideales para contenedores</li>
-          <li>Menor consumo de recursos en entornos Kubernetes</li>
-          <li>Arranque rápido para escalado eficiente</li>
+      <div className={`${styles.infoBox} ${styles.infoBoxGreen}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleGreen}`}>Go y Kubernetes</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>Kubernetes está escrito en Go</li>
+          <li className={styles.listItem}>Cliente oficial (client-go) para integración con Kubernetes</li>
+          <li className={styles.listItem}>Excelente soporte para crear operadores y extensiones</li>
+          <li className={styles.listItem}>Aplicaciones Go generan binarios pequeños, ideales para contenedores</li>
+          <li className={styles.listItem}>Menor consumo de recursos en entornos Kubernetes</li>
+          <li className={styles.listItem}>Arranque rápido para escalado eficiente</li>
         </ul>
       </div>
     </div>
 
-    <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-100">
-      <h3 className="font-bold text-yellow-800 mb-2">Arquitectura típica de microservicios en Kubernetes</h3>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-2 text-center">
-        <div className="p-2 bg-white rounded border border-yellow-200">
-          <h4 className="font-semibold text-yellow-700 text-sm">Ingress</h4>
-          <p className="text-xs text-gray-600">Gestión de tráfico externo</p>
+    <div className={`${styles.infoBox} ${styles.infoBoxYellow}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleYellow}`}>Arquitectura típica de microservicios en Kubernetes</h3>
+      <div className={styles.topicGrid}>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Ingress</h4>
+          <p className={styles.topicCardDescription}>Gestión de tráfico externo</p>
         </div>
-        <div className="p-2 bg-white rounded border border-yellow-200">
-          <h4 className="font-semibold text-yellow-700 text-sm">API Gateway</h4>
-          <p className="text-xs text-gray-600">Ruteo y autenticación</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>API Gateway</h4>
+          <p className={styles.topicCardDescription}>Ruteo y autenticación</p>
         </div>
-        <div className="p-2 bg-white rounded border border-yellow-200">
-          <h4 className="font-semibold text-yellow-700 text-sm">Microservicios</h4>
-          <p className="text-xs text-gray-600">Lógica de negocio</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Microservicios</h4>
+          <p className={styles.topicCardDescription}>Lógica de negocio</p>
         </div>
-        <div className="p-2 bg-white rounded border border-yellow-200">
-          <h4 className="font-semibold text-yellow-700 text-sm">Bases de datos</h4>
-          <p className="text-xs text-gray-600">Persistencia</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Bases de datos</h4>
+          <p className={styles.topicCardDescription}>Persistencia</p>
         </div>
         
-        <div className="p-2 bg-white rounded border border-yellow-200">
-          <h4 className="font-semibold text-yellow-700 text-sm">Service Discovery</h4>
-          <p className="text-xs text-gray-600">Localización de servicios</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Service Discovery</h4>
+          <p className={styles.topicCardDescription}>Localización de servicios</p>
         </div>
-        <div className="p-2 bg-white rounded border border-yellow-200">
-          <h4 className="font-semibold text-yellow-700 text-sm">Config Maps</h4>
-          <p className="text-xs text-gray-600">Configuración dinámica</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Config Maps</h4>
+          <p className={styles.topicCardDescription}>Configuración dinámica</p>
         </div>
-        <div className="p-2 bg-white rounded border border-yellow-200">
-          <h4 className="font-semibold text-yellow-700 text-sm">Secrets</h4>
-          <p className="text-xs text-gray-600">Datos sensibles</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Secrets</h4>
+          <p className={styles.topicCardDescription}>Datos sensibles</p>
         </div>
-        <div className="p-2 bg-white rounded border border-yellow-200">
-          <h4 className="font-semibold text-yellow-700 text-sm">Monitoring</h4>
-          <p className="text-xs text-gray-600">Observabilidad</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Monitoring</h4>
+          <p className={styles.topicCardDescription}>Observabilidad</p>
         </div>
       </div>
     </div>
@@ -566,11 +565,11 @@ const KubernetesContent = () => (
 
 const DistribuidosContent = () => (
   <div>
-    <SectionTitle title="Sistemas Distribuidos" icon={<Globe size={20} className="text-blue-700" />} />
+    <SectionTitle title="Sistemas Distribuidos" icon={<Globe size={20} className={styles.sectionIcon} />} />
     
-    <p className="mb-4">Go es una excelente elección para construir sistemas distribuidos gracias a su eficiencia, concurrencia y rendimiento. Aprende los fundamentos y patrones para construir sistemas distribuidos robustos y escalables.</p>
+    <p className={styles.headerDescription}>Go es una excelente elección para construir sistemas distribuidos gracias a su eficiencia, concurrencia y rendimiento. Aprende los fundamentos y patrones para construir sistemas distribuidos robustos y escalables.</p>
     
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div className={styles.topicGrid}>
       <TopicCard 
         title="Fundamentos de sistemas distribuidos" 
         description="Principios básicos, desafíos y características de los sistemas distribuidos." 
@@ -603,48 +602,48 @@ const DistribuidosContent = () => (
       />
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-      <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
-        <h3 className="font-bold text-blue-800 mb-2">Desafíos de los sistemas distribuidos</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li><span className="font-medium">Latencia:</span> Retardos en la comunicación entre nodos</li>
-          <li><span className="font-medium">Fallos parciales:</span> Componentes individuales pueden fallar mientras otros siguen funcionando</li>
-          <li><span className="font-medium">Consistencia de datos:</span> Mantener datos coherentes entre diferentes nodos</li>
-          <li><span className="font-medium">Particiones de red:</span> Segmentos de la red pueden quedar aislados temporalmente</li>
-          <li><span className="font-medium">Concurrencia:</span> Múltiples operaciones ocurriendo simultáneamente</li>
-          <li><span className="font-medium">Escalabilidad:</span> Mantener rendimiento al crecer el sistema</li>
+    <div className={styles.twoColGrid}>
+      <div className={`${styles.infoBox} ${styles.infoBoxBlue}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleBlue}`}>Desafíos de los sistemas distribuidos</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Latencia:</span> Retardos en la comunicación entre nodos</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Fallos parciales:</span> Componentes individuales pueden fallar mientras otros siguen funcionando</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Consistencia de datos:</span> Mantener datos coherentes entre diferentes nodos</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Particiones de red:</span> Segmentos de la red pueden quedar aislados temporalmente</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Concurrencia:</span> Múltiples operaciones ocurriendo simultáneamente</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Escalabilidad:</span> Mantener rendimiento al crecer el sistema</li>
         </ul>
       </div>
-      <div className="p-4 bg-green-50 rounded-lg border border-green-100">
-        <h3 className="font-bold text-green-800 mb-2">¿Por qué Go para sistemas distribuidos?</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li><span className="font-medium">Concurrencia nativa:</span> Goroutines y channels facilitan operaciones concurrentes</li>
-          <li><span className="font-medium">Networking potente:</span> Excelente biblioteca estándar para comunicaciones en red</li>
-          <li><span className="font-medium">Eficiencia:</span> Bajo consumo de recursos para entornos cloud</li>
-          <li><span className="font-medium">Tiempos de inicio rápidos:</span> Ideal para escalado dinámico</li>
-          <li><span className="font-medium">Simplicidad:</span> Código mantenible para sistemas complejos</li>
-          <li><span className="font-medium">Ecosistema:</span> Muchas herramientas y bibliotecas para sistemas distribuidos</li>
+      <div className={`${styles.infoBox} ${styles.infoBoxGreen}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleGreen}`}>¿Por qué Go para sistemas distribuidos?</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Concurrencia nativa:</span> Goroutines y channels facilitan operaciones concurrentes</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Networking potente:</span> Excelente biblioteca estándar para comunicaciones en red</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Eficiencia:</span> Bajo consumo de recursos para entornos cloud</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Tiempos de inicio rápidos:</span> Ideal para escalado dinámico</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Simplicidad:</span> Código mantenible para sistemas complejos</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Ecosistema:</span> Muchas herramientas y bibliotecas para sistemas distribuidos</li>
         </ul>
       </div>
     </div>
 
-    <div className="p-4 bg-purple-50 rounded-lg border border-purple-100">
-      <h3 className="font-bold text-purple-800 mb-2">Teorema CAP y diseño de sistemas distribuidos</h3>
-      <p className="text-gray-700 mb-4">
+    <div className={`${styles.infoBox} ${styles.infoBoxPurple}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitlePurple}`}>Teorema CAP y diseño de sistemas distribuidos</h3>
+      <p className={styles.listItem}>
         El teorema CAP establece que un sistema distribuido no puede proporcionar simultáneamente más de dos de estas garantías:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">Consistencia (C)</h4>
-          <p className="text-sm text-gray-600">Todos los nodos ven los mismos datos al mismo tiempo</p>
+      <div className={styles.topicGrid}>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Consistencia (C)</h4>
+          <p className={styles.topicCardDescription}>Todos los nodos ven los mismos datos al mismo tiempo</p>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">Disponibilidad (A)</h4>
-          <p className="text-sm text-gray-600">Cada petición recibe una respuesta (sin garantía de que contenga los datos más recientes)</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Disponibilidad (A)</h4>
+          <p className={styles.topicCardDescription}>Cada petición recibe una respuesta (sin garantía de que contenga los datos más recientes)</p>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
-          <h4 className="font-semibold text-purple-700">Tolerancia a particiones (P)</h4>
-          <p className="text-sm text-gray-600">El sistema sigue funcionando aunque haya fallos en la comunicación entre nodos</p>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Tolerancia a particiones (P)</h4>
+          <p className={styles.topicCardDescription}>El sistema sigue funcionando aunque haya fallos en la comunicación entre nodos</p>
         </div>
       </div>
     </div>
@@ -653,11 +652,11 @@ const DistribuidosContent = () => (
 
 const ArquitecturaContent = () => (
   <div>
-    <SectionTitle title="DDD y Arquitectura Hexagonal en Go" icon={<GitBranch size={20} className="text-blue-700" />} />
+    <SectionTitle title="DDD y Arquitectura Hexagonal en Go" icon={<GitBranch size={20} className={styles.sectionIcon} />} />
     
-    <p className="mb-4">La Arquitectura Hexagonal y el Domain-Driven Design (DDD) son enfoques poderosos para organizar aplicaciones complejas. Go es un excelente lenguaje para implementar estos patrones gracias a su sistema de interfaces y su claridad sintáctica.</p>
+    <p className={styles.headerDescription}>La Arquitectura Hexagonal y el Domain-Driven Design (DDD) son enfoques poderosos para organizar aplicaciones complejas. Go es un excelente lenguaje para implementar estos patrones gracias a su sistema de interfaces y su claridad sintáctica.</p>
     
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div className={styles.topicGrid}>
       <TopicCard 
         title="Principios de DDD" 
         description="Ubiquitous Language, Bounded Contexts, Aggregates, Entities, Value Objects y Domain Events en Go." 
@@ -690,10 +689,10 @@ const ArquitecturaContent = () => (
       />
     </div>
 
-    <div className="p-4 bg-blue-50 rounded-lg border border-blue-100 mb-6">
-      <h3 className="font-bold text-blue-800 mb-2">Estructura de Proyecto en Arquitectura Hexagonal</h3>
-      <div className="bg-gray-800 text-white p-3 rounded-md text-sm overflow-x-auto">
-        <pre className="whitespace-pre-wrap">
+    <div className={`${styles.infoBox} ${styles.infoBoxBlue}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleBlue}`}>Estructura de Proyecto en Arquitectura Hexagonal</h3>
+      <div className={styles.codeBlock}>
+        <pre>
 {`/cmd
   /api         # Punto de entrada - API HTTP
   /worker      # Punto de entrada - Procesamiento en segundo plano
@@ -716,51 +715,51 @@ const ArquitecturaContent = () => (
       </div>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-      <div className="p-4 bg-green-50 rounded-lg border border-green-100">
-        <h3 className="font-bold text-green-800 mb-2">Beneficios de Arquitectura Hexagonal en Go</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li><span className="font-medium">Separación de preocupaciones:</span> Aislamiento claro de la lógica de dominio</li>
-          <li><span className="font-medium">Testabilidad:</span> Facilidad para realizar pruebas unitarias y de integración</li>
-          <li><span className="font-medium">Flexibilidad:</span> Cambiar adaptadores sin modificar el núcleo de la aplicación</li>
-          <li><span className="font-medium">Mantenibilidad:</span> Código más organizado y con menor acoplamiento</li>
-          <li><span className="font-medium">Evolución:</span> Facilita el crecimiento y la evolución del sistema</li>
+    <div className={styles.twoColGrid}>
+      <div className={`${styles.infoBox} ${styles.infoBoxGreen}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleGreen}`}>Beneficios de Arquitectura Hexagonal en Go</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Separación de preocupaciones:</span> Aislamiento claro de la lógica de dominio</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Testabilidad:</span> Facilidad para realizar pruebas unitarias y de integración</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Flexibilidad:</span> Cambiar adaptadores sin modificar el núcleo de la aplicación</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Mantenibilidad:</span> Código más organizado y con menor acoplamiento</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Evolución:</span> Facilita el crecimiento y la evolución del sistema</li>
         </ul>
       </div>
-      <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-100">
-        <h3 className="font-bold text-yellow-800 mb-2">Implementación en Go</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li><span className="font-medium">Interfaces Go:</span> Ideales para implementar puertos y adaptadores</li>
-          <li><span className="font-medium">Structs:</span> Perfectos para modelar entidades y value objects</li>
-          <li><span className="font-medium">Dependency Injection:</span> Manejo limpio de dependencias externas</li>
-          <li><span className="font-medium">Error handling:</span> Control granular de errores de dominio</li>
-          <li><span className="font-medium">Context package:</span> Gestión de contextos entre capas de la aplicación</li>
-          <li><span className="font-medium">Testing:</span> Excelentes herramientas de testing y mocking</li>
+      <div className={`${styles.infoBox} ${styles.infoBoxYellow}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleYellow}`}>Implementación en Go</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Interfaces Go:</span> Ideales para implementar puertos y adaptadores</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Structs:</span> Perfectos para modelar entidades y value objects</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Dependency Injection:</span> Manejo limpio de dependencias externas</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Error handling:</span> Control granular de errores de dominio</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Context package:</span> Gestión de contextos entre capas de la aplicación</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Testing:</span> Excelentes herramientas de testing y mocking</li>
         </ul>
       </div>
     </div>
 
-    <div className="p-4 bg-purple-50 rounded-lg border border-purple-100">
-      <h3 className="font-bold text-purple-800 mb-2">Errores comunes y mejores prácticas</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className={`${styles.infoBox} ${styles.infoBoxPurple}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitlePurple}`}>Errores comunes y mejores prácticas</h3>
+      <div className={styles.twoColGrid}>
         <div>
-          <h4 className="font-semibold text-purple-700">Errores comunes</h4>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700">
-            <li>Filtrar detalles de infraestructura en el dominio</li>
-            <li>Interfaces demasiado grandes (violar ISP)</li>
-            <li>Agregados demasiado grandes o complejos</li>
-            <li>Ignorar los límites de contexto</li>
-            <li>Abuso de value objects o entidades</li>
+          <h4 className={styles.boxTitle}>Errores comunes</h4>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>Filtrar detalles de infraestructura en el dominio</li>
+            <li className={styles.listItem}>Interfaces demasiado grandes (violar ISP)</li>
+            <li className={styles.listItem}>Agregados demasiado grandes o complejos</li>
+            <li className={styles.listItem}>Ignorar los límites de contexto</li>
+            <li className={styles.listItem}>Abuso de value objects o entidades</li>
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-purple-700">Mejores prácticas</h4>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700">
-            <li>Mantener el dominio puro, sin dependencias externas</li>
-            <li>Interfaces pequeñas y cohesivas</li>
-            <li>Inmutabilidad cuando sea posible</li>
-            <li>Transacciones confinadas a los límites del agregado</li>
-            <li>Uso adecuado de DTO para transferencia entre capas</li>
+          <h4 className={styles.boxTitle}>Mejores prácticas</h4>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>Mantener el dominio puro, sin dependencias externas</li>
+            <li className={styles.listItem}>Interfaces pequeñas y cohesivas</li>
+            <li className={styles.listItem}>Inmutabilidad cuando sea posible</li>
+            <li className={styles.listItem}>Transacciones confinadas a los límites del agregado</li>
+            <li className={styles.listItem}>Uso adecuado de DTO para transferencia entre capas</li>
           </ul>
         </div>
       </div>
@@ -770,11 +769,11 @@ const ArquitecturaContent = () => (
 
 const RecursosContent = () => (
   <div>
-    <SectionTitle title="Recursos de Aprendizaje" icon={<Database size={20} className="text-blue-700" />} />
+    <SectionTitle title="Recursos de Aprendizaje" icon={<Database size={20} className={styles.sectionIcon} />} />
     
-    <p className="mb-4">Una colección de recursos de alta calidad para profundizar en todos los aspectos del desarrollo con Go, microservicios y sistemas distribuidos.</p>
+    <p className={styles.headerDescription}>Una colección de recursos de alta calidad para profundizar en todos los aspectos del desarrollo con Go, microservicios y sistemas distribuidos.</p>
     
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div className={styles.resourceGrid}>
       <ResourceCard 
         title="Go Programming Language" 
         type="libro" 
@@ -831,60 +830,60 @@ const RecursosContent = () => (
       />
     </div>
 
-    <div className="p-4 bg-blue-50 rounded-lg border border-blue-100 mb-6">
-      <h3 className="font-bold text-blue-800 mb-2">Comunidades y foros</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="p-3 bg-white rounded shadow-sm hover:shadow-md transition-shadow">
-          <h4 className="font-semibold text-blue-700">Go Forum</h4>
-          <p className="text-sm text-gray-600">Foro oficial para discusiones sobre Go</p>
-          <a href="https://forum.golangbridge.org/" className="text-blue-600 text-xs hover:underline">forum.golangbridge.org</a>
+    <div className={`${styles.infoBox} ${styles.infoBoxBlue}`}>
+      <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleBlue}`}>Comunidades y foros</h3>
+      <div className={styles.twoColGrid}>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Go Forum</h4>
+          <p className={styles.topicCardDescription}>Foro oficial para discusiones sobre Go</p>
+          <a href="https://forum.golangbridge.org/" className={styles.resourceCardLink}>forum.golangbridge.org</a>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm hover:shadow-md transition-shadow">
-          <h4 className="font-semibold text-blue-700">Go Slack</h4>
-          <p className="text-sm text-gray-600">Canal de Slack para desarrolladores de Go</p>
-          <a href="https://gophers.slack.com/" className="text-blue-600 text-xs hover:underline">gophers.slack.com</a>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Go Slack</h4>
+          <p className={styles.topicCardDescription}>Canal de Slack para desarrolladores de Go</p>
+          <a href="https://gophers.slack.com/" className={styles.resourceCardLink}>gophers.slack.com</a>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm hover:shadow-md transition-shadow">
-          <h4 className="font-semibold text-blue-700">Stack Overflow</h4>
-          <p className="text-sm text-gray-600">Amplia comunidad de preguntas y respuestas</p>
-          <a href="https://stackoverflow.com/questions/tagged/go" className="text-blue-600 text-xs hover:underline">stackoverflow.com/go</a>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Stack Overflow</h4>
+          <p className={styles.topicCardDescription}>Amplia comunidad de preguntas y respuestas</p>
+          <a href="https://stackoverflow.com/questions/tagged/go" className={styles.resourceCardLink}>stackoverflow.com/go</a>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm hover:shadow-md transition-shadow">
-          <h4 className="font-semibold text-blue-700">Reddit - /r/golang</h4>
-          <p className="text-sm text-gray-600">Subreddit para desarrolladores de Go</p>
-          <a href="https://www.reddit.com/r/golang/" className="text-blue-600 text-xs hover:underline">reddit.com/r/golang</a>
+        <div className={styles.box}>
+          <h4 className={styles.boxTitle}>Reddit - /r/golang</h4>
+          <p className={styles.topicCardDescription}>Subreddit para desarrolladores de Go</p>
+          <a href="https://www.reddit.com/r/golang/" className={styles.resourceCardLink}>reddit.com/r/golang</a>
         </div>
       </div>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="p-4 bg-green-50 rounded-lg border border-green-100">
-        <h3 className="font-bold text-green-800 mb-2">Ruta de aprendizaje recomendada</h3>
-        <ol className="list-decimal pl-5 space-y-1 text-gray-700">
-          <li>Aprende los fundamentos de Go (sintaxis, tipos, funciones)</li>
-          <li>Profundiza en concurrencia con goroutines y channels</li>
-          <li>Practica construyendo APIs y servicios web</li>
-          <li>Estudia patrones de diseño y arquitecturas en Go</li>
-          <li>Domina los principios de DDD y Arquitectura Hexagonal</li>
-          <li>Aprende sobre contenedores y Docker</li>
-          <li>Implementa microservicios con principios de diseño sólidos</li>
-          <li>Aprende sobre orquestación con Kubernetes</li>
-          <li>Estudia sistemas distribuidos y patrones avanzados</li>
+    <div className={styles.twoColGrid}>
+      <div className={`${styles.infoBox} ${styles.infoBoxGreen}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleGreen}`}>Ruta de aprendizaje recomendada</h3>
+        <ol className={styles.orderedList}>
+          <li className={styles.listItem}>Aprende los fundamentos de Go (sintaxis, tipos, funciones)</li>
+          <li className={styles.listItem}>Profundiza en concurrencia con goroutines y channels</li>
+          <li className={styles.listItem}>Practica construyendo APIs y servicios web</li>
+          <li className={styles.listItem}>Estudia patrones de diseño y arquitecturas en Go</li>
+          <li className={styles.listItem}>Domina los principios de DDD y Arquitectura Hexagonal</li>
+          <li className={styles.listItem}>Aprende sobre contenedores y Docker</li>
+          <li className={styles.listItem}>Implementa microservicios con principios de diseño sólidos</li>
+          <li className={styles.listItem}>Aprende sobre orquestación con Kubernetes</li>
+          <li className={styles.listItem}>Estudia sistemas distribuidos y patrones avanzados</li>
         </ol>
       </div>
-      <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-100">
-        <h3 className="font-bold text-yellow-800 mb-2">Herramientas esenciales</h3>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li><span className="font-medium">Go CLI:</span> Comando go para compilación, pruebas, etc.</li>
-          <li><span className="font-medium">IDEs:</span> VSCode con extensión Go, GoLand, Vim-Go</li>
-          <li><span className="font-medium">Debug:</span> Delve, pprof para perfilado</li>
-          <li><span className="font-medium">Docker:</span> Para contenerización</li>
-          <li><span className="font-medium">Kubernetes:</span> Para orquestación de contenedores</li>
-          <li><span className="font-medium">Git:</span> Control de versiones</li>
-          <li><span className="font-medium">Prometheus/Grafana:</span> Monitorización</li>
-          <li><span className="font-medium">gRPC:</span> Comunicación entre servicios</li>
-          <li><span className="font-medium">PostgreSQL/MongoDB:</span> Bases de datos</li>
-          <li><span className="font-medium">Air:</span> Recarga en vivo durante el desarrollo</li>
+      <div className={`${styles.infoBox} ${styles.infoBoxYellow}`}>
+        <h3 className={`${styles.infoBoxTitle} ${styles.infoBoxTitleYellow}`}>Herramientas esenciales</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Go CLI:</span> Comando go para compilación, pruebas, etc.</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>IDEs:</span> VSCode con extensión Go, GoLand, Vim-Go</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Debug:</span> Delve, pprof para perfilado</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Docker:</span> Para contenerización</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Kubernetes:</span> Para orquestación de contenedores</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Git:</span> Control de versiones</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Prometheus/Grafana:</span> Monitorización</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>gRPC:</span> Comunicación entre servicios</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>PostgreSQL/MongoDB:</span> Bases de datos</li>
+          <li className={styles.listItem}><span className={styles.listItemLabel}>Air:</span> Recarga en vivo durante el desarrollo</li>
         </ul>
       </div>
     </div>
