@@ -20,8 +20,8 @@ const GoStackGuide = () => {
         <p className="text-gray-600 mt-2">Una guía completa para desarrolladores backend que quieren dominar Go y sistemas distribuidos</p>
       </header>
 
-      <nav className="mb-6">
-        <div className="flex flex-wrap gap-2">
+      <nav className="mb-6 sticky top-0 z-10">
+        <div className="flex flex-wrap gap-2 justify-center">
           <TabButton 
             label="Fundamentos de Go" 
             icon={<BookOpen size={18} />} 
@@ -73,7 +73,7 @@ const GoStackGuide = () => {
         </div>
       </nav>
 
-      <main className="bg-white p-6 rounded-lg shadow border border-gray-100 flex-grow">
+      <main className="bg-white p-6 rounded-lg shadow border border-gray-100 flex-grow transition-all duration-300">
         {activeTab === 'fundamentos' && <FundamentosContent />}
         {activeTab === 'concurrencia' && <ConcurrenciaContent />}
         {activeTab === 'runtime' && <RuntimeContent />}
@@ -94,7 +94,7 @@ const GoStackGuide = () => {
 const TabButton = ({ label, icon, active, onClick }) => (
   <button
     className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-colors ${
-      active ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+      active ? 'bg-blue-600 text-white shadow-md transform scale-105' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
     }`}
     onClick={onClick}
   >
@@ -105,20 +105,22 @@ const TabButton = ({ label, icon, active, onClick }) => (
 
 const SectionTitle = ({ title, icon }) => (
   <div className="flex items-center gap-2 mb-4">
-    <div className="p-2 bg-blue-100 rounded-full">{icon}</div>
+    <div className="p-2 bg-blue-100 rounded-full">
+      {icon}
+    </div>
     <h2 className="text-xl font-bold text-blue-800">{title}</h2>
   </div>
 );
 
 const TopicCard = ({ title, description, level }) => {
   const levelColors = {
-    básico: 'bg-green-100 text-green-800',
-    intermedio: 'bg-yellow-100 text-yellow-800',
-    avanzado: 'bg-red-100 text-red-800',
+    básico: 'bg-green-100 text-green-800 border-green-200',
+    intermedio: 'bg-yellow-100 text-yellow-800 border-yellow-200',
+    avanzado: 'bg-red-100 text-red-800 border-red-200',
   };
 
   return (
-    <div className="border border-gray-200 rounded-lg p-4 transition-all hover:shadow-md">
+    <div className="border border-gray-200 rounded-lg p-4 transition-all hover:shadow-md hover:translate-y-1">
       <div className="flex justify-between items-start mb-2">
         <h3 className="font-bold text-gray-800">{title}</h3>
         <span className={`px-2 py-1 rounded text-xs font-medium ${levelColors[level]}`}>
@@ -150,7 +152,7 @@ const ResourceCard = ({ title, type, link, description }) => {
   };
 
   return (
-    <div className="border border-gray-200 rounded-lg p-4 transition-all hover:shadow-md">
+    <div className="border border-gray-200 rounded-lg p-4 transition-all hover:shadow-md hover:-translate-y-1">
       <div className="flex justify-between items-start mb-2">
         <h3 className="font-bold text-gray-800">{title}</h3>
         <span className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium ${typeColors[type]}`}>
@@ -266,7 +268,7 @@ const ConcurrenciaContent = () => (
     <div className="p-4 bg-blue-50 rounded-lg border border-blue-100 mb-6">
       <h3 className="font-bold text-blue-800 mb-2">Diferencias entre Concurrencia y Paralelismo</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
+        <div className="p-3 bg-white rounded-lg shadow-sm">
           <h4 className="font-semibold text-blue-700">Concurrencia</h4>
           <ul className="list-disc pl-5 space-y-1 text-gray-700">
             <li>Lidiar con múltiples tareas al mismo tiempo</li>
@@ -275,7 +277,7 @@ const ConcurrenciaContent = () => (
             <li>Gestión de múltiples tareas</li>
           </ul>
         </div>
-        <div>
+        <div className="p-3 bg-white rounded-lg shadow-sm">
           <h4 className="font-semibold text-blue-700">Paralelismo</h4>
           <ul className="list-disc pl-5 space-y-1 text-gray-700">
             <li>Ejecutar múltiples tareas simultáneamente</li>
@@ -649,7 +651,6 @@ const DistribuidosContent = () => (
   </div>
 );
 
-// Nueva pestaña para Arquitectura Hexagonal y DDD
 const ArquitecturaContent = () => (
   <div>
     <SectionTitle title="DDD y Arquitectura Hexagonal en Go" icon={<GitBranch size={20} className="text-blue-700" />} />
@@ -691,7 +692,8 @@ const ArquitecturaContent = () => (
 
     <div className="p-4 bg-blue-50 rounded-lg border border-blue-100 mb-6">
       <h3 className="font-bold text-blue-800 mb-2">Estructura de Proyecto en Arquitectura Hexagonal</h3>
-      <pre className="bg-gray-800 text-white p-3 rounded-md text-sm overflow-x-auto">
+      <div className="bg-gray-800 text-white p-3 rounded-md text-sm overflow-x-auto">
+        <pre className="whitespace-pre-wrap">
 {`/cmd
   /api         # Punto de entrada - API HTTP
   /worker      # Punto de entrada - Procesamiento en segundo plano
@@ -710,7 +712,8 @@ const ArquitecturaContent = () => (
 /pkg           # Código reutilizable entre proyectos
 /config        # Configuración
 /scripts       # Scripts de despliegue, migración, etc.`}
-      </pre>
+        </pre>
+      </div>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -826,45 +829,27 @@ const RecursosContent = () => (
         link="https://github.com/quii/learn-go-with-tests" 
         description="Aprende Go y TDD simultáneamente con ejercicios prácticos." 
       />
-      <ResourceCard 
-        title="GoLand IDE" 
-        type="herramienta" 
-        link="https://www.jetbrains.com/go/" 
-        description="IDE potente especializado para desarrollo en Go con excelentes herramientas de debugging." 
-      />
-      <ResourceCard 
-        title="pprof" 
-        type="herramienta" 
-        link="https://github.com/google/pprof" 
-        description="Herramienta para visualizar y analizar datos de perfilado de Go, esencial para optimización." 
-      />
-      <ResourceCard 
-        title="Temporal" 
-        type="herramienta" 
-        link="https://temporal.io/" 
-        description="Framework para crear aplicaciones distribuidas confiables usando Go como uno de sus lenguajes principales." 
-      />
     </div>
 
     <div className="p-4 bg-blue-50 rounded-lg border border-blue-100 mb-6">
       <h3 className="font-bold text-blue-800 mb-2">Comunidades y foros</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="p-3 bg-white rounded shadow-sm">
+        <div className="p-3 bg-white rounded shadow-sm hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-700">Go Forum</h4>
           <p className="text-sm text-gray-600">Foro oficial para discusiones sobre Go</p>
           <a href="https://forum.golangbridge.org/" className="text-blue-600 text-xs hover:underline">forum.golangbridge.org</a>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
+        <div className="p-3 bg-white rounded shadow-sm hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-700">Go Slack</h4>
           <p className="text-sm text-gray-600">Canal de Slack para desarrolladores de Go</p>
           <a href="https://gophers.slack.com/" className="text-blue-600 text-xs hover:underline">gophers.slack.com</a>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
+        <div className="p-3 bg-white rounded shadow-sm hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-700">Stack Overflow</h4>
           <p className="text-sm text-gray-600">Amplia comunidad de preguntas y respuestas</p>
           <a href="https://stackoverflow.com/questions/tagged/go" className="text-blue-600 text-xs hover:underline">stackoverflow.com/go</a>
         </div>
-        <div className="p-3 bg-white rounded shadow-sm">
+        <div className="p-3 bg-white rounded shadow-sm hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-700">Reddit - /r/golang</h4>
           <p className="text-sm text-gray-600">Subreddit para desarrolladores de Go</p>
           <a href="https://www.reddit.com/r/golang/" className="text-blue-600 text-xs hover:underline">reddit.com/r/golang</a>
