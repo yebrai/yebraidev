@@ -63,6 +63,37 @@
   transform: translateY(-2px);
 }
 
+/* Estilos específicos para la habilidad de Go */
+.goSkill {
+  cursor: pointer;  /* Cambia el cursor a un puntero */
+  position: relative;
+  background-color: rgba(75, 141, 225, 0.15);
+  border: 1px solid rgba(75, 141, 225, 0.3);
+}
+
+.goSkill:hover {
+  background-color: rgba(75, 141, 225, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de resplandor sutil para indicar que es clickable */
+.goSkill::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #4b8de1, #007D9C, #4b8de1); /* Colores del logo de Go */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.goSkill:hover::after {
+  opacity: 1;
+}
+
 .skillIcon {
   margin-right: 8px;
   color: #333;
