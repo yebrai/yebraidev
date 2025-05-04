@@ -25,16 +25,18 @@ export default function About() {
         transition={{ duration: 0.5, delay: 1 }}
       >
         <div className={styles.aboutContainer}>
-          <p className={styles.profileSummary}>
-          Backend specialist building robust server-side solutions with cloud and Linux background. I deliver clean, scalable code with a proven ability to rapidly adapt to new environments, technologies, and requirements while maintaining high quality standards.
-          </p>
+        <p className={styles.profileSummary}>
+          Backend specialist with frontend and cloud background. I build scalable, maintainable systems with a strong focus on clean architecture and performance. Experienced in migrating services to distributed architectures.
+          <br /><br />
+          Golang & MongoDB community leader.
+        </p>
           
           <div className={styles.experienceBoxes}>
             <div className={styles.expBox}>
               <FontAwesomeIcon icon={faCode} className={styles.expIcon} />
               <div className={styles.expText}>
                 <span className={styles.expYears}>4+</span>
-                <span className={styles.expLabel}>Years as Software Engineer</span>
+                <span className={styles.expLabel}>Years collaborating as Software Engineer</span>
               </div>
             </div>
             
@@ -42,7 +44,7 @@ export default function About() {
               <FontAwesomeIcon icon={faLayerGroup} className={styles.expIcon} />
               <div className={styles.expText}>
                 <span className={styles.expYears}>9+</span>
-                <span className={styles.expLabel}>Services, Systems & Teams</span>
+                <span className={styles.expLabel}>Projects with Diverse Teams & Architectures</span>
               </div>
             </div>
           </div>
@@ -69,7 +71,7 @@ export default function About() {
         
         <div className={styles.downloadContainer}>
           <a 
-            href="https://drive.google.com/file/d/1lFYYH5g6LbH2NaLgEeJiL_yFPh2f9iRU/view?usp=drive_link" 
+            href="https://drive.google.com/file/d/1mJA_Krgl5RoANg0wP2fjA-SGt15LEZPA/view?usp=drive_link" 
             target="_blank" 
             rel="noreferrer" 
             onClick={handleDownload}
