@@ -817,9 +817,9 @@ const RecursosContent = () => (
         description="Documentación oficial de Kubernetes, fundamental para orquestación de contenedores." 
       />
       <ResourceCard 
-        title="Go Patterns for Real-World Problems" 
-        type="libro" 
-        link="https://www.manning.com/books/design-patterns-in-go" 
+        title="Design Patterns in Go - Refactoring Guru" 
+        type="documentación" 
+        link="https://refactoring.guru/design-patterns/go" 
         description="Implementación de patrones de diseño para resolver problemas reales con Go." 
       />
       <ResourceCard 
